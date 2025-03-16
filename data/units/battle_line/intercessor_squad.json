@@ -1,0 +1,245 @@
+{
+    "name": "Intercessor Squad",
+    "faction": "Space Marines",
+    "points": 80,
+    "unit_composition": {
+        "base_size": 5,
+        "max_size": 10,
+        "points_per_model": 16
+    },
+    "stats": {
+        "movement": 6,
+        "toughness": 4,
+        "save": 3,
+        "wounds": 2,
+        "leadership": 6,
+        "objective_control": 2
+    },
+    "weapons": [
+        {
+            "name": "Astartes grenade launcher - frag",
+            "profiles": [
+                {
+                    "type": "Ranged",
+                    "range": 24,
+                    "attacks": "D3",
+                    "skill": 3,
+                    "strength": 4,
+                    "ap": 0,
+                    "damage": 1,
+                    "special_rules": ["BLAST"]
+                }
+            ]
+        },
+        {
+            "name": "Astartes grenade launcher - krak",
+            "profiles": [
+                {
+                    "type": "Ranged",
+                    "range": 24,
+                    "attacks": 1,
+                    "skill": 3,
+                    "strength": 9,
+                    "ap": -2,
+                    "damage": "D3"
+                }
+            ]
+        },
+        {
+            "name": "Bolt pistol",
+            "profiles": [
+                {
+                    "type": "Ranged",
+                    "range": 12,
+                    "attacks": 1,
+                    "skill": 3,
+                    "strength": 4,
+                    "ap": 0,
+                    "damage": 1,
+                    "special_rules": ["PISTOL"]
+                }
+            ]
+        },
+        {
+            "name": "Bolt rifle",
+            "profiles": [
+                {
+                    "type": "Ranged",
+                    "range": 24,
+                    "attacks": 2,
+                    "skill": 3,
+                    "strength": 4,
+                    "ap": -1,
+                    "damage": 1,
+                    "special_rules": ["ASSAULT", "HEAVY"]
+                }
+            ]
+        },
+        {
+            "name": "Hand flamer",
+            "profiles": [
+                {
+                    "type": "Ranged",
+                    "range": 12,
+                    "attacks": "D6",
+                    "skill": null,
+                    "strength": 3,
+                    "ap": 0,
+                    "damage": 1,
+                    "special_rules": ["IGNORES COVER", "PISTOL", "TORRENT"]
+                }
+            ]
+        },
+        {
+            "name": "Plasma pistol - standard",
+            "profiles": [
+                {
+                    "type": "Ranged",
+                    "range": 12,
+                    "attacks": 1,
+                    "skill": 3,
+                    "strength": 7,
+                    "ap": -2,
+                    "damage": 1,
+                    "special_rules": ["PISTOL"]
+                }
+            ]
+        },
+        {
+            "name": "Plasma pistol - supercharge",
+            "profiles": [
+                {
+                    "type": "Ranged",
+                    "range": 12,
+                    "attacks": 1,
+                    "skill": 3,
+                    "strength": 8,
+                    "ap": -3,
+                    "damage": 2,
+                    "special_rules": ["HAZARDOUS", "PISTOL"]
+                }
+            ]
+        },
+        {
+            "name": "Astartes chainsword",
+            "profiles": [
+                {
+                    "type": "Melee",
+                    "range": "Melee",
+                    "attacks": 5,
+                    "skill": 3,
+                    "strength": 4,
+                    "ap": -1,
+                    "damage": 1
+                }
+            ]
+        },
+        {
+            "name": "Close combat weapon",
+            "profiles": [
+                {
+                    "type": "Melee",
+                    "range": "Melee",
+                    "attacks": 3,
+                    "skill": 3,
+                    "strength": 4,
+                    "ap": 0,
+                    "damage": 1
+                }
+            ]
+        },
+        {
+            "name": "Power fist",
+            "profiles": [
+                {
+                    "type": "Melee",
+                    "range": "Melee",
+                    "attacks": 3,
+                    "skill": 3,
+                    "strength": 8,
+                    "ap": -2,
+                    "damage": 2
+                }
+            ]
+        },
+        {
+            "name": "Power weapon",
+            "profiles": [
+                {
+                    "type": "Melee",
+                    "range": "Melee",
+                    "attacks": 4,
+                    "skill": 3,
+                    "strength": 5,
+                    "ap": -2,
+                    "damage": 1
+                }
+            ]
+        },
+        {
+            "name": "Thunder hammer",
+            "profiles": [
+                {
+                    "type": "Melee",
+                    "range": "Melee",
+                    "attacks": 3,
+                    "skill": 4,
+                    "strength": 8,
+                    "ap": -2,
+                    "damage": 2,
+                    "special_rules": ["DEVASTATING WOUNDS"]
+                }
+            ]
+        }
+    ],
+    "wargear_options": [
+        {
+            "description": "The Intercessor Sergeant's bolt rifle can be replaced with one of the following:",
+            "options": [
+                "1 Astartes chainsword",
+                "1 hand flamer",
+                "1 plasma pistol",
+                "1 power weapon"
+            ]
+        },
+        {
+            "description": "The Intercessor Sergeant's close combat weapon can be replaced with one of the following:",
+            "options": [
+                "1 Astartes chainsword",
+                "1 power fist",
+                "1 power weapon",
+                "1 thunder hammer"
+            ]
+        },
+        {
+            "description": "For every 5 models in this unit, 1 model equipped with a bolt rifle can be equipped with 1 Astartes grenade launcher."
+        }
+    ],
+    "abilities": {
+        "core": [],
+        "faction": [
+            "Oath of Moment"
+        ],
+        "unit": [
+            {
+                "name": "Objective Secured",
+                "description": "If you control an objective marker at the end of your Command phase and this unit is within range of that objective marker, that objective marker remains under your control, even if you have no models within range of it, until your opponent controls it at the start or end of any turn."
+            },
+            {
+                "name": "Target Elimination",
+                "description": "Each time this unit is selected to shoot, it can use this ability. If it does, until the end of the phase, add 2 to the Attacks characteristic of bolt rifles equipped by models in this unit and you can only select one enemy unit as the target of all of this unit's attacks."
+            }
+        ]
+    },
+    "keywords": [
+        "INFANTRY",
+        "BATTLELINE",
+        "GRENADES",
+        "IMPERIUM",
+        "TACTICUS",
+        "INTERCESSOR SQUAD"
+    ],
+    "faction_keywords": [
+        "ADEPTUS ASTARTES"
+    ]
+} 

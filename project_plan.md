@@ -1,204 +1,255 @@
-# Warhammer 40K Space Marines Points Efficiency Calculator
+# Warhammer 40K Space Marines Data Collection
 ## Project Implementation Plan
 
 ### 1. Project Structure
 ```
 40k-data/
-├── src/
-│   ├── models/
-│   │   └── unit.py          # Unit data models/schemas
-│   ├── data/
-│   │   ├── units/           # JSON files for unit data backup
-│   │   └── weapons/         # JSON files for weapon data backup
-│   ├── utils/
-│   │   ├── db.py           # MongoDB connection and operations
-│   │   └── calculator.py    # Points efficiency calculations
-│   └── main.py             # Main application entry point
-├── requirements.txt         # Project dependencies
-└── README.md               # Project documentation
-```
+├── data/
+│   ├── units/                 # Individual unit JSON files
+│   │   ├── characters/       # Character units (Captains, Lieutenants, etc.)
+│   │   ├── battle_line/      # Battle Line units (Intercessors, Tactical Marines)
+│   │   ├── infantry/         # Other infantry units (Terminators, Vanguard)
+│   │   ├── mounted/          # Mounted units (Bikes, Outriders)
+│   │   ├── vehicles/         # Vehicle units (Predators, Vindicators)
+│   │   └── transports/       # Transport units (Drop Pods, Rhinos)
+│   └── weapons/              # Shared weapon profiles
+├── schemas/                   # JSON schemas for validation
+│   ├── unit_schema.json      # Unit data structure definition
+│   └── weapon_schema.json    # Weapon data structure definition
+└── README.md                 # Project documentation
 
-### 2. Database Setup
-```python
-# src/utils/db.py
-from pymongo import MongoClient
+### 2. Data Structure
 
-class Database:
-    def __init__(self):
-        self.client = MongoClient("mongodb://localhost:27017/")
-        self.db = self.client["warhammer40k"]
-        self.units = self.db["space_marines"]
-        
-    def insert_unit(self, unit_data):
-        return self.units.insert_one(unit_data)
-        
-    def get_unit(self, name):
-        return self.units.find_one({"name": name})
-        
-    def get_all_units(self):
-        return list(self.units.find())
-```
+The data structure is designed to capture all relevant information for Space Marine units in 10th edition. Here's what each major section represents:
 
-### 3. Unit Data Model
-```python
-# src/models/unit.py
-from typing import List, Dict, Optional
+#### Core Unit Information
+- `name`: Unit's full name
+- `faction`: Always "Space Marines" for this dataset
+- `points`: Base points cost for the minimum size unit
 
-class Weapon:
-    def __init__(self, name: str, type: str, range: int, attacks: int, 
-                 strength: int, ap: int, damage: int, risk: Optional[str] = None):
-        self.name = name
-        self.type = type
-        self.range = range
-        self.attacks = attacks
-        self.strength = strength
-        self.ap = ap
-        self.damage = damage
-        self.risk = risk
+#### Unit Composition
+- `base_size`: Minimum number of models in the unit
+- `max_size`: Maximum number of models allowed
+- `points_per_model`: Points cost for each additional model
 
-    def to_dict(self) -> Dict:
-        return {
-            "name": self.name,
-            "type": self.type,
-            "range": self.range,
-            "attacks": self.attacks,
-            "strength": self.strength,
-            "ap": self.ap,
-            "damage": self.damage,
-            "risk": self.risk
-        }
+#### Stats
+All basic unit statistics that appear on their datasheet:
+- `movement`: Movement in inches
+- `toughness`: Toughness characteristic
+- `save`: Armor save value (e.g., 3 for 3+)
+- `wounds`: Wounds per model
+- `leadership`: Leadership characteristic
+- `objective_control`: Number of models counted for controlling objectives
 
-class Unit:
-    def __init__(self, name: str, faction: str, stats: Dict, points: int,
-                 weapons: List[Weapon], loadout_options: List[Dict],
-                 default_loadout: List[str], abilities: List[Dict]):
-        self.name = name
-        self.faction = faction
-        self.stats = stats
-        self.points = points
-        self.weapons = weapons
-        self.loadout_options = loadout_options
-        self.default_loadout = default_loadout
-        self.abilities = abilities
+#### Weapons
+Each weapon includes:
+- `name`: Weapon name
+- `profiles`: List of different firing modes/profiles
+  - `type`: "Ranged" or "Melee"
+  - `range`: Range in inches (null for melee)
+  - `attacks`: Number of attacks
+  - `skill`: Weapon Skill (melee) or Ballistic Skill (ranged)
+  - `strength`: Strength of the weapon
+  - `ap`: Armor Penetration value
+  - `damage`: Damage value
+  - `special_rules`: Any special rules that apply
 
-    def to_dict(self) -> Dict:
-        return {
-            "name": self.name,
-            "faction": self.faction,
-            "stats": self.stats,
-            "points": self.points,
-            "weapons": [w.to_dict() for w in self.weapons],
-            "loadout_options": self.loadout_options,
-            "default_loadout": self.default_loadout,
-            "abilities": self.abilities
-        }
-```
+#### Abilities
+Grouped into three categories:
+- `core`: Core abilities all Space Marines share
+- `faction`: Faction-specific abilities
+- `unit`: Special abilities unique to this unit
 
-### 4. Points Efficiency Calculator
-```python
-# src/utils/calculator.py
-class EfficiencyCalculator:
-    def calculate_wounds_per_point(self, unit_data: dict) -> float:
-        total_wounds = unit_data["stats"]["wounds"]
-        points = unit_data["points"]
-        save = unit_data["stats"]["save"]
-        
-        # Calculate effective wounds considering saves
-        failed_save_prob = (save - 1) / 6
-        effective_wounds = total_wounds / (1 - failed_save_prob)
-        
-        return effective_wounds / points
+#### Keywords
+All relevant keywords for the unit, used for rule interactions and detachment building
 
-    def calculate_damage_per_point(self, unit_data: dict) -> float:
-        # Calculate average damage output per point
-        total_damage = 0
-        for weapon in unit_data["weapons"]:
-            damage = weapon["damage"]
-            attacks = weapon["attacks"]
-            total_damage += damage * attacks
-            
-        return total_damage / unit_data["points"]
-```
-
-### 5. Main Application
-```python
-# src/main.py
-from utils.db import Database
-from utils.calculator import EfficiencyCalculator
-from models.unit import Unit, Weapon
-
-def main():
-    # Initialize database and calculator
-    db = Database()
-    calculator = EfficiencyCalculator()
-    
-    # Example: Add a unit to the database
-    hellblaster = Unit(
-        name="Hellblaster Squad",
-        faction="Space Marines",
-        stats={
-            "movement": 6,
-            "toughness": 4,
-            "save": 3,
-            "wounds": 2,
-            "leadership": 6,
-            "oc": 2
+#### Unit JSON Structure
+```json
+{
+    "name": "Intercessor Squad",
+    "faction": "Space Marines",
+    "points": 95,
+    "unit_composition": {
+        "base_size": 5,
+        "max_size": 10,
+        "points_per_model": 19
+    },
+    "stats": {
+        "movement": 6,
+        "toughness": 4,
+        "save": 3,
+        "wounds": 2,
+        "leadership": 6,
+        "objective_control": 2
+    },
+    "weapons": [
+        {
+            "name": "Bolt Rifle",
+            "profiles": [
+                {
+                    "type": "Ranged",
+                    "range": 30,
+                    "attacks": 2,
+                    "skill": 3,
+                    "strength": 4,
+                    "ap": -1,
+                    "damage": 1
+                }
+            ]
         },
-        points=115,
-        weapons=[
-            Weapon(
-                name="Plasma Incinerator",
-                type="Standard",
-                range=30,
-                attacks=1,
-                strength=7,
-                ap=-3,
-                damage=1
-            )
+        {
+            "name": "Close Combat Weapon",
+            "profiles": [
+                {
+                    "type": "Melee",
+                    "range": null,
+                    "attacks": 2,
+                    "skill": 3,
+                    "strength": 4,
+                    "ap": 0,
+                    "damage": 1
+                }
+            ]
+        }
+    ],
+    "wargear_options": [
+        {
+            "description": "The Intercessor Sergeant can be equipped with 1 of the following instead of 1 bolt rifle:",
+            "options": [
+                "Astartes chainsword",
+                "Hand flamer",
+                "Plasma pistol",
+                "Power sword",
+                "Thunder hammer"
+            ]
+        }
+    ],
+    "abilities": {
+        "core": [
+            "Scouts 6\"",
+            "Leader"
         ],
-        loadout_options=[{"description": "Each model can take a Plasma Incinerator"}],
-        default_loadout=["Plasma Incinerator"],
-        abilities=[{"name": "Angels of Death"}]
-    )
-    
-    # Insert unit into database
-    db.insert_unit(hellblaster.to_dict())
-    
-    # Calculate efficiency
-    unit_data = db.get_unit("Hellblaster Squad")
-    wounds_per_point = calculator.calculate_wounds_per_point(unit_data)
-    damage_per_point = calculator.calculate_damage_per_point(unit_data)
-    
-    print(f"Wounds per point: {wounds_per_point}")
-    print(f"Damage per point: {damage_per_point}")
-
-if __name__ == "__main__":
-    main()
+        "faction": [
+            "Oath of Moment"
+        ],
+        "unit": [
+            {
+                "name": "Combat Squads",
+                "description": "Before any models are deployed, if this unit contains 10 models, it can be divided into two units containing 5 models each."
+            }
+        ]
+    },
+    "keywords": [
+        "Infantry",
+        "Battleline",
+        "Grenades",
+        "Imperium",
+        "Tacticus",
+        "Intercessor Squad"
+    ],
+    "model_count": {
+        "min": 5,
+        "max": 10
+    }
+}
 ```
 
-### 6. Requirements
-```
-# requirements.txt
-pymongo==4.6.1
+#### Weapon JSON Structure
+```json
+{
+    "name": "Bolt Rifle",
+    "category": "Basic Weapons",
+    "profiles": [
+        {
+            "type": "Ranged",
+            "range": 30,
+            "attacks": 2,
+            "skill": 3,
+            "strength": 4,
+            "ap": -1,
+            "damage": 1,
+            "special_rules": [
+                "Rapid Fire 1"
+            ]
+        }
+    ]
+}
 ```
 
-### Implementation Notes
-1. The project uses MongoDB for primary storage of unit data
-2. JSON files serve as backups and for version control
-3. The calculator provides:
-   - Wounds per point analysis
-   - Damage per point analysis
-   - Flexible unit and weapon data models
-4. The structure is scalable for adding more features like:
-   - Additional efficiency metrics
-   - More unit types
-   - Battle simulation
-   - UI integration
+### 3. Implementation Steps
 
-### Next Steps
-1. Set up MongoDB locally or using MongoDB Atlas
-2. Create the project directory structure
-3. Install required dependencies
-4. Implement the core classes
-5. Add unit data
-6. Test calculations and database operations 
+1. Create Base Directory Structure
+   - Create folders for each unit category
+   - Set up schemas directory
+
+2. Create JSON Schemas
+   - Define unit data validation rules
+   - Define weapon data validation rules
+
+3. Data Collection
+   - Start with Battle Line units (core troops)
+   - Add Character units
+   - Add Infantry units
+   - Add Mounted units
+   - Add Vehicles
+   - Add Transports
+   - Document special rules and abilities
+
+4. Data Validation
+   - Validate all JSON files against schemas
+   - Check for consistency in weapon profiles
+   - Verify points costs and power ratings
+
+### 4. Example Unit Files
+
+#### Example: troops/intercessor_squad.json
+```json
+{
+    "name": "Intercessor Squad",
+    // ... (full unit data as shown in structure above)
+}
+```
+
+#### Example: weapons/bolt_weapons.json
+```json
+{
+    "bolt_rifle": {
+        "name": "Bolt Rifle",
+        // ... (weapon data as shown in structure above)
+    },
+    "auto_bolt_rifle": {
+        "name": "Auto Bolt Rifle",
+        "profiles": [
+            {
+                "type": "Ranged",
+                "range": 24,
+                "attacks": 3,
+                "skill": 3,
+                "strength": 4,
+                "ap": 0,
+                "damage": 1
+            }
+        ]
+    }
+}
+```
+
+### 5. Next Steps
+
+1. Create the directory structure
+2. Write JSON schemas for validation
+3. Start with core Battle Line choices:
+   - Intercessor Squad
+   - Tactical Squad
+   - Assault Intercessor Squad
+4. Add Character choices:
+   - Captain
+   - Lieutenant
+   - Chaplain
+5. Continue with remaining units:
+   - Infantry units
+   - Mounted units
+   - Vehicles
+   - Transports
+6. Add weapon profiles
+7. Validate all data files 

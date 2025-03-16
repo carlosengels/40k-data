@@ -1,0 +1,180 @@
+{
+    "name": "Assault Intercessor Squad",
+    "faction": "Space Marines",
+    "points": 75,
+    "unit_composition": {
+        "base_size": 5,
+        "max_size": 10,
+        "points_per_model": 15
+    },
+    "stats": {
+        "movement": 6,
+        "toughness": 4,
+        "save": 3,
+        "wounds": 2,
+        "leadership": 6,
+        "objective_control": 2
+    },
+    "weapons": [
+        {
+            "name": "Heavy bolt pistol",
+            "profiles": [
+                {
+                    "type": "Ranged",
+                    "range": 18,
+                    "attacks": 1,
+                    "skill": 3,
+                    "strength": 4,
+                    "ap": -1,
+                    "damage": 1
+                }
+            ]
+        },
+        {
+            "name": "Hand flamer",
+            "profiles": [
+                {
+                    "type": "Ranged",
+                    "range": 12,
+                    "attacks": "D6",
+                    "skill": null,
+                    "strength": 3,
+                    "ap": 0,
+                    "damage": 1,
+                    "special_rules": ["IGNORES COVER", "PISTOL", "TORRENT"]
+                }
+            ]
+        },
+        {
+            "name": "Plasma pistol - standard",
+            "profiles": [
+                {
+                    "type": "Ranged",
+                    "range": 12,
+                    "attacks": 1,
+                    "skill": 3,
+                    "strength": 7,
+                    "ap": -2,
+                    "damage": 1,
+                    "special_rules": ["PISTOL"]
+                }
+            ]
+        },
+        {
+            "name": "Plasma pistol - supercharge",
+            "profiles": [
+                {
+                    "type": "Ranged",
+                    "range": 12,
+                    "attacks": 1,
+                    "skill": 3,
+                    "strength": 8,
+                    "ap": -3,
+                    "damage": 2,
+                    "special_rules": ["HAZARDOUS", "PISTOL"]
+                }
+            ]
+        },
+        {
+            "name": "Astartes chainsword",
+            "profiles": [
+                {
+                    "type": "Melee",
+                    "range": "Melee",
+                    "attacks": 4,
+                    "skill": 3,
+                    "strength": 4,
+                    "ap": -1,
+                    "damage": 1
+                }
+            ]
+        },
+        {
+            "name": "Power fist",
+            "profiles": [
+                {
+                    "type": "Melee",
+                    "range": "Melee",
+                    "attacks": 3,
+                    "skill": 3,
+                    "strength": 8,
+                    "ap": -2,
+                    "damage": 2
+                }
+            ]
+        },
+        {
+            "name": "Power weapon",
+            "profiles": [
+                {
+                    "type": "Melee",
+                    "range": "Melee",
+                    "attacks": 4,
+                    "skill": 3,
+                    "strength": 5,
+                    "ap": -2,
+                    "damage": 1
+                }
+            ]
+        },
+        {
+            "name": "Thunder hammer",
+            "profiles": [
+                {
+                    "type": "Melee",
+                    "range": "Melee",
+                    "attacks": 3,
+                    "skill": 4,
+                    "strength": 8,
+                    "ap": -2,
+                    "damage": 2,
+                    "special_rules": ["DEVASTATING WOUNDS"]
+                }
+            ]
+        }
+    ],
+    "wargear_options": [
+        {
+            "description": "The Assault Intercessor Sergeant's heavy bolt pistol can be replaced with one of the following:",
+            "options": [
+                "1 hand flamer",
+                "1 plasma pistol"
+            ]
+        },
+        {
+            "description": "The Assault Intercessor Sergeant's Astartes chainsword can be replaced with one of the following:",
+            "options": [
+                "1 power fist",
+                "1 power weapon",
+                "1 thunder hammer"
+            ]
+        }
+    ],
+    "abilities": {
+        "core": [],
+        "faction": [
+            "Oath of Moment"
+        ],
+        "unit": [
+            {
+                "name": "Shock Assault",
+                "description": "Each time a model in this unit targets an enemy unit with a melee attack, re-roll a Wound roll of 1. If that enemy unit is within range of an objective marker, you can re-roll the Wound roll instead."
+            }
+        ]
+    },
+    "keywords": [
+        "INFANTRY",
+        "BATTLELINE",
+        "GRENADES",
+        "IMPERIUM",
+        "TACTICUS",
+        "ASSAULT INTERCESSOR SQUAD"
+    ],
+    "faction_keywords": [
+        "ADEPTUS ASTARTES"
+    ],
+    "leader": {
+        "can_be_attached": true,
+        "description": "You can attach this model to the above unit even if one Captain, Chapter Master or Lieutenant model has already been attached to it. If you do, and that Bodyguard unit is destroyed, the Leader units attached to it become separate units, with their original Starting Strengths."
+    }
+} 

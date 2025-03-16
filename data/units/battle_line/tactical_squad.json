@@ -1,0 +1,469 @@
+{
+    "name": "Tactical Squad",
+    "faction": "Space Marines",
+    "points": 140,
+    "unit_composition": {
+        "base_size": 10,
+        "max_size": 10,
+        "points_per_model": 14
+    },
+    "stats": {
+        "movement": 6,
+        "toughness": 4,
+        "save": 3,
+        "wounds": 2,
+        "leadership": 6,
+        "objective_control": 2
+    },
+    "weapons": [
+        {
+            "name": "Bolt pistol",
+            "profiles": [
+                {
+                    "type": "Ranged",
+                    "range": 12,
+                    "attacks": 1,
+                    "skill": 3,
+                    "strength": 4,
+                    "ap": 0,
+                    "damage": 1,
+                    "special_rules": ["PISTOL"]
+                }
+            ]
+        },
+        {
+            "name": "Boltgun",
+            "profiles": [
+                {
+                    "type": "Ranged",
+                    "range": 24,
+                    "attacks": 2,
+                    "skill": 3,
+                    "strength": 4,
+                    "ap": 0,
+                    "damage": 1
+                }
+            ]
+        },
+        {
+            "name": "Combi-weapon",
+            "profiles": [
+                {
+                    "type": "Ranged",
+                    "range": 24,
+                    "attacks": 1,
+                    "skill": 4,
+                    "strength": 4,
+                    "ap": 0,
+                    "damage": 1,
+                    "special_rules": ["ANTI-INFANTRY 4+", "DEVASTATING WOUNDS", "RAPID FIRE 1"]
+                }
+            ]
+        },
+        {
+            "name": "Flamer",
+            "profiles": [
+                {
+                    "type": "Ranged",
+                    "range": 12,
+                    "attacks": "D6",
+                    "skill": null,
+                    "strength": 4,
+                    "ap": 0,
+                    "damage": 1,
+                    "special_rules": ["IGNORES COVER", "TORRENT"]
+                }
+            ]
+        },
+        {
+            "name": "Grav-cannon",
+            "profiles": [
+                {
+                    "type": "Ranged",
+                    "range": 24,
+                    "attacks": 3,
+                    "skill": 4,
+                    "strength": 6,
+                    "ap": -1,
+                    "damage": 3,
+                    "special_rules": ["ANTI-VEHICLE 2+", "HEAVY"]
+                }
+            ]
+        },
+        {
+            "name": "Grav-gun",
+            "profiles": [
+                {
+                    "type": "Ranged",
+                    "range": 18,
+                    "attacks": 2,
+                    "skill": 3,
+                    "strength": 5,
+                    "ap": -1,
+                    "damage": 2,
+                    "special_rules": ["ANTI-VEHICLE 2+"]
+                }
+            ]
+        },
+        {
+            "name": "Grav-pistol",
+            "profiles": [
+                {
+                    "type": "Ranged",
+                    "range": 12,
+                    "attacks": 1,
+                    "skill": 3,
+                    "strength": 4,
+                    "ap": -1,
+                    "damage": 2,
+                    "special_rules": ["ANTI-VEHICLE 2+", "PISTOL"]
+                }
+            ]
+        },
+        {
+            "name": "Heavy bolter",
+            "profiles": [
+                {
+                    "type": "Ranged",
+                    "range": 36,
+                    "attacks": 3,
+                    "skill": 4,
+                    "strength": 5,
+                    "ap": -1,
+                    "damage": 2,
+                    "special_rules": ["HEAVY", "SUSTAINED HITS 1"]
+                }
+            ]
+        },
+        {
+            "name": "Lascannon",
+            "profiles": [
+                {
+                    "type": "Ranged",
+                    "range": 48,
+                    "attacks": 1,
+                    "skill": 4,
+                    "strength": 12,
+                    "ap": -3,
+                    "damage": "D6+1",
+                    "special_rules": ["HEAVY"]
+                }
+            ]
+        },
+        {
+            "name": "Meltagun",
+            "profiles": [
+                {
+                    "type": "Ranged",
+                    "range": 12,
+                    "attacks": 1,
+                    "skill": 3,
+                    "strength": 9,
+                    "ap": -4,
+                    "damage": "D6",
+                    "special_rules": ["MELTA 2"]
+                }
+            ]
+        },
+        {
+            "name": "Missile launcher - frag",
+            "profiles": [
+                {
+                    "type": "Ranged",
+                    "range": 48,
+                    "attacks": "D6",
+                    "skill": 4,
+                    "strength": 4,
+                    "ap": 0,
+                    "damage": 1,
+                    "special_rules": ["BLAST", "HEAVY"]
+                }
+            ]
+        },
+        {
+            "name": "Missile launcher - krak",
+            "profiles": [
+                {
+                    "type": "Ranged",
+                    "range": 48,
+                    "attacks": 1,
+                    "skill": 4,
+                    "strength": 9,
+                    "ap": -2,
+                    "damage": "D6",
+                    "special_rules": ["HEAVY"]
+                }
+            ]
+        },
+        {
+            "name": "Multi-melta",
+            "profiles": [
+                {
+                    "type": "Ranged",
+                    "range": 18,
+                    "attacks": 2,
+                    "skill": 4,
+                    "strength": 9,
+                    "ap": -4,
+                    "damage": "D6",
+                    "special_rules": ["HEAVY", "MELTA 2"]
+                }
+            ]
+        },
+        {
+            "name": "Plasma cannon - standard",
+            "profiles": [
+                {
+                    "type": "Ranged",
+                    "range": 36,
+                    "attacks": "D3",
+                    "skill": 4,
+                    "strength": 7,
+                    "ap": -2,
+                    "damage": 1,
+                    "special_rules": ["BLAST", "HEAVY"]
+                }
+            ]
+        },
+        {
+            "name": "Plasma cannon - supercharge",
+            "profiles": [
+                {
+                    "type": "Ranged",
+                    "range": 36,
+                    "attacks": "D3",
+                    "skill": 4,
+                    "strength": 8,
+                    "ap": -3,
+                    "damage": 2,
+                    "special_rules": ["BLAST", "HEAVY", "HAZARDOUS"]
+                }
+            ]
+        },
+        {
+            "name": "Plasma gun - standard",
+            "profiles": [
+                {
+                    "type": "Ranged",
+                    "range": 24,
+                    "attacks": 1,
+                    "skill": 3,
+                    "strength": 7,
+                    "ap": -2,
+                    "damage": 1,
+                    "special_rules": ["RAPID FIRE 1"]
+                }
+            ]
+        },
+        {
+            "name": "Plasma gun - supercharge",
+            "profiles": [
+                {
+                    "type": "Ranged",
+                    "range": 24,
+                    "attacks": 1,
+                    "skill": 3,
+                    "strength": 8,
+                    "ap": -3,
+                    "damage": 2,
+                    "special_rules": ["HAZARDOUS", "RAPID FIRE 1"]
+                }
+            ]
+        },
+        {
+            "name": "Plasma pistol - standard",
+            "profiles": [
+                {
+                    "type": "Ranged",
+                    "range": 12,
+                    "attacks": 1,
+                    "skill": 3,
+                    "strength": 7,
+                    "ap": -2,
+                    "damage": 1,
+                    "special_rules": ["PISTOL"]
+                }
+            ]
+        },
+        {
+            "name": "Plasma pistol - supercharge",
+            "profiles": [
+                {
+                    "type": "Ranged",
+                    "range": 12,
+                    "attacks": 1,
+                    "skill": 3,
+                    "strength": 8,
+                    "ap": -3,
+                    "damage": 2,
+                    "special_rules": ["HAZARDOUS", "PISTOL"]
+                }
+            ]
+        },
+        {
+            "name": "Storm bolter",
+            "profiles": [
+                {
+                    "type": "Ranged",
+                    "range": 24,
+                    "attacks": 2,
+                    "skill": 3,
+                    "strength": 4,
+                    "ap": 0,
+                    "damage": 1,
+                    "special_rules": ["RAPID FIRE 2"]
+                }
+            ]
+        },
+        {
+            "name": "Astartes chainsword",
+            "profiles": [
+                {
+                    "type": "Melee",
+                    "range": "Melee",
+                    "attacks": 4,
+                    "skill": 3,
+                    "strength": 4,
+                    "ap": -1,
+                    "damage": 1
+                }
+            ]
+        },
+        {
+            "name": "Close combat weapon",
+            "profiles": [
+                {
+                    "type": "Melee",
+                    "range": "Melee",
+                    "attacks": 2,
+                    "skill": 3,
+                    "strength": 4,
+                    "ap": 0,
+                    "damage": 1
+                }
+            ]
+        },
+        {
+            "name": "Power fist",
+            "profiles": [
+                {
+                    "type": "Melee",
+                    "range": "Melee",
+                    "attacks": 2,
+                    "skill": 3,
+                    "strength": 8,
+                    "ap": -2,
+                    "damage": 2
+                }
+            ]
+        },
+        {
+            "name": "Power weapon",
+            "profiles": [
+                {
+                    "type": "Melee",
+                    "range": "Melee",
+                    "attacks": 3,
+                    "skill": 3,
+                    "strength": 5,
+                    "ap": -2,
+                    "damage": 1
+                }
+            ]
+        },
+        {
+            "name": "Thunder hammer",
+            "profiles": [
+                {
+                    "type": "Melee",
+                    "range": "Melee",
+                    "attacks": 2,
+                    "skill": 4,
+                    "strength": 8,
+                    "ap": -2,
+                    "damage": 2,
+                    "special_rules": ["DEVASTATING WOUNDS"]
+                }
+            ]
+        },
+        {
+            "name": "Twin lightning claws",
+            "profiles": [
+                {
+                    "type": "Melee",
+                    "range": "Melee",
+                    "attacks": 4,
+                    "skill": 3,
+                    "strength": 4,
+                    "ap": -2,
+                    "damage": 1,
+                    "special_rules": ["TWIN-LINKED"]
+                }
+            ]
+        }
+    ],
+    "wargear_options": [
+        {
+            "description": "1 Tactical Marine's boltgun can be replaced with one of the following:",
+            "options": [
+                "1 flamer",
+                "1 heavy bolter",
+                "1 grav-cannon",
+                "1 grav-gun",
+                "1 lascannon",
+                "1 meltagun",
+                "1 missile launcher",
+                "1 multi-melta",
+                "1 plasma cannon",
+                "1 plasma gun"
+            ]
+        },
+        {
+            "description": "1 Tactical Marine's boltgun can be replaced with one of the following:",
+            "options": [
+                "1 flamer",
+                "1 grav-gun",
+                "1 meltagun",
+                "1 plasma gun"
+            ]
+        },
+        {
+            "description": "The Tactical Sergeant's bolt pistol and boltgun can be replaced with 1 twin lightning claws, or two different weapons from the following list:*",
+            "options": [
+                "1 Astartes chainsword",
+                "1 bolt pistol",
+                "1 boltgun",
+                "1 combi-weapon",
+                "1 grav-pistol",
+                "1 plasma pistol",
+                "1 storm bolter",
+                "1 power fist",
+                "1 power weapon",
+                "1 thunder hammer"
+            ],
+            "note": "* This model can only be equipped with two ranged weapons if one of them is a Pistol (and it can only have one Pistol)."
+        }
+    ],
+    "abilities": {
+        "core": [],
+        "faction": [
+            "Oath of Moment"
+        ],
+        "unit": [
+            {
+                "name": "Combat Squads",
+                "description": "At the start of the Declare Battle Formations step, before any units have been set up, this unit can be split into two units, each containing five models."
+            }
+        ]
+    },
+    "keywords": [
+        "INFANTRY",
+        "BATTLELINE",
+        "GRENADES",
+        "IMPERIUM",
+        "TACTICAL SQUAD"
+    ],
+    "faction_keywords": [
+        "ADEPTUS ASTARTES"
+    ]
+} 

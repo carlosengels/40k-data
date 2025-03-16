@@ -1,0 +1,107 @@
+{
+    "name": "Heavy Intercessor Squad",
+    "faction": "Space Marines",
+    "points": 110,
+    "unit_composition": {
+        "base_size": 5,
+        "max_size": 10,
+        "points_per_model": 22
+    },
+    "stats": {
+        "movement": 5,
+        "toughness": 6,
+        "save": 3,
+        "wounds": 3,
+        "leadership": 6,
+        "objective_control": 2
+    },
+    "weapons": [
+        {
+            "name": "Bolt pistol",
+            "profiles": [
+                {
+                    "type": "Ranged",
+                    "range": 12,
+                    "attacks": 1,
+                    "skill": 3,
+                    "strength": 4,
+                    "ap": 0,
+                    "damage": 1,
+                    "special_rules": ["PISTOL"]
+                }
+            ]
+        },
+        {
+            "name": "Heavy bolt rifle",
+            "profiles": [
+                {
+                    "type": "Ranged",
+                    "range": 30,
+                    "attacks": 2,
+                    "skill": 3,
+                    "strength": 5,
+                    "ap": -1,
+                    "damage": 2,
+                    "special_rules": ["ASSAULT", "HEAVY"]
+                }
+            ]
+        },
+        {
+            "name": "Heavy bolter",
+            "profiles": [
+                {
+                    "type": "Ranged",
+                    "range": 36,
+                    "attacks": 3,
+                    "skill": 3,
+                    "strength": 5,
+                    "ap": -1,
+                    "damage": 2,
+                    "special_rules": ["ASSAULT", "HEAVY", "SUSTAINED HITS 1"]
+                }
+            ]
+        },
+        {
+            "name": "Close combat weapon",
+            "profiles": [
+                {
+                    "type": "Melee",
+                    "range": "Melee",
+                    "attacks": 3,
+                    "skill": 3,
+                    "strength": 4,
+                    "ap": 0,
+                    "damage": 1
+                }
+            ]
+        }
+    ],
+    "wargear_options": [
+        {
+            "description": "For every 5 models in this unit, 1 Heavy Intercessor's heavy bolt rifle can be replaced with 1 heavy bolter."
+        }
+    ],
+    "abilities": {
+        "core": [],
+        "faction": [
+            "Oath of Moment"
+        ],
+        "unit": [
+            {
+                "name": "Unyielding in the Face of the Foe",
+                "description": "While this unit is within range of an objective marker you control, each time an attack with a Damage characteristic of 1 is allocated to a model in this unit, add 1 to any armour saving throw made against that attack."
+            }
+        ]
+    },
+    "keywords": [
+        "INFANTRY",
+        "BATTLELINE",
+        "GRENADES",
+        "IMPERIUM",
+        "GRAVIS",
+        "HEAVY INTERCESSOR SQUAD"
+    ],
+    "faction_keywords": [
+        "ADEPTUS ASTARTES"
+    ]
+} 
