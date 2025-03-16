@@ -1,0 +1,203 @@
+{
+    "name": "Impulsor",
+    "faction": "Space Marines",
+    "points": 80,
+    "unit_composition": {
+        "base_size": 1,
+        "max_size": 1,
+        "points_per_model": 80
+    },
+    "stats": {
+        "movement": 12,
+        "toughness": 9,
+        "save": 3,
+        "wounds": 11,
+        "leadership": 6,
+        "objective_control": 2
+    },
+    "weapons": [
+        {
+            "name": "Bellicatus missile array - frag",
+            "profiles": [
+                {
+                    "type": "Ranged",
+                    "range": 48,
+                    "attacks": "D6",
+                    "skill": 3,
+                    "strength": 4,
+                    "ap": 0,
+                    "damage": 1,
+                    "special_rules": ["BLAST"]
+                }
+            ]
+        },
+        {
+            "name": "Bellicatus missile array - Icarus",
+            "profiles": [
+                {
+                    "type": "Ranged",
+                    "range": 48,
+                    "attacks": "D3",
+                    "skill": 3,
+                    "strength": 8,
+                    "ap": -1,
+                    "damage": 2,
+                    "special_rules": ["ANTI-FLY 2+"]
+                }
+            ]
+        },
+        {
+            "name": "Bellicatus missile array - krak",
+            "profiles": [
+                {
+                    "type": "Ranged",
+                    "range": 48,
+                    "attacks": 1,
+                    "skill": 3,
+                    "strength": 8,
+                    "ap": -2,
+                    "damage": "D6"
+                }
+            ]
+        },
+        {
+            "name": "Fragstorm grenade launcher",
+            "profiles": [
+                {
+                    "type": "Ranged",
+                    "range": 18,
+                    "attacks": "D6",
+                    "skill": 3,
+                    "strength": 4,
+                    "ap": 0,
+                    "damage": 1,
+                    "special_rules": ["BLAST"]
+                }
+            ]
+        },
+        {
+            "name": "Ironhail heavy stubber",
+            "profiles": [
+                {
+                    "type": "Ranged",
+                    "range": 36,
+                    "attacks": 3,
+                    "skill": 3,
+                    "strength": 4,
+                    "ap": 0,
+                    "damage": 1,
+                    "special_rules": ["RAPID FIRE 3"]
+                }
+            ]
+        },
+        {
+            "name": "Ironhail skytalon array",
+            "profiles": [
+                {
+                    "type": "Ranged",
+                    "range": 36,
+                    "attacks": 8,
+                    "skill": 3,
+                    "strength": 4,
+                    "ap": 0,
+                    "damage": 1,
+                    "special_rules": ["ANTI-FLY 4+", "SUSTAINED HITS 1"]
+                }
+            ]
+        },
+        {
+            "name": "Storm bolter",
+            "profiles": [
+                {
+                    "type": "Ranged",
+                    "range": 24,
+                    "attacks": 2,
+                    "skill": 3,
+                    "strength": 4,
+                    "ap": 0,
+                    "damage": 1,
+                    "special_rules": ["RAPID FIRE 2"]
+                }
+            ]
+        },
+        {
+            "name": "Armoured hull",
+            "profiles": [
+                {
+                    "type": "Melee",
+                    "range": "Melee",
+                    "attacks": 3,
+                    "skill": 4,
+                    "strength": 6,
+                    "ap": 0,
+                    "damage": 1
+                }
+            ]
+        }
+    ],
+    "wargear_options": [
+        {
+            "description": "This model can be equipped with 1 ironhail heavy stubber.",
+            "options": [
+                "1 ironhail heavy stubber"
+            ]
+        },
+        {
+            "description": "This model's 2 storm bolters can be replaced with 2 fragstorm grenade launchers.",
+            "options": [
+                "2 fragstorm grenade launchers"
+            ]
+        },
+        {
+            "description": "This model can be equipped with one of the following:",
+            "options": [
+                "1 bellicatus missile array",
+                "1 ironhail skytalon array",
+                "1 orbital comms array",
+                "1 shield dome"
+            ]
+        }
+    ],
+    "abilities": {
+        "core": [
+            "Deadly Demise D3",
+            "Firing Deck 6"
+        ],
+        "faction": [
+            "Oath of Moment"
+        ],
+        "unit": [
+            {
+                "name": "Assault Vehicle",
+                "description": "Units can disembark from this TRANSPORT after it has Advanced. Units that do so count as having made a Normal move, and cannot declare a charge that turn."
+            }
+        ],
+        "wargear": [
+            {
+                "name": "Orbital Comms Array",
+                "description": "(Aura): While a friendly ADEPTUS ASTARTES unit is within 6\" of the bearer, each time you target that unit with a Stratagem, roll one D6: on a 5+, you gain 1CP."
+            },
+            {
+                "name": "Shield Dome",
+                "description": "The bearer has a 5+ invulnerable save."
+            }
+        ]
+    },
+    "transport": {
+        "capacity": 7,
+        "restrictions": [
+            "TACTICUS or PHOBOS INFANTRY models",
+            "Cannot transport JUMP PACK models"
+        ]
+    },
+    "keywords": [
+        "VEHICLE",
+        "TRANSPORT",
+        "DEDICATED TRANSPORT",
+        "IMPERIUM",
+        "IMPULSOR"
+    ],
+    "faction_keywords": [
+        "ADEPTUS ASTARTES"
+    ]
+} 

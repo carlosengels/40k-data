@@ -1,0 +1,170 @@
+{
+    "name": "Captain in Gravis Armour",
+    "faction": "Space Marines",
+    "points": 80,
+    "unit_composition": {
+        "base_size": 1,
+        "max_size": 1,
+        "points_per_model": 80
+    },
+    "stats": {
+        "movement": 5,
+        "toughness": 6,
+        "save": 3,
+        "wounds": 6,
+        "leadership": 6,
+        "objective_control": 1,
+        "invulnerable": 4
+    },
+    "weapons": [
+        {
+            "name": "Boltstorm gauntlet",
+            "profiles": [
+                {
+                    "type": "Ranged",
+                    "range": 12,
+                    "attacks": 3,
+                    "skill": 2,
+                    "strength": 4,
+                    "ap": -1,
+                    "damage": 1,
+                    "special_rules": ["PISTOL"]
+                }
+            ]
+        },
+        {
+            "name": "Master-crafted heavy bolt rifle",
+            "profiles": [
+                {
+                    "type": "Ranged",
+                    "range": 30,
+                    "attacks": 2,
+                    "skill": 2,
+                    "strength": 5,
+                    "ap": -1,
+                    "damage": 3,
+                    "special_rules": ["ASSAULT", "HEAVY"]
+                }
+            ]
+        },
+        {
+            "name": "Master-crafted power weapon",
+            "profiles": [
+                {
+                    "type": "Melee",
+                    "range": "Melee",
+                    "attacks": 6,
+                    "skill": 2,
+                    "strength": 5,
+                    "ap": -2,
+                    "damage": 2
+                }
+            ]
+        },
+        {
+            "name": "Power fist",
+            "profiles": [
+                {
+                    "type": "Melee",
+                    "range": "Melee",
+                    "attacks": 5,
+                    "skill": 2,
+                    "strength": 8,
+                    "ap": -2,
+                    "damage": 2
+                }
+            ]
+        },
+        {
+            "name": "Relic blade",
+            "profiles": [
+                {
+                    "type": "Melee",
+                    "range": "Melee",
+                    "attacks": 2,
+                    "skill": 2,
+                    "strength": 5,
+                    "ap": -2,
+                    "damage": 2,
+                    "special_rules": ["EXTRA ATTACKS"]
+                }
+            ]
+        },
+        {
+            "name": "Relic chainsword",
+            "profiles": [
+                {
+                    "type": "Melee",
+                    "range": "Melee",
+                    "attacks": 3,
+                    "skill": 2,
+                    "strength": 4,
+                    "ap": -1,
+                    "damage": 2,
+                    "special_rules": ["EXTRA ATTACKS"]
+                }
+            ]
+        },
+        {
+            "name": "Relic fist",
+            "profiles": [
+                {
+                    "type": "Melee",
+                    "range": "Melee",
+                    "attacks": 1,
+                    "skill": 2,
+                    "strength": 8,
+                    "ap": -2,
+                    "damage": 2,
+                    "special_rules": ["EXTRA ATTACKS"]
+                }
+            ]
+        }
+    ],
+    "wargear_options": [
+        {
+            "description": "This model's master-crafted heavy bolt rifle and master-crafted power weapon can be replaced with:",
+            "options": [
+                "1 boltstorm gauntlet, 1 power fist and 1 relic chainsword",
+                "1 boltstorm gauntlet, 1 power fist and 1 relic blade",
+                "1 boltstorm gauntlet, 1 power fist and 1 relic fist"
+            ]
+        }
+    ],
+    "abilities": {
+        "core": [
+            "Leader"
+        ],
+        "faction": [
+            "Oath of Moment"
+        ],
+        "unit": [
+            {
+                "name": "Rites of Battle",
+                "description": "Once per battle round, one unit from your army with this ability can use it when its unit is targeted with a Stratagem. If it does, reduce the CP cost of that use of that Stratagem by 1CP."
+            },
+            {
+                "name": "Refuse to Yield",
+                "description": "Each time an attack is allocated to this model, halve the Damage characteristic of that attack."
+            }
+        ]
+    },
+    "leader": {
+        "can_lead": [
+            "Aggressor Squad",
+            "Eradicator Squad",
+            "Heavy Intercessor Squad"
+        ]
+    },
+    "keywords": [
+        "INFANTRY",
+        "CHARACTER",
+        "GRENADES",
+        "IMPERIUM",
+        "GRAVIS",
+        "CAPTAIN"
+    ],
+    "faction_keywords": [
+        "ADEPTUS ASTARTES"
+    ]
+} 

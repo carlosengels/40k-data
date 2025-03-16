@@ -1,0 +1,131 @@
+{
+    "name": "Ancient",
+    "faction": "Space Marines",
+    "points": 50,
+    "unit_composition": {
+        "base_size": 1,
+        "max_size": 1,
+        "points_per_model": 50
+    },
+    "stats": {
+        "movement": 6,
+        "toughness": 4,
+        "save": 3,
+        "wounds": 4,
+        "leadership": 6,
+        "objective_control": 1
+    },
+    "weapons": [
+        {
+            "name": "Bolt pistol",
+            "profiles": [
+                {
+                    "type": "Ranged",
+                    "range": 12,
+                    "attacks": 1,
+                    "skill": 3,
+                    "strength": 4,
+                    "ap": 0,
+                    "damage": 1,
+                    "special_rules": ["PISTOL"]
+                }
+            ]
+        },
+        {
+            "name": "Bolt rifle",
+            "profiles": [
+                {
+                    "type": "Ranged",
+                    "range": 24,
+                    "attacks": 2,
+                    "skill": 3,
+                    "strength": 4,
+                    "ap": -1,
+                    "damage": 1,
+                    "special_rules": ["ASSAULT", "HEAVY"]
+                }
+            ]
+        },
+        {
+            "name": "Close combat weapon",
+            "profiles": [
+                {
+                    "type": "Melee",
+                    "range": "Melee",
+                    "attacks": 5,
+                    "skill": 2,
+                    "strength": 4,
+                    "ap": 0,
+                    "damage": 1
+                }
+            ]
+        },
+        {
+            "name": "Power weapon",
+            "profiles": [
+                {
+                    "type": "Melee",
+                    "range": "Melee",
+                    "attacks": 5,
+                    "skill": 2,
+                    "strength": 5,
+                    "ap": -2,
+                    "damage": 1
+                }
+            ]
+        }
+    ],
+    "wargear_options": [
+        {
+            "description": "This model's bolt rifle and close combat weapon can be replaced with 1 power weapon.",
+            "options": [
+                "1 power weapon"
+            ]
+        }
+    ],
+    "abilities": {
+        "core": [
+            "Leader"
+        ],
+        "faction": [
+            "Oath of Moment"
+        ],
+        "unit": [
+            {
+                "name": "Astartes Banner",
+                "description": "While this model is leading a unit, add 1 to the Objective Control characteristic of models in that unit."
+            },
+            {
+                "name": "Unbreakable Duty",
+                "description": "While this model is within range of an objective marker and/or within 6\" of the centre of the battlefield, this model has the Feel No Pain 4+ ability."
+            }
+        ]
+    },
+    "leader": {
+        "can_lead": [
+            "Assault Intercessor Squad",
+            "Desolation Squad",
+            "Devastator Squad",
+            "Hellblaster Squad",
+            "Infernus Squad",
+            "Intercessor Squad",
+            "Sternguard Veteran Squad",
+            "Tactical Squad"
+        ],
+        "rules": [
+            "You can attach this model to one of the above units even if one CAPTAIN, CHAPTER MASTER or LIEUTENANT model has already been attached to it.",
+            "If you do, and that Bodyguard unit is destroyed, the Leader units attached to it become separate units, with their original Starting Strengths."
+        ]
+    },
+    "keywords": [
+        "INFANTRY",
+        "CHARACTER",
+        "GRENADES",
+        "IMPERIUM",
+        "TACTICUS",
+        "ANCIENT"
+    ],
+    "faction_keywords": [
+        "ADEPTUS ASTARTES"
+    ]
+} 

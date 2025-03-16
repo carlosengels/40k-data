@@ -1,0 +1,89 @@
+{
+    "name": "Bladeguard Ancient",
+    "faction": "Space Marines",
+    "points": 45,
+    "unit_composition": {
+        "base_size": 1,
+        "max_size": 1,
+        "points_per_model": 45
+    },
+    "stats": {
+        "movement": 6,
+        "toughness": 4,
+        "save": 3,
+        "wounds": 4,
+        "leadership": 6,
+        "objective_control": 1,
+        "invulnerable": 4
+    },
+    "weapons": [
+        {
+            "name": "Heavy bolt pistol",
+            "profiles": [
+                {
+                    "type": "Ranged",
+                    "range": 18,
+                    "attacks": 1,
+                    "skill": 3,
+                    "strength": 4,
+                    "ap": -1,
+                    "damage": 1,
+                    "special_rules": ["PISTOL"]
+                }
+            ]
+        },
+        {
+            "name": "Close combat weapon",
+            "profiles": [
+                {
+                    "type": "Melee",
+                    "range": "Melee",
+                    "attacks": 5,
+                    "skill": 2,
+                    "strength": 4,
+                    "ap": 0,
+                    "damage": 1
+                }
+            ]
+        }
+    ],
+    "abilities": {
+        "core": [
+            "Leader"
+        ],
+        "faction": [
+            "Oath of Moment"
+        ],
+        "unit": [
+            {
+                "name": "Astartes Banner",
+                "description": "While this model is leading a unit, add 1 to the Objective Control characteristic of models in that unit."
+            },
+            {
+                "name": "Deeds of Heroism",
+                "description": "Once per battle, when this model is selected to fight, it can use this ability. If it does, until the end of the phase, add 1 to the Attacks characteristic of melee weapons equipped by models in this model's unit."
+            }
+        ]
+    },
+    "leader": {
+        "can_lead": [
+            "Bladeguard Veteran Squad"
+        ],
+        "rules": [
+            "You can attach this model to the above unit even if one CAPTAIN, CHAPTER MASTER or LIEUTENANT model has already been attached to it.",
+            "If you do, and that Bodyguard unit is destroyed, the LEADER units attached to it become separate units, with their original Starting Strengths."
+        ]
+    },
+    "keywords": [
+        "INFANTRY",
+        "CHARACTER",
+        "GRENADES",
+        "IMPERIUM",
+        "TACTICUS",
+        "ANCIENT",
+        "BLADEGUARD ANCIENT"
+    ],
+    "faction_keywords": [
+        "ADEPTUS ASTARTES"
+    ]
+} 

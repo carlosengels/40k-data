@@ -1,0 +1,139 @@
+{
+    "name": "Marneus Calgar",
+    "faction": "Space Marines",
+    "points": 210,
+    "unit_composition": {
+        "base_size": 3,
+        "max_size": 3,
+        "points_per_model": 210,
+        "models": [
+            {
+                "name": "Marneus Calgar",
+                "stats": {
+                    "movement": 6,
+                    "toughness": 6,
+                    "save": 2,
+                    "wounds": 6,
+                    "leadership": 6,
+                    "objective_control": 1,
+                    "invulnerable": 4
+                },
+                "is_epic_hero": true,
+                "weapons": [
+                    {
+                        "name": "Gauntlets of Ultramar (shooting)",
+                        "profiles": [
+                            {
+                                "type": "Ranged",
+                                "range": 18,
+                                "attacks": 4,
+                                "skill": 2,
+                                "strength": 4,
+                                "ap": -1,
+                                "damage": 2,
+                                "special_rules": ["PISTOL", "TWIN-LINKED"]
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Gauntlets of Ultramar (melee)",
+                        "profiles": [
+                            {
+                                "type": "Melee",
+                                "range": "Melee",
+                                "attacks": 6,
+                                "skill": 2,
+                                "strength": 8,
+                                "ap": -3,
+                                "damage": 3,
+                                "special_rules": ["TWIN-LINKED"]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "Victrix Honour Guard",
+                "count": 2,
+                "stats": {
+                    "movement": 6,
+                    "toughness": 4,
+                    "save": 2,
+                    "wounds": 3,
+                    "leadership": 6,
+                    "objective_control": 1,
+                    "invulnerable": 4
+                },
+                "weapons": [
+                    {
+                        "name": "Victrix power sword",
+                        "profiles": [
+                            {
+                                "type": "Melee",
+                                "range": "Melee",
+                                "attacks": 5,
+                                "skill": 2,
+                                "strength": 5,
+                                "ap": -2,
+                                "damage": 2
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    "abilities": {
+        "core": [
+            "Leader"
+        ],
+        "faction": [
+            "Oath of Moment"
+        ],
+        "unit": [
+            {
+                "name": "Inspiring Leader",
+                "description": "While this unit is leading a unit and contains a MARNEUS CALGAR model, that unit is eligible to shoot and declare a charge in a turn in which it Advanced or Fell Back"
+            },
+            {
+                "name": "Master Tactician",
+                "description": "At the start of your Command phase, if this unit's MARNEUS CALGAR model is on the battlefield, you gain 1CP."
+            },
+            {
+                "name": "Honour Guard of Macragge",
+                "description": "While this unit contains one or more Victrix Honour Guard models, this unit's MARNEUS CALGAR model has the Feel No Pain 4+ ability."
+            }
+        ]
+    },
+    "leader": {
+        "can_lead": [
+            "Aggressor Squad",
+            "Assault Intercessor Squad",
+            "Bladeguard Veteran Squad",
+            "Company Heroes",
+            "Eradicator Squad",
+            "Heavy Intercessor Squad",
+            "Infernus Squad",
+            "Intercessor Squad",
+            "Sternguard Veteran Squad",
+            "Tactical Squad"
+        ]
+    },
+    "keywords": {
+        "all_models": [
+            "INFANTRY",
+            "IMPERIUM"
+        ],
+        "marneus_calgar": [
+            "CHARACTER",
+            "EPIC HERO",
+            "GRAVIS",
+            "CHAPTER MASTER",
+            "MARNEUS CALGAR"
+        ]
+    },
+    "faction_keywords": [
+        "ADEPTUS ASTARTES",
+        "ULTRAMARINES"
+    ]
+} 

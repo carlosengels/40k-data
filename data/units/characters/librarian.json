@@ -1,0 +1,120 @@
+{
+    "name": "Librarian",
+    "faction": "Space Marines",
+    "points": 65,
+    "unit_composition": {
+        "base_size": 1,
+        "max_size": 1,
+        "points_per_model": 65
+    },
+    "stats": {
+        "movement": 6,
+        "toughness": 4,
+        "save": 3,
+        "wounds": 4,
+        "leadership": 6,
+        "objective_control": 1
+    },
+    "weapons": [
+        {
+            "name": "Bolt pistol",
+            "profiles": [
+                {
+                    "type": "Ranged",
+                    "range": 12,
+                    "attacks": 1,
+                    "skill": 3,
+                    "strength": 4,
+                    "ap": 0,
+                    "damage": 1,
+                    "special_rules": ["PISTOL"]
+                }
+            ]
+        },
+        {
+            "name": "Smite",
+            "profiles": [
+                {
+                    "name": "Witchfire",
+                    "type": "Ranged",
+                    "range": 24,
+                    "attacks": "D6",
+                    "skill": 3,
+                    "strength": 5,
+                    "ap": -1,
+                    "damage": "D3",
+                    "special_rules": ["PSYCHIC"]
+                },
+                {
+                    "name": "Focused witchfire",
+                    "type": "Ranged",
+                    "range": 24,
+                    "attacks": "D6",
+                    "skill": 3,
+                    "strength": 6,
+                    "ap": -2,
+                    "damage": "D3",
+                    "special_rules": ["DEVASTATING WOUNDS", "HAZARDOUS", "PSYCHIC"]
+                }
+            ]
+        },
+        {
+            "name": "Force weapon",
+            "profiles": [
+                {
+                    "type": "Melee",
+                    "range": "Melee",
+                    "attacks": 4,
+                    "skill": 3,
+                    "strength": 6,
+                    "ap": -1,
+                    "damage": "D3",
+                    "special_rules": ["PSYCHIC"]
+                }
+            ]
+        }
+    ],
+    "abilities": {
+        "core": [
+            "Leader"
+        ],
+        "faction": [
+            "Oath of Moment"
+        ],
+        "unit": [
+            {
+                "name": "Psychic Hood",
+                "description": "While this model is leading a unit, models in that unit have the Feel No Pain 4+ ability against Psychic Attacks."
+            },
+            {
+                "name": "Mental Fortress",
+                "description": "While this model is leading a unit, models in that unit have a 4+ invulnerable save.",
+                "is_psychic": true
+            }
+        ]
+    },
+    "leader": {
+        "can_lead": [
+            "Assault Intercessor Squad",
+            "Desolation Squad",
+            "Devastator Squad",
+            "Hellblaster Squad",
+            "Infernus Squad",
+            "Intercessor Squad",
+            "Sternguard Veteran Squad",
+            "Tactical Squad"
+        ]
+    },
+    "keywords": [
+        "INFANTRY",
+        "CHARACTER",
+        "GRENADES",
+        "PSYKER",
+        "IMPERIUM",
+        "TACTICUS",
+        "LIBRARIAN"
+    ],
+    "faction_keywords": [
+        "ADEPTUS ASTARTES"
+    ]
+} 

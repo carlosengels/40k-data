@@ -1,0 +1,231 @@
+{
+    "name": "Chaplain with Jump Pack",
+    "faction": "Space Marines",
+    "points": 75,
+    "unit_composition": {
+        "base_size": 1,
+        "max_size": 1,
+        "points_per_model": 75
+    },
+    "stats": {
+        "movement": 12,
+        "toughness": 4,
+        "save": 3,
+        "wounds": 4,
+        "leadership": 5,
+        "objective_control": 1,
+        "invulnerable": 4
+    },
+    "weapons": [
+        {
+            "name": "Bolt pistol",
+            "profiles": [
+                {
+                    "type": "Ranged",
+                    "range": 12,
+                    "attacks": 1,
+                    "skill": 3,
+                    "strength": 4,
+                    "ap": 0,
+                    "damage": 1,
+                    "special_rules": ["PISTOL"]
+                }
+            ]
+        },
+        {
+            "name": "Boltgun",
+            "profiles": [
+                {
+                    "type": "Ranged",
+                    "range": 24,
+                    "attacks": 2,
+                    "skill": 3,
+                    "strength": 4,
+                    "ap": 0,
+                    "damage": 1
+                }
+            ]
+        },
+        {
+            "name": "Combi-weapon",
+            "profiles": [
+                {
+                    "type": "Ranged",
+                    "range": 24,
+                    "attacks": 1,
+                    "skill": 4,
+                    "strength": 4,
+                    "ap": 0,
+                    "damage": 1,
+                    "special_rules": ["ANTI-INFANTRY 4+", "DEVASTATING WOUNDS", "RAPID FIRE 1"]
+                }
+            ]
+        },
+        {
+            "name": "Grav-pistol",
+            "profiles": [
+                {
+                    "type": "Ranged",
+                    "range": 12,
+                    "attacks": 1,
+                    "skill": 3,
+                    "strength": 4,
+                    "ap": -1,
+                    "damage": 2,
+                    "special_rules": ["ANTI-VEHICLE 2+", "PISTOL"]
+                }
+            ]
+        },
+        {
+            "name": "Hand flamer",
+            "profiles": [
+                {
+                    "type": "Ranged",
+                    "range": 12,
+                    "attacks": "D6",
+                    "skill": "N/A",
+                    "strength": 3,
+                    "ap": 0,
+                    "damage": 1,
+                    "special_rules": ["IGNORES COVER", "PISTOL", "TORRENT"]
+                }
+            ]
+        },
+        {
+            "name": "Inferno pistol",
+            "profiles": [
+                {
+                    "type": "Ranged",
+                    "range": 6,
+                    "attacks": 1,
+                    "skill": 3,
+                    "strength": 8,
+                    "ap": -4,
+                    "damage": "D3",
+                    "special_rules": ["MELTA 2", "PISTOL"]
+                }
+            ]
+        },
+        {
+            "name": "Plasma pistol",
+            "profiles": [
+                {
+                    "name": "Standard",
+                    "type": "Ranged",
+                    "range": 12,
+                    "attacks": 1,
+                    "skill": 3,
+                    "strength": 7,
+                    "ap": -2,
+                    "damage": 1,
+                    "special_rules": ["PISTOL"]
+                },
+                {
+                    "name": "Supercharge",
+                    "type": "Ranged",
+                    "range": 12,
+                    "attacks": 1,
+                    "skill": 3,
+                    "strength": 8,
+                    "ap": -3,
+                    "damage": 2,
+                    "special_rules": ["HAZARDOUS", "PISTOL"]
+                }
+            ]
+        },
+        {
+            "name": "Storm bolter",
+            "profiles": [
+                {
+                    "type": "Ranged",
+                    "range": 24,
+                    "attacks": 2,
+                    "skill": 3,
+                    "strength": 4,
+                    "ap": 0,
+                    "damage": 1,
+                    "special_rules": ["RAPID FIRE 2"]
+                }
+            ]
+        },
+        {
+            "name": "Crozius arcanum",
+            "profiles": [
+                {
+                    "type": "Melee",
+                    "range": "Melee",
+                    "attacks": 5,
+                    "skill": 2,
+                    "strength": 6,
+                    "ap": -1,
+                    "damage": 2
+                }
+            ]
+        },
+        {
+            "name": "Power fist",
+            "profiles": [
+                {
+                    "type": "Melee",
+                    "range": "Melee",
+                    "attacks": 4,
+                    "skill": 2,
+                    "strength": 8,
+                    "ap": -2,
+                    "damage": 2
+                }
+            ]
+        }
+    ],
+    "wargear_options": [
+        {
+            "description": "This model's bolt pistol can be replaced with one of the following:",
+            "options": [
+                "1 boltgun",
+                "1 combi-weapon",
+                "1 grav-pistol",
+                "1 hand flamer",
+                "1 inferno pistol",
+                "1 plasma pistol",
+                "1 storm bolter",
+                "1 power fist"
+            ]
+        }
+    ],
+    "abilities": {
+        "core": [
+            "Deep Strike",
+            "Leader"
+        ],
+        "faction": [
+            "Oath of Moment"
+        ],
+        "unit": [
+            {
+                "name": "Litany of Hate",
+                "description": "While this model is leading a unit, each time a model in that unit makes a melee attack, add 1 to the Wound roll."
+            },
+            {
+                "name": "Exhortation of Rage",
+                "description": "Each time this model's unit is selected to fight, you can select one enemy unit within Engagement Range of this model's unit and roll one D6: on a 4-5, that enemy unit suffers D3 mortal wounds; on a 6, that enemy unit suffers 3 mortal wounds."
+            }
+        ]
+    },
+    "leader": {
+        "can_lead": [
+            "Assault Intercessors With Jump Packs",
+            "Vanguard Veteran Squad With Jump Packs"
+        ]
+    },
+    "keywords": [
+        "INFANTRY",
+        "CHARACTER",
+        "JUMP PACK",
+        "FLY",
+        "IMPERIUM",
+        "CHAPLAIN"
+    ],
+    "faction_keywords": [
+        "ADEPTUS ASTARTES"
+    ]
+} 

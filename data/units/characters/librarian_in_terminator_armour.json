@@ -1,0 +1,139 @@
+{
+    "name": "Librarian in Terminator Armour",
+    "faction": "Space Marines",
+    "points": 75,
+    "unit_composition": {
+        "base_size": 1,
+        "max_size": 1,
+        "points_per_model": 75
+    },
+    "stats": {
+        "movement": 5,
+        "toughness": 5,
+        "save": 2,
+        "wounds": 5,
+        "leadership": 6,
+        "objective_control": 1,
+        "invulnerable": 4
+    },
+    "weapons": [
+        {
+            "name": "Combi-weapon",
+            "profiles": [
+                {
+                    "type": "Ranged",
+                    "range": 24,
+                    "attacks": 1,
+                    "skill": 4,
+                    "strength": 4,
+                    "ap": 0,
+                    "damage": 1,
+                    "special_rules": ["ANTI-INFANTRY 4+", "DEVASTATING WOUNDS", "RAPID FIRE 1"]
+                }
+            ]
+        },
+        {
+            "name": "Storm bolter",
+            "profiles": [
+                {
+                    "type": "Ranged",
+                    "range": 24,
+                    "attacks": 2,
+                    "skill": 3,
+                    "strength": 4,
+                    "ap": 0,
+                    "damage": 1,
+                    "special_rules": ["RAPID FIRE 2"]
+                }
+            ]
+        },
+        {
+            "name": "Smite",
+            "profiles": [
+                {
+                    "name": "Witchfire",
+                    "type": "Ranged",
+                    "range": 24,
+                    "attacks": "D6",
+                    "skill": 3,
+                    "strength": 5,
+                    "ap": -1,
+                    "damage": "D3",
+                    "special_rules": ["PSYCHIC"]
+                },
+                {
+                    "name": "Focused witchfire",
+                    "type": "Ranged",
+                    "range": 24,
+                    "attacks": "D6",
+                    "skill": 3,
+                    "strength": 6,
+                    "ap": -2,
+                    "damage": "D3",
+                    "special_rules": ["DEVASTATING WOUNDS", "HAZARDOUS", "PSYCHIC"]
+                }
+            ]
+        },
+        {
+            "name": "Force weapon",
+            "profiles": [
+                {
+                    "type": "Melee",
+                    "range": "Melee",
+                    "attacks": 4,
+                    "skill": 3,
+                    "strength": 6,
+                    "ap": -1,
+                    "damage": "D3",
+                    "special_rules": ["PSYCHIC"]
+                }
+            ]
+        }
+    ],
+    "wargear_options": [
+        {
+            "description": "This model can be equipped with one of the following:",
+            "options": [
+                "1 combi-weapon",
+                "1 storm bolter"
+            ]
+        }
+    ],
+    "abilities": {
+        "core": [
+            "Deep Strike",
+            "Leader"
+        ],
+        "faction": [
+            "Oath of Moment"
+        ],
+        "unit": [
+            {
+                "name": "Psychic Hood",
+                "description": "While this model is leading a unit, models in that unit have the Feel No Pain 4+ ability against Psychic Attacks."
+            },
+            {
+                "name": "Veil of Time",
+                "description": "While this model is leading a unit, weapons equipped by models in that unit have the [SUSTAINED HITS 1] ability.",
+                "is_psychic": true
+            }
+        ]
+    },
+    "leader": {
+        "can_lead": [
+            "Terminator Assault Squad",
+            "Terminator Squad"
+        ]
+    },
+    "keywords": [
+        "INFANTRY",
+        "CHARACTER",
+        "PSYKER",
+        "IMPERIUM",
+        "TERMINATOR",
+        "LIBRARIAN"
+    ],
+    "faction_keywords": [
+        "ADEPTUS ASTARTES"
+    ]
+} 

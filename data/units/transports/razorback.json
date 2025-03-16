@@ -1,0 +1,146 @@
+{
+    "name": "Razorback",
+    "faction": "Space Marines",
+    "points": 95,
+    "unit_composition": {
+        "base_size": 1,
+        "max_size": 1,
+        "points_per_model": 95
+    },
+    "stats": {
+        "movement": 12,
+        "toughness": 9,
+        "save": 3,
+        "wounds": 10,
+        "leadership": 6,
+        "objective_control": 2
+    },
+    "weapons": [
+        {
+            "name": "Hunter-killer missile",
+            "profiles": [
+                {
+                    "type": "Ranged",
+                    "range": 48,
+                    "attacks": 1,
+                    "skill": 2,
+                    "strength": 14,
+                    "ap": -3,
+                    "damage": "D6",
+                    "special_rules": ["ONE SHOT"]
+                }
+            ]
+        },
+        {
+            "name": "Storm bolter",
+            "profiles": [
+                {
+                    "type": "Ranged",
+                    "range": 24,
+                    "attacks": 2,
+                    "skill": 3,
+                    "strength": 4,
+                    "ap": 0,
+                    "damage": 1,
+                    "special_rules": ["RAPID FIRE 2"]
+                }
+            ]
+        },
+        {
+            "name": "Twin heavy bolter",
+            "profiles": [
+                {
+                    "type": "Ranged",
+                    "range": 36,
+                    "attacks": 3,
+                    "skill": 3,
+                    "strength": 5,
+                    "ap": -1,
+                    "damage": 2,
+                    "special_rules": ["SUSTAINED HITS 1", "TWIN-LINKED"]
+                }
+            ]
+        },
+        {
+            "name": "Twin lascannon",
+            "profiles": [
+                {
+                    "type": "Ranged",
+                    "range": 48,
+                    "attacks": 1,
+                    "skill": 3,
+                    "strength": 12,
+                    "ap": -3,
+                    "damage": "D6+1",
+                    "special_rules": ["TWIN-LINKED"]
+                }
+            ]
+        },
+        {
+            "name": "Armoured tracks",
+            "profiles": [
+                {
+                    "type": "Melee",
+                    "range": "Melee",
+                    "attacks": 3,
+                    "skill": 4,
+                    "strength": 6,
+                    "ap": 0,
+                    "damage": 1
+                }
+            ]
+        }
+    ],
+    "wargear_options": [
+        {
+            "description": "This model's twin heavy bolter can be replaced with 1 twin lascannon.",
+            "options": [
+                "1 twin lascannon"
+            ]
+        },
+        {
+            "description": "This model can be equipped with 1 hunter-killer missile.",
+            "options": [
+                "1 hunter-killer missile"
+            ]
+        },
+        {
+            "description": "This model can be equipped with 1 storm bolter.",
+            "options": [
+                "1 storm bolter"
+            ]
+        }
+    ],
+    "abilities": {
+        "core": [
+            "Deadly Demise D3"
+        ],
+        "faction": [
+            "Oath of Moment"
+        ],
+        "unit": [
+            {
+                "name": "Fire Support",
+                "description": "In your Shooting phase, after this model has shot, select one enemy unit hit by one or more of those attacks, Until the end of the phase, each time a friendly model that disembarked from this Transport this turn makes an attack that targets that enemy unit, you can re-roll the Wound roll."
+            }
+        ]
+    },
+    "transport": {
+        "capacity": 6,
+        "restrictions": [
+            "ADEPTUS ASTARTES INFANTRY models",
+            "Cannot transport JUMP PACK, WULFEN, PHOBOS, GRAVIS, CENTURION, TERMINATOR or TACTICUS models (excluding TACTICUS CHARACTER models that began the battle attached to a non-TACTICUS unit)"
+        ]
+    },
+    "keywords": [
+        "VEHICLE",
+        "SMOKE",
+        "TRANSPORT",
+        "DEDICATED TRANSPORT",
+        "IMPERIUM",
+        "RAZORBACK"
+    ],
+    "faction_keywords": [
+        "ADEPTUS ASTARTES"
+    ]
+} 

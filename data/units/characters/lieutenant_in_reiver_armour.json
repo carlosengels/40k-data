@@ -1,0 +1,88 @@
+{
+    "name": "Lieutenant in Reiver Armour",
+    "faction": "Space Marines",
+    "points": 55,
+    "unit_composition": {
+        "base_size": 1,
+        "max_size": 1,
+        "points_per_model": 55
+    },
+    "stats": {
+        "movement": 6,
+        "toughness": 4,
+        "save": 3,
+        "wounds": 4,
+        "leadership": 6,
+        "objective_control": 1
+    },
+    "weapons": [
+        {
+            "name": "Master-crafted special issue bolt pistol",
+            "profiles": [
+                {
+                    "type": "Ranged",
+                    "range": 12,
+                    "attacks": 1,
+                    "skill": 2,
+                    "strength": 4,
+                    "ap": -1,
+                    "damage": 2,
+                    "special_rules": ["PISTOL", "PRECISION"]
+                }
+            ]
+        },
+        {
+            "name": "Combat knife",
+            "profiles": [
+                {
+                    "type": "Melee",
+                    "range": "Melee",
+                    "attacks": 6,
+                    "skill": 2,
+                    "strength": 4,
+                    "ap": -1,
+                    "damage": 1,
+                    "special_rules": ["PRECISION"]
+                }
+            ]
+        }
+    ],
+    "abilities": {
+        "core": [
+            "Leader",
+            "Scouts 6\""
+        ],
+        "faction": [
+            "Oath of Moment"
+        ],
+        "unit": [
+            {
+                "name": "Tactical Precision",
+                "description": "While this model is leading a unit, weapons equipped by models in that unit have the [LETHAL HITS] ability."
+            },
+            {
+                "name": "Deadly Terror",
+                "description": "While this model is leading a unit, increase the range of that unit's Terror Troops ability by 3\"."
+            }
+        ]
+    },
+    "leader": {
+        "can_lead": [
+            "Reiver Squad"
+        ],
+        "can_join_captain": true
+    },
+    "keywords": [
+        "INFANTRY",
+        "CHARACTER",
+        "SMOKE",
+        "GRENADES",
+        "IMPERIUM",
+        "PHOBOS",
+        "LIEUTENANT",
+        "LIEUTENANT IN REIVER ARMOUR"
+    ],
+    "faction_keywords": [
+        "ADEPTUS ASTARTES"
+    ]
+} 

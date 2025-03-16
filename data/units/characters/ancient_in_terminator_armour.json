@@ -1,0 +1,186 @@
+{
+    "name": "Ancient in Terminator Armour",
+    "faction": "Space Marines",
+    "points": 75,
+    "unit_composition": {
+        "base_size": 1,
+        "max_size": 1,
+        "points_per_model": 75
+    },
+    "stats": {
+        "movement": 5,
+        "toughness": 5,
+        "save": 2,
+        "wounds": 5,
+        "leadership": 6,
+        "objective_control": 1,
+        "invulnerable": 4
+    },
+    "weapons": [
+        {
+            "name": "Storm bolter",
+            "profiles": [
+                {
+                    "type": "Ranged",
+                    "range": 24,
+                    "attacks": 2,
+                    "skill": 3,
+                    "strength": 4,
+                    "ap": 0,
+                    "damage": 1,
+                    "special_rules": ["RAPID FIRE 2"]
+                }
+            ]
+        },
+        {
+            "name": "Chainfist",
+            "profiles": [
+                {
+                    "type": "Melee",
+                    "range": "Melee",
+                    "attacks": 4,
+                    "skill": 3,
+                    "strength": 8,
+                    "ap": -2,
+                    "damage": 2,
+                    "special_rules": ["ANTI-VEHICLE 3+"]
+                }
+            ]
+        },
+        {
+            "name": "Close combat weapon",
+            "profiles": [
+                {
+                    "type": "Melee",
+                    "range": "Melee",
+                    "attacks": 5,
+                    "skill": 2,
+                    "strength": 4,
+                    "ap": 0,
+                    "damage": 1
+                }
+            ]
+        },
+        {
+            "name": "Power fist",
+            "profiles": [
+                {
+                    "type": "Melee",
+                    "range": "Melee",
+                    "attacks": 4,
+                    "skill": 2,
+                    "strength": 8,
+                    "ap": -2,
+                    "damage": 2
+                }
+            ]
+        },
+        {
+            "name": "Power weapon",
+            "profiles": [
+                {
+                    "type": "Melee",
+                    "range": "Melee",
+                    "attacks": 5,
+                    "skill": 2,
+                    "strength": 5,
+                    "ap": -2,
+                    "damage": 1
+                }
+            ]
+        },
+        {
+            "name": "Thunder hammer",
+            "profiles": [
+                {
+                    "type": "Melee",
+                    "range": "Melee",
+                    "attacks": 4,
+                    "skill": 3,
+                    "strength": 8,
+                    "ap": -2,
+                    "damage": 2,
+                    "special_rules": ["DEVASTATING WOUNDS"]
+                }
+            ]
+        },
+        {
+            "name": "Twin lightning claws",
+            "profiles": [
+                {
+                    "type": "Melee",
+                    "range": "Melee",
+                    "attacks": 6,
+                    "skill": 2,
+                    "strength": 5,
+                    "ap": -2,
+                    "damage": 1,
+                    "special_rules": ["TWIN-LINKED"]
+                }
+            ]
+        }
+    ],
+    "wargear_options": [
+        {
+            "description": "This model's power fist can be replaced with one of the following:",
+            "options": [
+                "1 chainfist",
+                "1 close combat weapon",
+                "1 power weapon",
+                "1 thunder hammer"
+            ]
+        },
+        {
+            "description": "This model's storm bolter and power fist can be replaced with one of the following:",
+            "options": [
+                "1 twin lightning claws",
+                "1 thunder hammer and 1 Terminator storm shield"
+            ]
+        }
+    ],
+    "abilities": {
+        "core": [
+            "Deep Strike",
+            "Leader"
+        ],
+        "faction": [
+            "Oath of Moment"
+        ],
+        "unit": [
+            {
+                "name": "Astartes Banner",
+                "description": "While this model is leading a unit, add 1 to the Objective Control characteristic of models in that unit."
+            },
+            {
+                "name": "Keep the Banner High",
+                "description": "While this model is leading a unit, each time a model in that unit makes an attack, add 1 to the Hit roll if that unit is below its Starting Strength, and add 1 to the Wound roll as well if that unit is Below Half-strength."
+            }
+        ],
+        "wargear": [
+            {
+                "name": "Terminator Storm Shield",
+                "description": "The bearer has a Wounds characteristic of 6."
+            }
+        ]
+    },
+    "leader": {
+        "can_lead": [
+            "Terminator Assault Squad",
+            "Terminator Squad"
+        ],
+        "rules": [
+            "You can attach this model to one of the above units even if one CAPTAIN, CHAPTER MASTER or LIEUTENANT model has already been attached to it.",
+            "If you do, and that Bodyguard unit is destroyed, the LEADER units attached to it become separate units, with their original Starting Strengths."
+        ]
+    },
+    "keywords": [
+        "INFANTRY",
+        "CHARACTER",
+        "IMPERIUM",
+        "TERMINATOR",
+        "ANCIENT"
+    ],
+    "faction_keywords": [
+        "ADEPTUS ASTARTES"
+    ]
+} 

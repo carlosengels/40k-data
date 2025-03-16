@@ -1,0 +1,201 @@
+{
+    "name": "Captain with Jump Pack",
+    "faction": "Space Marines",
+    "points": 85,
+    "unit_composition": {
+        "base_size": 1,
+        "max_size": 1,
+        "points_per_model": 85
+    },
+    "stats": {
+        "movement": 12,
+        "toughness": 4,
+        "save": 3,
+        "wounds": 5,
+        "leadership": 6,
+        "objective_control": 1,
+        "invulnerable": 4
+    },
+    "weapons": [
+        {
+            "name": "Hand flamer",
+            "profiles": [
+                {
+                    "type": "Ranged",
+                    "range": 12,
+                    "attacks": "D6",
+                    "skill": "N/A",
+                    "strength": 3,
+                    "ap": 0,
+                    "damage": 1,
+                    "special_rules": ["IGNORES COVER", "PISTOL", "TORRENT"]
+                }
+            ]
+        },
+        {
+            "name": "Heavy bolt pistol",
+            "profiles": [
+                {
+                    "type": "Ranged",
+                    "range": 18,
+                    "attacks": 1,
+                    "skill": 2,
+                    "strength": 4,
+                    "ap": -1,
+                    "damage": 1,
+                    "special_rules": ["PISTOL"]
+                }
+            ]
+        },
+        {
+            "name": "Plasma pistol",
+            "profiles": [
+                {
+                    "name": "Standard",
+                    "type": "Ranged",
+                    "range": 12,
+                    "attacks": 1,
+                    "skill": 2,
+                    "strength": 7,
+                    "ap": -2,
+                    "damage": 1,
+                    "special_rules": ["PISTOL"]
+                },
+                {
+                    "name": "Supercharge",
+                    "type": "Ranged",
+                    "range": 12,
+                    "attacks": 1,
+                    "skill": 2,
+                    "strength": 8,
+                    "ap": -3,
+                    "damage": 2,
+                    "special_rules": ["HAZARDOUS", "PISTOL"]
+                }
+            ]
+        },
+        {
+            "name": "Astartes chainsword",
+            "profiles": [
+                {
+                    "type": "Melee",
+                    "range": "Melee",
+                    "attacks": 7,
+                    "skill": 2,
+                    "strength": 4,
+                    "ap": -1,
+                    "damage": 1
+                }
+            ]
+        },
+        {
+            "name": "Power fist",
+            "profiles": [
+                {
+                    "type": "Melee",
+                    "range": "Melee",
+                    "attacks": 5,
+                    "skill": 2,
+                    "strength": 8,
+                    "ap": -2,
+                    "damage": 2
+                }
+            ]
+        },
+        {
+            "name": "Relic weapon",
+            "profiles": [
+                {
+                    "type": "Melee",
+                    "range": "Melee",
+                    "attacks": 6,
+                    "skill": 2,
+                    "strength": 5,
+                    "ap": -2,
+                    "damage": 2
+                }
+            ]
+        },
+        {
+            "name": "Thunder hammer",
+            "profiles": [
+                {
+                    "type": "Melee",
+                    "range": "Melee",
+                    "attacks": 5,
+                    "skill": 3,
+                    "strength": 8,
+                    "ap": -2,
+                    "damage": 2,
+                    "special_rules": ["DEVASTATING WOUNDS"]
+                }
+            ]
+        }
+    ],
+    "wargear_options": [
+        {
+            "description": "This model's heavy bolt pistol can be replaced with one of the following:",
+            "options": [
+                "1 plasma pistol",
+                "1 hand flamer"
+            ]
+        },
+        {
+            "description": "This model's Astartes chainsword can be replaced with one of the following:",
+            "options": [
+                "1 power fist",
+                "1 relic weapon"
+            ]
+        },
+        {
+            "description": "This model's heavy bolt pistol and Astartes chainsword can be replaced with 1 thunder hammer and 1 relic shield.",
+            "options": [
+                "1 thunder hammer and 1 relic shield"
+            ]
+        }
+    ],
+    "wargear_abilities": [
+        {
+            "name": "Relic Shield",
+            "description": "The bearer has a Wounds characteristic of 6."
+        }
+    ],
+    "abilities": {
+        "core": [
+            "Deep Strike",
+            "Leader"
+        ],
+        "faction": [
+            "Oath of Moment"
+        ],
+        "unit": [
+            {
+                "name": "Angel's Wrath",
+                "description": "While this model is leading a unit, each time that unit ends a Charge move, until the end of the turn, add 1 to the Strength characteristic of melee weapons equipped by models in that unit."
+            },
+            {
+                "name": "Rites of Battle",
+                "description": "Once per battle round, one unit from your army with this ability can use it when its unit is targeted with a Stratagem. If it does, reduce the CP cost of that use of that Stratagem by 1CP."
+            }
+        ]
+    },
+    "leader": {
+        "can_lead": [
+            "Assault Intercessors With Jump Packs",
+            "Vanguard Veteran Squad With Jump Packs"
+        ]
+    },
+    "keywords": [
+        "INFANTRY",
+        "CHARACTER",
+        "JUMP PACK",
+        "FLY",
+        "GRENADES",
+        "IMPERIUM",
+        "TACTICUS",
+        "CAPTAIN"
+    ],
+    "faction_keywords": [
+        "ADEPTUS ASTARTES"
+    ]
+} 

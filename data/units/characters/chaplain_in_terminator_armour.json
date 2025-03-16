@@ -1,0 +1,99 @@
+{
+    "name": "Chaplain in Terminator Armour",
+    "faction": "Space Marines",
+    "points": 75,
+    "unit_composition": {
+        "base_size": 1,
+        "max_size": 1,
+        "points_per_model": 75
+    },
+    "stats": {
+        "movement": 5,
+        "toughness": 5,
+        "save": 2,
+        "wounds": 5,
+        "leadership": 5,
+        "objective_control": 1,
+        "invulnerable": 4
+    },
+    "weapons": [
+        {
+            "name": "Storm bolter",
+            "profiles": [
+                {
+                    "type": "Ranged",
+                    "range": 24,
+                    "attacks": 2,
+                    "skill": 3,
+                    "strength": 4,
+                    "ap": 0,
+                    "damage": 1,
+                    "special_rules": ["RAPID FIRE 2"]
+                }
+            ]
+        },
+        {
+            "name": "Crozius arcanum",
+            "profiles": [
+                {
+                    "type": "Melee",
+                    "range": "Melee",
+                    "attacks": 5,
+                    "skill": 2,
+                    "strength": 6,
+                    "ap": -1,
+                    "damage": 2
+                }
+            ]
+        }
+    ],
+    "wargear_options": [
+        {
+            "description": "This model's storm bolter can be replaced with 1 relic shield.",
+            "options": [
+                "1 relic shield"
+            ]
+        }
+    ],
+    "wargear_abilities": [
+        {
+            "name": "Relic Shield",
+            "description": "The bearer has a Wounds characteristic of 6."
+        }
+    ],
+    "abilities": {
+        "core": [
+            "Deep Strike",
+            "Leader"
+        ],
+        "faction": [
+            "Oath of Moment"
+        ],
+        "unit": [
+            {
+                "name": "Litany of Hate",
+                "description": "While this model is leading a unit, each time a model in that unit makes a melee attack, add 1 to the Wound roll."
+            },
+            {
+                "name": "Recitation of Faith",
+                "description": "While this model is leading a unit, models in that unit have the Feel No Pain 4+ ability against mortal wounds."
+            }
+        ]
+    },
+    "leader": {
+        "can_lead": [
+            "Terminator Assault Squad",
+            "Terminator Squad"
+        ]
+    },
+    "keywords": [
+        "INFANTRY",
+        "CHARACTER",
+        "IMPERIUM",
+        "TERMINATOR",
+        "CHAPLAIN"
+    ],
+    "faction_keywords": [
+        "ADEPTUS ASTARTES"
+    ]
+} 

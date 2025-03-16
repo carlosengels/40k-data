@@ -1,0 +1,98 @@
+{
+    "name": "Chaplain on Bike",
+    "faction": "Space Marines",
+    "points": 75,
+    "unit_composition": {
+        "base_size": 1,
+        "max_size": 1,
+        "points_per_model": 75
+    },
+    "stats": {
+        "movement": 12,
+        "toughness": 5,
+        "save": 3,
+        "wounds": 5,
+        "leadership": 5,
+        "objective_control": 1,
+        "invulnerable": 4
+    },
+    "weapons": [
+        {
+            "name": "Absolvor bolt pistol",
+            "profiles": [
+                {
+                    "type": "Ranged",
+                    "range": 18,
+                    "attacks": 1,
+                    "skill": 3,
+                    "strength": 5,
+                    "ap": -1,
+                    "damage": 2,
+                    "special_rules": ["PISTOL"]
+                }
+            ]
+        },
+        {
+            "name": "Twin bolt rifle",
+            "profiles": [
+                {
+                    "type": "Ranged",
+                    "range": 24,
+                    "attacks": 2,
+                    "skill": 3,
+                    "strength": 4,
+                    "ap": -1,
+                    "damage": 1,
+                    "special_rules": ["TWIN-LINKED"]
+                }
+            ]
+        },
+        {
+            "name": "Crozius arcanum",
+            "profiles": [
+                {
+                    "type": "Melee",
+                    "range": "Melee",
+                    "attacks": 5,
+                    "skill": 2,
+                    "strength": 6,
+                    "ap": -1,
+                    "damage": 2
+                }
+            ]
+        }
+    ],
+    "abilities": {
+        "core": [
+            "Leader"
+        ],
+        "faction": [
+            "Oath of Moment"
+        ],
+        "unit": [
+            {
+                "name": "Litany of Hate",
+                "description": "While this model is leading a unit, each time a model in that unit makes a melee attack, add 1 to the Wound roll."
+            },
+            {
+                "name": "Catechism of Fire",
+                "description": "Each time this model's unit is selected to shoot, you can select one enemy unit within 12\" of and visible to this model. Until the end of the phase, ranged weapons equipped by models in this model's unit have the [DEVASTATING WOUNDS] ability when targeting that enemy unit."
+            }
+        ]
+    },
+    "leader": {
+        "can_lead": [
+            "Outrider Squad"
+        ]
+    },
+    "keywords": [
+        "MOUNTED",
+        "CHARACTER",
+        "GRENADES",
+        "IMPERIUM",
+        "CHAPLAIN"
+    ],
+    "faction_keywords": [
+        "ADEPTUS ASTARTES"
+    ]
+} 

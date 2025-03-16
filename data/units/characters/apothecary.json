@@ -1,0 +1,109 @@
+{
+    "name": "Apothecary",
+    "faction": "Space Marines",
+    "points": 50,
+    "unit_composition": {
+        "base_size": 1,
+        "max_size": 1,
+        "points_per_model": 50
+    },
+    "stats": {
+        "movement": 6,
+        "toughness": 4,
+        "save": 3,
+        "wounds": 4,
+        "leadership": 6,
+        "objective_control": 1
+    },
+    "weapons": [
+        {
+            "name": "Absolvor bolt pistol",
+            "profiles": [
+                {
+                    "type": "Ranged",
+                    "range": 18,
+                    "attacks": 1,
+                    "skill": 3,
+                    "strength": 5,
+                    "ap": -1,
+                    "damage": 2,
+                    "special_rules": ["PISTOL"]
+                }
+            ]
+        },
+        {
+            "name": "Reductor pistol",
+            "profiles": [
+                {
+                    "type": "Ranged",
+                    "range": 3,
+                    "attacks": 1,
+                    "skill": 3,
+                    "strength": 4,
+                    "ap": -4,
+                    "damage": 2,
+                    "special_rules": ["PISTOL"]
+                }
+            ]
+        },
+        {
+            "name": "Close combat weapon",
+            "profiles": [
+                {
+                    "type": "Melee",
+                    "range": "Melee",
+                    "attacks": 4,
+                    "skill": 3,
+                    "strength": 4,
+                    "ap": 0,
+                    "damage": 1
+                }
+            ]
+        }
+    ],
+    "abilities": {
+        "core": [
+            "Leader"
+        ],
+        "faction": [
+            "Oath of Moment"
+        ],
+        "unit": [
+            {
+                "name": "Narthecium",
+                "description": "While this model is leading a unit, in your Command phase, you can return 1 destroyed model (excluding CHARACTER models) to that unit."
+            },
+            {
+                "name": "Gene-seed Recovery",
+                "description": "When this model's Bodyguard unit is destroyed, roll one D6: on a 2+, you gain 1CP"
+            }
+        ]
+    },
+    "leader": {
+        "can_lead": [
+            "Assault Intercessor Squad",
+            "Desolation Squad",
+            "Devastator Squad",
+            "Hellblaster Squad",
+            "Infernus Squad",
+            "Intercessor Squad",
+            "Sternguard Veteran Squad",
+            "Tactical Squad"
+        ],
+        "rules": [
+            "You can attach this model to one of the above units even if one CAPTAIN, CHAPTER MASTER or LIEUTENANT model has already been attached to it.",
+            "If you do, and that Bodyguard unit is destroyed, the Leader units attached to it become separate units, with their original Starting Strengths."
+        ]
+    },
+    "keywords": [
+        "INFANTRY",
+        "CHARACTER",
+        "GRENADES",
+        "IMPERIUM",
+        "TACTICUS",
+        "APOTHECARY"
+    ],
+    "faction_keywords": [
+        "ADEPTUS ASTARTES"
+    ]
+} 

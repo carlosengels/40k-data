@@ -1,0 +1,113 @@
+{
+    "name": "Roboute Guilliman",
+    "faction": "Space Marines",
+    "points": 345,
+    "unit_composition": {
+        "base_size": 1,
+        "max_size": 1,
+        "points_per_model": 345,
+        "must_be_warlord": true,
+        "is_epic_hero": true
+    },
+    "stats": {
+        "movement": 8,
+        "toughness": 9,
+        "save": 2,
+        "wounds": 10,
+        "leadership": 5,
+        "objective_control": 4,
+        "invulnerable": 4
+    },
+    "weapons": [
+        {
+            "name": "Hand of Dominion (shooting)",
+            "profiles": [
+                {
+                    "type": "Ranged",
+                    "range": 30,
+                    "attacks": 2,
+                    "skill": 2,
+                    "strength": 6,
+                    "ap": -2,
+                    "damage": 2,
+                    "special_rules": ["RAPID FIRE 2"]
+                }
+            ]
+        },
+        {
+            "name": "Emperor's Sword",
+            "profiles": [
+                {
+                    "type": "Melee",
+                    "range": "Melee",
+                    "attacks": 14,
+                    "skill": 2,
+                    "strength": 8,
+                    "ap": -3,
+                    "damage": 2,
+                    "special_rules": ["DEVASTATING WOUNDS"]
+                }
+            ]
+        },
+        {
+            "name": "Hand of Dominion (melee)",
+            "profiles": [
+                {
+                    "type": "Melee",
+                    "range": "Melee",
+                    "attacks": 7,
+                    "skill": 2,
+                    "strength": 14,
+                    "ap": -4,
+                    "damage": 4,
+                    "special_rules": ["LETHAL HITS"]
+                }
+            ]
+        }
+    ],
+    "abilities": {
+        "faction": [
+            "Oath of Moment"
+        ],
+        "unit": [
+            {
+                "name": "Author of the Codex",
+                "description": "At the Start of your Command phase, select two Author of the Codex abilities (see left). Until the start of your next Command phase, this model has those abilities."
+            },
+            {
+                "name": "Ultramarines Bodyguard",
+                "description": "While this model is within 3\" of one or more friendly ADEPTUS ASTARTES INFANTRY units, this model has the Lone Operative ability."
+            },
+            {
+                "name": "Armour of Fate",
+                "description": "The first time this model is destroyed, roll one D6 at the end of the phase: on a 3+, set this model back up on the battlefield as close as possible to where it was destroyed and not within Engagement Range of any enemy models, with 6 wounds remaining."
+            }
+        ],
+        "author_of_codex": [
+            {
+                "name": "Primarch of the XIII (Aura)",
+                "description": "While a friendly ADEPTUS ASTARTES unit is within 6\" of this model, add 1 to the Objective Control characteristic of models in that unit and you can re-roll Battle-shock and Leadership tests taken for that unit."
+            },
+            {
+                "name": "Master of Battle",
+                "description": "At the start of your Command phase, after you have selected your Oath of Moment target, select a second enemy unit. Until the start of your next Command phase, if your Oath of Moment target is destroyed, that second enemy unit becomes your Oath of Moment target until you select a new one."
+            },
+            {
+                "name": "Supreme Strategist",
+                "description": "Once per turn, you can target one friendly ADEPTUS ASTARTES unit within 12\" of this model with a Stratagem. If it does, reduce the CP cost of that use of that Stratagem by 1CP."
+            }
+        ]
+    },
+    "keywords": [
+        "MONSTER",
+        "CHARACTER",
+        "EPIC HERO",
+        "IMPERIUM",
+        "PRIMARCH",
+        "ROBOUTE GUILLIMAN"
+    ],
+    "faction_keywords": [
+        "ADEPTUS ASTARTES",
+        "ULTRAMARINES"
+    ]
+} 
