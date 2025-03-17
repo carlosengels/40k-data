@@ -1,0 +1,78 @@
+{
+  "name": "Firestrike Servo-turrets",
+  "type": "other",
+  "base_size": "80mm",
+  "characteristics": {
+    "movement": "3\"",
+    "toughness": 6,
+    "save": "2+",
+    "wounds": 6,
+    "leadership": "6+",
+    "objective_control": 2
+  },
+  "weapons": {
+    "ranged": [
+      {
+        "name": "Twin Firestrike autocannon",
+        "range": "48\"",
+        "attacks": 3,
+        "ballistic_skill": "2+",
+        "strength": 9,
+        "armor_penetration": -1,
+        "damage": 3,
+        "abilities": ["twin-linked"]
+      },
+      {
+        "name": "Twin Firestrike las-talon",
+        "range": "36\"",
+        "attacks": 2,
+        "ballistic_skill": "2+",
+        "strength": 10,
+        "armor_penetration": -3,
+        "damage": "D6+1",
+        "abilities": ["twin-linked"]
+      }
+    ],
+    "melee": [
+      {
+        "name": "Close combat weapon",
+        "range": "Melee",
+        "attacks": 3,
+        "weapon_skill": "3+",
+        "strength": 4,
+        "armor_penetration": 0,
+        "damage": 1
+      }
+    ]
+  },
+  "abilities": [
+    "Oath of Moment",
+    "Sentinel Protocols: Each time you select this unit for the Fire Overwatch Stratagem, hits are scored on unmodified Hit rolls of 4+ when resolving that Stratagem."
+  ],
+  "unit_composition": {
+    "minimum": 1,
+    "maximum": 2,
+    "cost": {
+      "1_model": 75,
+      "2_models": 150
+    },
+    "models": [
+      {
+        "name": "Firestrike Servo-turret",
+        "equipment": ["twin Firestrike las-talon", "close combat weapon"]
+      }
+    ]
+  },
+  "keywords": [
+    "ARTILLERY",
+    "VEHICLE",
+    "IMPERIUM",
+    "FIRESTRIKE SERVO-TURRETS"
+  ],
+  "faction_keywords": [
+    "ADEPTUS ASTARTES"
+  ],
+  "wargear_options": [
+    "Any number of models can each have their twin Firestrike las-talon replaced with 1 twin Firestrike autocannon."
+  ]
+} 

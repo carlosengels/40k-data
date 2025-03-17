@@ -1,0 +1,130 @@
+{
+  "name": "Hellblaster Squad",
+  "type": "other",
+  "base_size": "32mm",
+  "characteristics": {
+    "movement": "6\"",
+    "toughness": 4,
+    "save": "3+",
+    "wounds": 2,
+    "leadership": "6+",
+    "objective_control": 1
+  },
+  "weapons": {
+    "ranged": [
+      {
+        "name": "Bolt pistol",
+        "range": "12\"",
+        "attacks": 1,
+        "ballistic_skill": "3+",
+        "strength": 4,
+        "armor_penetration": 0,
+        "damage": 1,
+        "abilities": ["pistol"]
+      },
+      {
+        "name": "Plasma incinerator - standard",
+        "range": "24\"",
+        "attacks": 2,
+        "ballistic_skill": "3+",
+        "strength": 7,
+        "armor_penetration": -2,
+        "damage": 1,
+        "abilities": ["assault", "heavy"]
+      },
+      {
+        "name": "Plasma incinerator - supercharge",
+        "range": "24\"",
+        "attacks": 2,
+        "ballistic_skill": "3+",
+        "strength": 8,
+        "armor_penetration": -3,
+        "damage": 2,
+        "abilities": ["assault", "hazardous", "heavy"]
+      },
+      {
+        "name": "Plasma pistol - standard",
+        "range": "12\"",
+        "attacks": 1,
+        "ballistic_skill": "3+",
+        "strength": 7,
+        "armor_penetration": -2,
+        "damage": 1,
+        "abilities": ["pistol"]
+      },
+      {
+        "name": "Plasma pistol - supercharge",
+        "range": "12\"",
+        "attacks": 1,
+        "ballistic_skill": "3+",
+        "strength": 8,
+        "armor_penetration": -3,
+        "damage": 2,
+        "abilities": ["hazardous", "pistol"]
+      }
+    ],
+    "melee": [
+      {
+        "name": "Close combat weapon",
+        "range": "Melee",
+        "attacks": 3,
+        "weapon_skill": "3+",
+        "strength": 4,
+        "armor_penetration": 0,
+        "damage": 1
+      }
+    ]
+  },
+  "abilities": [
+    "Oath of Moment",
+    "For the Chapter!: Each time a model in this unit is destroyed, roll one D6: on a 3+, do not remove it from play. The destroyed model can shoot after the attacking model's unit has finished making its attacks, and is then removed from play. When resolving these attacks, any Hazardous tests taken for that attack are automatically passed."
+  ],
+  "unit_composition": {
+    "minimum": 5,
+    "maximum": 10,
+    "cost": {
+      "5_models": 115,
+      "10_models": 230
+    },
+    "models": [
+      {
+        "name": "Hellblaster Sergeant",
+        "equipment": ["bolt pistol", "plasma incinerator", "close combat weapon"]
+      },
+      {
+        "name": "Hellblasters",
+        "count": "4-9",
+        "equipment": ["bolt pistol", "plasma incinerator", "close combat weapon"]
+      }
+    ]
+  },
+  "keywords": [
+    "INFANTRY",
+    "GRENADES",
+    "IMPERIUM",
+    "TACTICUS",
+    "HELLBLASTER SQUAD"
+  ],
+  "faction_keywords": [
+    "ADEPTUS ASTARTES"
+  ],
+  "wargear_options": [
+    "The Hellblaster Sergeant's bolt pistol can be replaced with 1 plasma pistol."
+  ],
+  "led_by": [
+    "Ancient",
+    "Apothecary",
+    "Captain",
+    "Chaplain",
+    "Librarian",
+    "Lieutenant",
+    "Sanguinary Priest",
+    "Asmodai",
+    "Azrael",
+    "Ezekiel",
+    "Lieutenant Titus",
+    "Brother Corbulo",
+    "Captain Tycho",
+    "Gabriel Seth"
+  ]
+} 

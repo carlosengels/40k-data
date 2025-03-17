@@ -1,0 +1,87 @@
+{
+  "name": "Centurion Assault Squad",
+  "type": "other",
+  "base_size": "50mm",
+  "characteristics": {
+    "movement": "4\"",
+    "toughness": 7,
+    "save": "2+",
+    "wounds": 4,
+    "leadership": "6+",
+    "objective_control": 2
+  },
+  "weapons": {
+    "ranged": [
+      {
+        "name": "Centurion bolters",
+        "range": "24\"",
+        "attacks": 3,
+        "ballistic_skill": "3+",
+        "strength": 4,
+        "armor_penetration": 0,
+        "damage": 1,
+        "abilities": ["rapid fire 3", "twin-linked"]
+      },
+      {
+        "name": "Twin flamer",
+        "range": "12\"",
+        "attacks": "D6",
+        "ballistic_skill": "N/A",
+        "strength": 4,
+        "armor_penetration": 0,
+        "damage": 1,
+        "abilities": ["ignores cover", "torrent", "twin-linked"]
+      },
+      {
+        "name": "Twin meltagun",
+        "range": "12\"",
+        "attacks": 1,
+        "ballistic_skill": "3+",
+        "strength": 9,
+        "armor_penetration": -4,
+        "damage": "D6",
+        "abilities": ["melta 2", "twin-linked"]
+      }
+    ],
+    "melee": [
+      {
+        "name": "Siege drills",
+        "range": "Melee",
+        "attacks": 3,
+        "weapon_skill": "3+",
+        "strength": 10,
+        "armor_penetration": -2,
+        "damage": 3,
+        "abilities": ["twin-linked"]
+      }
+    ]
+  },
+  "abilities": [
+    "Oath of Moment",
+    "Annihilator Protocols: Melee weapons equipped by models in this unit have the [SUSTAINED HITS 2] ability when targeting MONSTER, VEHICLE or FORTIFICATION units."
+  ],
+  "unit_composition": {
+    "minimum": 3,
+    "maximum": 6,
+    "cost": {
+      "3_models": 150,
+      "6_models": 300
+    }
+  },
+  "keywords": [
+    "INFANTRY",
+    "IMPERIUM",
+    "CENTURION",
+    "CENTURION ASSAULT SQUAD"
+  ],
+  "faction_keywords": [
+    "ADEPTUS ASTARTES"
+  ],
+  "wargear_options": [
+    "Any number of models can each have their twin flamer replaced with 1 twin meltagun.",
+    "Any number of models can each have their Centurion bolters replaced with 1 Centurion assault launcher."
+  ],
+  "wargear_abilities": {
+    "Centurion Assault Launcher": "The bearer has the Grenades keyword."
+  }
+} 

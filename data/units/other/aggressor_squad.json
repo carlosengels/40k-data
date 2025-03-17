@@ -1,0 +1,89 @@
+{
+  "name": "Aggressor Squad",
+  "type": "other",
+  "base_size": "40mm",
+  "characteristics": {
+    "movement": "5\"",
+    "toughness": 6,
+    "save": "3+",
+    "wounds": 3,
+    "leadership": "6+",
+    "objective_control": 1
+  },
+  "weapons": {
+    "ranged": [
+      {
+        "name": "Auto boltstorm gauntlets",
+        "range": "18\"",
+        "attacks": 3,
+        "ballistic_skill": "3+",
+        "strength": 4,
+        "armor_penetration": 0,
+        "damage": 1,
+        "abilities": ["twin-linked"]
+      },
+      {
+        "name": "Flamestorm gauntlets",
+        "range": "12\"",
+        "attacks": "D6+1",
+        "strength": 4,
+        "armor_penetration": 0,
+        "damage": 1,
+        "abilities": ["ignores cover", "torrent", "twin-linked"]
+      },
+      {
+        "name": "Fragstorm grenade launcher",
+        "range": "18\"",
+        "attacks": "D6",
+        "ballistic_skill": "3+",
+        "strength": 4,
+        "armor_penetration": 0,
+        "damage": 1,
+        "abilities": ["blast"]
+      }
+    ],
+    "melee": [
+      {
+        "name": "Twin power fists",
+        "range": "Melee",
+        "attacks": 3,
+        "weapon_skill": "3+",
+        "strength": 8,
+        "armor_penetration": -2,
+        "damage": 2,
+        "abilities": ["twin-linked"]
+      }
+    ]
+  },
+  "abilities": [
+    "Oath of Moment",
+    "Close-quarters Firepower: Each time a model in this unit makes a ranged attack that targets the closest eligible target, improve the Armour Penetration characteristic of that attack by 1."
+  ],
+  "unit_composition": {
+    "minimum": 3,
+    "maximum": 6,
+    "cost": {
+      "3_models": 120,
+      "6_models": 240
+    }
+  },
+  "keywords": [
+    "INFANTRY",
+    "IMPERIUM",
+    "GRAVIS",
+    "AGGRESSOR SQUAD"
+  ],
+  "faction_keywords": [
+    "ADEPTUS ASTARTES"
+  ],
+  "wargear_options": [
+    "All models in this unit can each have their flamestorm gauntlets replaced with 1 auto boltstorm gauntlets and 1 fragstorm grenade launcher."
+  ],
+  "can_be_led_by": [
+    "Apothecary Biologis",
+    "Captain In Gravis Armour",
+    "Iron Father Feirros",
+    "Marneus Calgar",
+    "Tor Garadon"
+  ]
+} 

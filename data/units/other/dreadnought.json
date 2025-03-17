@@ -1,0 +1,159 @@
+{
+  "name": "Dreadnought",
+  "type": "other",
+  "base_size": "60mm",
+  "characteristics": {
+    "movement": "6\"",
+    "toughness": 9,
+    "save": "2+",
+    "wounds": 8,
+    "leadership": "6+",
+    "objective_control": 3
+  },
+  "weapons": {
+    "ranged": [
+      {
+        "name": "Assault cannon",
+        "range": "24\"",
+        "attacks": 6,
+        "ballistic_skill": "3+",
+        "strength": 6,
+        "armor_penetration": 0,
+        "damage": 1,
+        "abilities": ["devastating wounds"]
+      },
+      {
+        "name": "Heavy flamer",
+        "range": "12\"",
+        "attacks": "D6",
+        "ballistic_skill": "N/A",
+        "strength": 5,
+        "armor_penetration": -1,
+        "damage": 1,
+        "abilities": ["ignores cover", "torrent"]
+      },
+      {
+        "name": "Heavy plasma cannon - standard",
+        "range": "36\"",
+        "attacks": "D3",
+        "ballistic_skill": "3+",
+        "strength": 7,
+        "armor_penetration": -2,
+        "damage": 2,
+        "abilities": ["blast"]
+      },
+      {
+        "name": "Heavy plasma cannon - supercharge",
+        "range": "36\"",
+        "attacks": "D3",
+        "ballistic_skill": "3+",
+        "strength": 8,
+        "armor_penetration": -3,
+        "damage": 3,
+        "abilities": ["blast", "hazardous"]
+      },
+      {
+        "name": "Missile launcher - frag",
+        "range": "48\"",
+        "attacks": "D6",
+        "ballistic_skill": "3+",
+        "strength": 4,
+        "armor_penetration": 0,
+        "damage": 1,
+        "abilities": ["blast"]
+      },
+      {
+        "name": "Missile launcher - krak",
+        "range": "48\"",
+        "attacks": 1,
+        "ballistic_skill": "3+",
+        "strength": 9,
+        "armor_penetration": -2,
+        "damage": "D6"
+      },
+      {
+        "name": "Multi-melta",
+        "range": "18\"",
+        "attacks": 2,
+        "ballistic_skill": "3+",
+        "strength": 9,
+        "armor_penetration": -4,
+        "damage": "D6",
+        "abilities": ["melta 2"]
+      },
+      {
+        "name": "Storm bolter",
+        "range": "24\"",
+        "attacks": 2,
+        "ballistic_skill": "3+",
+        "strength": 4,
+        "armor_penetration": 0,
+        "damage": 1,
+        "abilities": ["rapid fire 2"]
+      },
+      {
+        "name": "Twin lascannon",
+        "range": "48\"",
+        "attacks": 1,
+        "ballistic_skill": "3+",
+        "strength": 12,
+        "armor_penetration": -3,
+        "damage": "D6+1",
+        "abilities": ["twin-linked"]
+      }
+    ],
+    "melee": [
+      {
+        "name": "Close combat weapon",
+        "range": "Melee",
+        "attacks": 5,
+        "weapon_skill": "3+",
+        "strength": 6,
+        "armor_penetration": 0,
+        "damage": 1
+      },
+      {
+        "name": "Dreadnought combat weapon",
+        "range": "Melee",
+        "attacks": 5,
+        "weapon_skill": "3+",
+        "strength": 12,
+        "armor_penetration": -2,
+        "damage": 3
+      }
+    ]
+  },
+  "abilities": [
+    "Deadly Demise 1",
+    "Oath of Moment",
+    "Wisdom of the Ancients (Aura): While a friendly ADEPTUS ASTARTES INFANTRY unit is within 6\" of this model, each time a model in that unit makes an attack, re-roll a Hit roll of 1."
+  ],
+  "unit_composition": {
+    "minimum": 1,
+    "maximum": 1,
+    "cost": {
+      "1_model": 135
+    },
+    "models": [
+      {
+        "name": "Dreadnought",
+        "equipment": ["assault cannon", "storm bolter", "Dreadnought combat weapon"]
+      }
+    ]
+  },
+  "keywords": [
+    "VEHICLE",
+    "WALKER",
+    "SMOKE",
+    "IMPERIUM",
+    "DREADNOUGHT",
+    "DEATHWING"
+  ],
+  "faction_keywords": [
+    "ADEPTUS ASTARTES"
+  ],
+  "wargear_options": [
+    "This model's assault cannon can be replaced with one of the following: 1 heavy plasma cannon; 1 multi-melta; 1 twin lascannon",
+    "This model's Dreadnought combat weapon and storm bolter can be replaced with one of the following: 1 missile launcher and 1 close combat weapon; 1 heavy flamer and 1 Dreadnought combat weapon"
+  ]
+} 

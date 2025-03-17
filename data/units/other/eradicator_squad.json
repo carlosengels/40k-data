@@ -1,0 +1,100 @@
+{
+  "name": "Eradicator Squad",
+  "type": "other",
+  "base_size": "40mm",
+  "characteristics": {
+    "movement": "5\"",
+    "toughness": 6,
+    "save": "3+",
+    "wounds": 3,
+    "leadership": "6+",
+    "objective_control": 1
+  },
+  "weapons": {
+    "ranged": [
+      {
+        "name": "Bolt pistol",
+        "range": "12\"",
+        "attacks": 1,
+        "ballistic_skill": "3+",
+        "strength": 4,
+        "armor_penetration": 0,
+        "damage": 1,
+        "abilities": ["pistol"]
+      },
+      {
+        "name": "Melta rifle",
+        "range": "18\"",
+        "attacks": 1,
+        "ballistic_skill": "3+",
+        "strength": 9,
+        "armor_penetration": -4,
+        "damage": "D6",
+        "abilities": ["heavy", "melta 2"]
+      },
+      {
+        "name": "Multi-melta",
+        "range": "18\"",
+        "attacks": 2,
+        "ballistic_skill": "3+",
+        "strength": 9,
+        "armor_penetration": -4,
+        "damage": "D6",
+        "abilities": ["heavy", "melta 2"]
+      }
+    ],
+    "melee": [
+      {
+        "name": "Close combat weapon",
+        "range": "Melee",
+        "attacks": 3,
+        "weapon_skill": "3+",
+        "strength": 4,
+        "armor_penetration": 0,
+        "damage": 1
+      }
+    ]
+  },
+  "abilities": [
+    "Oath of Moment",
+    "Total Obliteration: Each time a ranged attack made by a model in this unit targets a MONSTER or VEHICLE model, you can re-roll the Hit roll, you can re-roll the Wound roll and you can re-roll the Damage roll."
+  ],
+  "unit_composition": {
+    "minimum": 3,
+    "maximum": 6,
+    "cost": {
+      "3_models": 100,
+      "6_models": 200
+    },
+    "models": [
+      {
+        "name": "Eradicator Sergeant",
+        "equipment": ["bolt pistol", "melta rifle", "close combat weapon"]
+      },
+      {
+        "name": "Eradicator",
+        "equipment": ["bolt pistol", "melta rifle", "close combat weapon"]
+      }
+    ]
+  },
+  "keywords": [
+    "INFANTRY",
+    "GRENADES",
+    "IMPERIUM",
+    "GRAVIS",
+    "ERADICATOR SQUAD"
+  ],
+  "faction_keywords": [
+    "ADEPTUS ASTARTES"
+  ],
+  "wargear_options": [
+    "For every 3 models in this unit, 1 Eradicator's melta rifle can be replaced with 1 multi-melta."
+  ],
+  "can_be_led_by": [
+    "Apothecary Biologis",
+    "Captain In Gravis Armour",
+    "Iron Father Feirros",
+    "Marneus Calgar",
+    "Tor Garadon"
+  ]
+} 

@@ -1,0 +1,146 @@
+{
+  "name": "Redemptor Dreadnought",
+  "type": "other",
+  "base_size": "90mm",
+  "characteristics": {
+    "movement": "8\"",
+    "toughness": 10,
+    "save": "2+",
+    "wounds": 12,
+    "leadership": "6+",
+    "objective_control": 4
+  },
+  "weapons": {
+    "ranged": [
+      {
+        "name": "Heavy flamer",
+        "range": "12\"",
+        "attacks": "D6",
+        "ballistic_skill": "N/A",
+        "strength": 5,
+        "armor_penetration": -1,
+        "damage": 1,
+        "abilities": ["ignores cover", "torrent"]
+      },
+      {
+        "name": "Heavy onslaught gatling cannon",
+        "range": "24\"",
+        "attacks": 12,
+        "ballistic_skill": "3+",
+        "strength": 6,
+        "armor_penetration": 0,
+        "damage": 1,
+        "abilities": ["devastating wounds"]
+      },
+      {
+        "name": "Icarus rocket pod",
+        "range": "24\"",
+        "attacks": "D3",
+        "ballistic_skill": "3+",
+        "strength": 8,
+        "armor_penetration": -1,
+        "damage": 2,
+        "abilities": ["anti-fly 2+"]
+      },
+      {
+        "name": "Macro plasma incinerator - standard",
+        "range": "36\"",
+        "attacks": "D6+1",
+        "ballistic_skill": "3+",
+        "strength": 8,
+        "armor_penetration": -3,
+        "damage": 2,
+        "abilities": ["blast"]
+      },
+      {
+        "name": "Macro plasma incinerator - supercharge",
+        "range": "36\"",
+        "attacks": "D6+1",
+        "ballistic_skill": "3+",
+        "strength": 9,
+        "armor_penetration": -4,
+        "damage": 3,
+        "abilities": ["blast", "hazardous"]
+      },
+      {
+        "name": "Onslaught gatling cannon",
+        "range": "24\"",
+        "attacks": 8,
+        "ballistic_skill": "3+",
+        "strength": 5,
+        "armor_penetration": 0,
+        "damage": 1,
+        "abilities": ["devastating wounds"]
+      },
+      {
+        "name": "Twin fragstorm grenade launcher",
+        "range": "18\"",
+        "attacks": "D6",
+        "ballistic_skill": "3+",
+        "strength": 4,
+        "armor_penetration": 0,
+        "damage": 1,
+        "abilities": ["blast", "twin-linked"]
+      },
+      {
+        "name": "Twin storm bolter",
+        "range": "24\"",
+        "attacks": 2,
+        "ballistic_skill": "3+",
+        "strength": 4,
+        "armor_penetration": 0,
+        "damage": 1,
+        "abilities": ["rapid fire 2", "twin-linked"]
+      }
+    ],
+    "melee": [
+      {
+        "name": "Redemptor fist",
+        "range": "Melee",
+        "attacks": 5,
+        "weapon_skill": "3+",
+        "strength": 12,
+        "armor_penetration": -2,
+        "damage": 3
+      }
+    ]
+  },
+  "abilities": [
+    "Deadly Demise D3",
+    "Oath of Moment",
+    "Duty Eternal: Each time an attack is allocated to this model, subtract 1 from the Damage characteristic of that attack."
+  ],
+  "unit_composition": {
+    "minimum": 1,
+    "maximum": 1,
+    "cost": {
+      "1_model": 210
+    },
+    "models": [
+      {
+        "name": "Redemptor Dreadnought",
+        "equipment": ["Twin fragstorm grenade launcher", "heavy flamer", "heavy onslaught gatling cannon", "Redemptor fist"]
+      }
+    ]
+  },
+  "keywords": [
+    "VEHICLE",
+    "WALKER",
+    "IMPERIUM",
+    "DREADNOUGHT",
+    "REDEMPTOR DREADNOUGHT",
+    "DEATHWING"
+  ],
+  "faction_keywords": [
+    "ADEPTUS ASTARTES"
+  ],
+  "wargear_options": [
+    "This model can be equipped with 1 Icarus rocket pod",
+    "This model's heavy flamer can be replaced with 1 onslaught gatling cannon",
+    "This model's heavy onslaught gatling cannon can be replaced with 1 macro plasma incinerator",
+    "This model's twin fragstorm grenade launcher can be replaced with 1 twin storm bolter"
+  ],
+  "damaged_effects": {
+    "1-4_wounds_remaining": "While this model has 1-4 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll."
+  }
+} 

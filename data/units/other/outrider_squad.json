@@ -1,0 +1,88 @@
+{
+  "name": "Outrider Squad",
+  "type": "other",
+  "base_size": "90mm x 52mm",
+  "characteristics": {
+    "movement": "12\"",
+    "toughness": 5,
+    "save": "3+",
+    "wounds": 4,
+    "leadership": "6+",
+    "objective_control": 2
+  },
+  "weapons": {
+    "ranged": [
+      {
+        "name": "Heavy bolt pistol",
+        "range": "18\"",
+        "attacks": 1,
+        "ballistic_skill": "3+",
+        "strength": 4,
+        "armor_penetration": -1,
+        "damage": 1,
+        "abilities": ["pistol"]
+      },
+      {
+        "name": "Twin bolt rifle",
+        "range": "24\"",
+        "attacks": 2,
+        "ballistic_skill": "3+",
+        "strength": 4,
+        "armor_penetration": -1,
+        "damage": 1,
+        "abilities": ["twin-linked"]
+      }
+    ],
+    "melee": [
+      {
+        "name": "Astartes chainsword",
+        "range": "Melee",
+        "attacks": 4,
+        "weapon_skill": "3+",
+        "strength": 4,
+        "armor_penetration": -1,
+        "damage": 1
+      }
+    ]
+  },
+  "abilities": [
+    "Oath of Moment",
+    "Thunderous Impact: Each time a model in this unit makes a melee attack, if this unit made a Charge move this turn, improve the Strength and Damage characteristics of that attack by 1."
+  ],
+  "unit_composition": {
+    "minimum": 3,
+    "maximum": 6,
+    "cost": {
+      "3_models": 80,
+      "6_models": 160,
+      "invader_atv": 60
+    },
+    "models": [
+      {
+        "name": "Outrider Sergeant",
+        "equipment": ["heavy bolt pistol", "twin bolt rifle", "Astartes chainsword"]
+      },
+      {
+        "name": "Outriders",
+        "equipment": ["heavy bolt pistol", "twin bolt rifle", "Astartes chainsword"]
+      },
+      {
+        "name": "Invader ATV",
+        "equipment": ["bolt pistol", "twin bolt rifle", "onslaught gatling cannon", "close combat weapon"]
+      }
+    ]
+  },
+  "keywords": [
+    "MOUNTED",
+    "GRENADES",
+    "IMPERIUM",
+    "OUTRIDER SQUAD",
+    "RAVENWING"
+  ],
+  "faction_keywords": [
+    "ADEPTUS ASTARTES"
+  ],
+  "wargear_options": [
+    "An Invader ATV's onslaught gatling cannon can be replaced with 1 multi-melta."
+  ]
+} 

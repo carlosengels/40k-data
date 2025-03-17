@@ -1,0 +1,96 @@
+{
+  "name": "Inceptor Squad",
+  "type": "other",
+  "base_size": "40mm",
+  "characteristics": {
+    "movement": "10\"",
+    "toughness": 6,
+    "save": "3+",
+    "wounds": 3,
+    "leadership": "6+",
+    "objective_control": 1
+  },
+  "weapons": {
+    "ranged": [
+      {
+        "name": "Assault bolters",
+        "range": "18\"",
+        "attacks": 3,
+        "ballistic_skill": "3+",
+        "strength": 5,
+        "armor_penetration": -1,
+        "damage": 2,
+        "abilities": ["assault", "pistol", "sustained hits 2", "twin-linked"]
+      },
+      {
+        "name": "Plasma exterminators - standard",
+        "range": "18\"",
+        "attacks": 2,
+        "ballistic_skill": "3+",
+        "strength": 7,
+        "armor_penetration": -2,
+        "damage": 2,
+        "abilities": ["assault", "pistol", "twin-linked"]
+      },
+      {
+        "name": "Plasma exterminators - supercharge",
+        "range": "18\"",
+        "attacks": 2,
+        "ballistic_skill": "3+",
+        "strength": 8,
+        "armor_penetration": -3,
+        "damage": 3,
+        "abilities": ["assault", "pistol", "hazardous", "twin-linked"]
+      }
+    ],
+    "melee": [
+      {
+        "name": "Close combat weapon",
+        "range": "Melee",
+        "attacks": 3,
+        "weapon_skill": "3+",
+        "strength": 4,
+        "armor_penetration": 0,
+        "damage": 1
+      }
+    ]
+  },
+  "abilities": [
+    "Deep Strike",
+    "Oath of Moment",
+    "Meteoric Descent: In your Movement phase, when this unit is set up on the battlefield using the Deep Strike ability, it can perform a meteoric descent. If it does, this unit can be set up anywhere on the battlefield that is more than 6\" horizontally away from all enemy units, but until the end of the turn, it is not eligible to declare a charge."
+  ],
+  "unit_composition": {
+    "minimum": 3,
+    "maximum": 6,
+    "cost": {
+      "3_models": 120,
+      "6_models": 240
+    },
+    "models": [
+      {
+        "name": "Inceptor Sergeant",
+        "equipment": ["assault bolters", "close combat weapon"]
+      },
+      {
+        "name": "Inceptors",
+        "count": "2-5",
+        "equipment": ["assault bolters", "close combat weapon"]
+      }
+    ]
+  },
+  "keywords": [
+    "INFANTRY",
+    "JUMP PACK",
+    "FLY",
+    "IMPERIUM",
+    "GRAVIS",
+    "INCEPTOR SQUAD"
+  ],
+  "faction_keywords": [
+    "ADEPTUS ASTARTES"
+  ],
+  "wargear_options": [
+    "All models in this unit can each have their assault bolters replaced with 1 plasma exterminators."
+  ]
+} 

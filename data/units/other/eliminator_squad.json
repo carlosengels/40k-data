@@ -1,0 +1,110 @@
+{
+  "name": "Eliminator Squad",
+  "type": "other",
+  "base_size": "40mm",
+  "characteristics": {
+    "movement": "6\"",
+    "toughness": 4,
+    "save": "3+",
+    "wounds": 2,
+    "leadership": "6+",
+    "objective_control": 1
+  },
+  "weapons": {
+    "ranged": [
+      {
+        "name": "Bolt pistol",
+        "range": "12\"",
+        "attacks": 1,
+        "ballistic_skill": "3+",
+        "strength": 4,
+        "armor_penetration": 0,
+        "damage": 1,
+        "abilities": ["pistol"]
+      },
+      {
+        "name": "Bolt sniper rifle",
+        "range": "36\"",
+        "attacks": 1,
+        "ballistic_skill": "3+",
+        "strength": 5,
+        "armor_penetration": -2,
+        "damage": 3,
+        "abilities": ["heavy", "precision"]
+      },
+      {
+        "name": "Instigator bolt carbine",
+        "range": "24\"",
+        "attacks": 1,
+        "ballistic_skill": "3+",
+        "strength": 4,
+        "armor_penetration": -2,
+        "damage": 2,
+        "abilities": ["precision"]
+      },
+      {
+        "name": "Las fusil",
+        "range": "36\"",
+        "attacks": 1,
+        "ballistic_skill": "3+",
+        "strength": 9,
+        "armor_penetration": -3,
+        "damage": "D6",
+        "abilities": ["heavy"]
+      }
+    ],
+    "melee": [
+      {
+        "name": "Close combat weapon",
+        "range": "Melee",
+        "attacks": 3,
+        "weapon_skill": "3+",
+        "strength": 4,
+        "armor_penetration": 0,
+        "damage": 1
+      }
+    ]
+  },
+  "abilities": [
+    "Infiltrators",
+    "Stealth",
+    "Oath of Moment",
+    "Reposition Under Covering Fire: In your Shooting phase, after this unit has shot, if it contains an Eliminator Sergeant equipped with an instigator bolt carbine, this unit can make a Normal move. If it does so, until the end of the turn, this unit is not eligible to declare a charge.",
+    "Mark the Target: Each time this unit Remains Stationary, until the start of your next Movement phase, ranged weapons equipped by models in this unit have the [DEVASTATING WOUNDS] ability."
+  ],
+  "unit_composition": {
+    "minimum": 3,
+    "maximum": 3,
+    "cost": {
+      "3_models": 85
+    },
+    "models": [
+      {
+        "name": "Eliminator Sergeant",
+        "equipment": ["bolt pistol", "bolt sniper rifle", "close combat weapon"]
+      },
+      {
+        "name": "Eliminator",
+        "equipment": ["bolt pistol", "bolt sniper rifle", "close combat weapon"]
+      }
+    ]
+  },
+  "keywords": [
+    "INFANTRY",
+    "GRENADES",
+    "IMPERIUM",
+    "PHOBOS",
+    "ELIMINATOR SQUAD"
+  ],
+  "faction_keywords": [
+    "ADEPTUS ASTARTES"
+  ],
+  "wargear_options": [
+    "The Eliminator Sergeant's bolt sniper rifle can be replaced with one of the following: 1 instigator bolt carbine; 1 las fusil",
+    "All Eliminators in this unit can each have their bolt sniper rifle replaced with 1 las fusil"
+  ],
+  "can_be_led_by": [
+    "Captain In Phobos Armour",
+    "Librarian In Phobos Armour"
+  ]
+} 

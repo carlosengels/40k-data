@@ -1,0 +1,112 @@
+{
+  "name": "Predator Annihilator",
+  "type": "other",
+  "base_size": "Use model",
+  "characteristics": {
+    "movement": "10\"",
+    "toughness": 10,
+    "save": "3+",
+    "wounds": 11,
+    "leadership": "6+",
+    "objective_control": 3
+  },
+  "weapons": {
+    "ranged": [
+      {
+        "name": "Predator twin lascannon",
+        "range": "48\"",
+        "attacks": 1,
+        "ballistic_skill": "3+",
+        "strength": 14,
+        "armor_penetration": -3,
+        "damage": "D6+1",
+        "abilities": ["twin-linked"]
+      },
+      {
+        "name": "Heavy bolter",
+        "range": "36\"",
+        "attacks": 3,
+        "ballistic_skill": "3+",
+        "strength": 5,
+        "armor_penetration": -1,
+        "damage": 2,
+        "abilities": ["sustained hits 1"]
+      },
+      {
+        "name": "Hunter-killer missile",
+        "range": "48\"",
+        "attacks": 1,
+        "ballistic_skill": "2+",
+        "strength": 14,
+        "armor_penetration": -3,
+        "damage": "D6",
+        "abilities": ["one shot"]
+      },
+      {
+        "name": "Lascannon",
+        "range": "48\"",
+        "attacks": 1,
+        "ballistic_skill": "3+",
+        "strength": 12,
+        "armor_penetration": -3,
+        "damage": "D6+1"
+      },
+      {
+        "name": "Storm bolter",
+        "range": "24\"",
+        "attacks": 2,
+        "ballistic_skill": "3+",
+        "strength": 4,
+        "armor_penetration": 0,
+        "damage": 1,
+        "abilities": ["rapid fire 2"]
+      }
+    ],
+    "melee": [
+      {
+        "name": "Armoured tracks",
+        "range": "Melee",
+        "attacks": 3,
+        "weapon_skill": "4+",
+        "strength": 6,
+        "armor_penetration": 0,
+        "damage": 1
+      }
+    ]
+  },
+  "abilities": [
+    "Deadly Demise D3",
+    "Oath of Moment",
+    "Annihilator: Each time a ranged attack made by this model is allocated to a MONSTER or VEHICLE model, you can re-roll the Damage roll."
+  ],
+  "unit_composition": {
+    "minimum": 1,
+    "maximum": 1,
+    "cost": {
+      "1_model": 135
+    },
+    "models": [
+      {
+        "name": "Predator Annihilator",
+        "equipment": ["Predator twin lascannon", "armoured tracks"]
+      }
+    ]
+  },
+  "keywords": [
+    "VEHICLE",
+    "SMOKE",
+    "IMPERIUM",
+    "PREDATOR ANNIHILATOR"
+  ],
+  "faction_keywords": [
+    "ADEPTUS ASTARTES"
+  ],
+  "wargear_options": [
+    "This model can be equipped with one of the following: 2 heavy bolters, 2 lascannons",
+    "This model can be equipped with 1 hunter-killer missile",
+    "This model can be equipped with 1 storm bolter"
+  ],
+  "damaged_effects": {
+    "1-4_wounds_remaining": "While this model has 1-4 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll."
+  }
+} 

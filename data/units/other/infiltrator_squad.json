@@ -1,0 +1,96 @@
+{
+  "name": "Infiltrator Squad",
+  "type": "other",
+  "base_size": "32mm",
+  "characteristics": {
+    "movement": "6\"",
+    "toughness": 4,
+    "save": "3+",
+    "wounds": 2,
+    "leadership": "6+",
+    "objective_control": 1
+  },
+  "weapons": {
+    "ranged": [
+      {
+        "name": "Bolt pistol",
+        "range": "12\"",
+        "attacks": 1,
+        "ballistic_skill": "3+",
+        "strength": 4,
+        "armor_penetration": 0,
+        "damage": 1,
+        "abilities": ["pistol"]
+      },
+      {
+        "name": "Marksman bolt carbine",
+        "range": "24\"",
+        "attacks": 2,
+        "ballistic_skill": "3+",
+        "strength": 4,
+        "armor_penetration": 0,
+        "damage": 1,
+        "abilities": ["heavy"]
+      }
+    ],
+    "melee": [
+      {
+        "name": "Close combat weapon",
+        "range": "Melee",
+        "attacks": 3,
+        "weapon_skill": "3+",
+        "strength": 4,
+        "armor_penetration": 0,
+        "damage": 1
+      }
+    ]
+  },
+  "abilities": [
+    "Oath of Moment",
+    "Omni-scramblers: Enemy units that are set up on the battlefield from Reserves cannot be set up within 12\" of this unit."
+  ],
+  "unit_composition": {
+    "minimum": 5,
+    "maximum": 10,
+    "cost": {
+      "5_models": 100,
+      "10_models": 200
+    },
+    "models": [
+      {
+        "name": "Infiltrator Sergeant",
+        "equipment": ["bolt pistol", "marksman bolt carbine", "close combat weapon"]
+      },
+      {
+        "name": "Infiltrators",
+        "count": "4-9",
+        "equipment": ["bolt pistol", "marksman bolt carbine", "close combat weapon"]
+      }
+    ]
+  },
+  "keywords": [
+    "INFANTRY",
+    "GRENADES",
+    "SMOKE",
+    "IMPERIUM",
+    "PHOBOS",
+    "INFILTRATOR SQUAD"
+  ],
+  "faction_keywords": [
+    "ADEPTUS ASTARTES"
+  ],
+  "wargear_options": [
+    "1 Infiltrator can be equipped with 1 helix gauntlet.*",
+    "1 Infiltrator can be equipped with 1 Infiltrator comms array.**",
+    "* These options cannot be taken on the same model."
+  ],
+  "wargear_abilities": {
+    "Helix Gauntlet": "Models in the bearer's unit have the Feel No Pain 6+ ability.",
+    "Infiltrator Comms Array": "Each time you target the bearer's unit with a Stratagem, roll one D6: on a 5+, you gain 1CP."
+  },
+  "led_by": [
+    "Captain In Phobos Armour",
+    "Librarian In Phobos Armour",
+    "Lieutenant In Phobos Armour"
+  ]
+} 

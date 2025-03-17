@@ -1,0 +1,79 @@
+{
+  "name": "Drop Pod",
+  "type": "other",
+  "base_size": "Use model",
+  "characteristics": {
+    "movement": "-",
+    "toughness": 7,
+    "save": "3+",
+    "wounds": 8,
+    "leadership": "6+",
+    "objective_control": 2
+  },
+  "weapons": {
+    "ranged": [
+      {
+        "name": "Deathwind launcher",
+        "range": "12\"",
+        "attacks": "D6+1",
+        "ballistic_skill": "3+",
+        "strength": 5,
+        "armor_penetration": 0,
+        "damage": 1,
+        "abilities": ["blast"]
+      },
+      {
+        "name": "Storm bolter",
+        "range": "24\"",
+        "attacks": 2,
+        "ballistic_skill": "3+",
+        "strength": 4,
+        "armor_penetration": 0,
+        "damage": 1,
+        "abilities": ["rapid fire 2"]
+      }
+    ]
+  },
+  "abilities": [
+    "Deadly Demise 1",
+    "Deep Strike",
+    "Oath of Moment",
+    "Drop Pod Assault: This model must start the battle in Reserves, but neither it nor any units embarked within it are counted towards any limits placed on the maximum number of Reserves units you can start the battle with. This model can be set up in the Reinforcements step of your first, second or third Movement phase, regardless of any mission rules. Any units embarked within this model must immediately disembark after it has been set up on the battlefield, and they must be set up more than 9\" away from all enemy models. After this model has been set up on the battlefield, no units can embark within it."
+  ],
+  "unit_composition": {
+    "minimum": 1,
+    "maximum": 1,
+    "cost": {
+      "1_model": 70
+    },
+    "models": [
+      {
+        "name": "Drop Pod",
+        "equipment": ["storm bolter"]
+      }
+    ]
+  },
+  "transport": {
+    "capacity": 10,
+    "restrictions": [
+      "ADEPTUS ASTARTES INFANTRY models only",
+      "Cannot transport JUMP PACK models",
+      "Cannot transport WULFEN models",
+      "Cannot transport GRAVIS models",
+      "Cannot transport CENTURION models",
+      "Cannot transport TERMINATOR models"
+    ]
+  },
+  "keywords": [
+    "VEHICLE",
+    "TRANSPORT",
+    "IMPERIUM",
+    "DROP POD"
+  ],
+  "faction_keywords": [
+    "ADEPTUS ASTARTES"
+  ],
+  "wargear_options": [
+    "This model's storm bolter can be replaced with 1 deathwind launcher"
+  ]
+} 

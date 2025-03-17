@@ -1,0 +1,132 @@
+{
+  "name": "Company Heroes",
+  "type": "other",
+  "base_size": "40mm",
+  "characteristics": {
+    "movement": "6\"",
+    "toughness": 4,
+    "save": "3+",
+    "wounds": 4,
+    "leadership": "6+",
+    "objective_control": 1
+  },
+  "weapons": {
+    "ranged": [
+      {
+        "name": "Bolt Pistol",
+        "range": "12\"",
+        "attacks": 1,
+        "ballistic_skill": "3+",
+        "strength": 4,
+        "armor_penetration": 0,
+        "damage": 1,
+        "abilities": ["pistol"]
+      },
+      {
+        "name": "Bolt rifle",
+        "range": "24\"",
+        "attacks": 1,
+        "ballistic_skill": "3+",
+        "strength": 4,
+        "armor_penetration": -1,
+        "damage": 1
+      },
+      {
+        "name": "Master-crafted bolt rifle",
+        "range": "24\"",
+        "attacks": 1,
+        "ballistic_skill": "2+",
+        "strength": 4,
+        "armor_penetration": -1,
+        "damage": 2,
+        "abilities": ["devastating wounds", "rapid fire 1"]
+      },
+      {
+        "name": "Master-crafted heavy bolter",
+        "range": "36\"",
+        "attacks": 3,
+        "ballistic_skill": "3+",
+        "strength": 5,
+        "armor_penetration": -1,
+        "damage": 3,
+        "abilities": ["heavy", "sustained hits 2"]
+      }
+    ],
+    "melee": [
+      {
+        "name": "Close combat weapon",
+        "range": "Melee",
+        "attacks": 5,
+        "weapon_skill": "3+",
+        "strength": 4,
+        "armor_penetration": 0,
+        "damage": 1
+      },
+      {
+        "name": "Master-crafted power weapon",
+        "range": "Melee",
+        "attacks": 6,
+        "weapon_skill": "2+",
+        "strength": 5,
+        "armor_penetration": -2,
+        "damage": 2,
+        "abilities": ["precision"]
+      }
+    ]
+  },
+  "abilities": [
+    "Oath of Moment",
+    "Astartes Banner: While this unit contains an Ancient, add 1 to the Objective Control characteristic of models in this unit.",
+    "Command Squad: While a CHARACTER model is leading this unit, each time an attack targets this unit, subtract 1 from the Wound roll."
+  ],
+  "unit_composition": {
+    "minimum": 4,
+    "maximum": 4,
+    "cost": 105,
+    "models": [
+      {
+        "name": "Ancient",
+        "equipment": ["bolt pistol", "bolt rifle", "close combat weapon"]
+      },
+      {
+        "name": "Company Champion",
+        "equipment": ["bolt pistol", "master-crafted power weapon"]
+      },
+      {
+        "name": "Company Veteran 1",
+        "equipment": ["bolt pistol", "master-crafted heavy bolter", "close combat weapon"]
+      },
+      {
+        "name": "Company Veteran 2",
+        "equipment": ["bolt pistol", "master-crafted bolt rifle", "close combat weapon"]
+      }
+    ]
+  },
+  "keywords": [
+    "INFANTRY",
+    "GRENADES",
+    "IMPERIUM",
+    "TACTICUS",
+    "COMPANY HEROES"
+  ],
+  "faction_keywords": [
+    "ADEPTUS ASTARTES"
+  ],
+  "can_be_led_by": [
+    "Adrax Agatone",
+    "Captain",
+    "Captain Sicarius",
+    "Kor'sarro Khan",
+    "Lieutenant",
+    "Marneus Calgar",
+    "Pedro Kantor",
+    "Uriel Ventris",
+    "Vulkan He'stan",
+    "Blood Angels Captain",
+    "Captain Tycho",
+    "Gabriel Seth"
+  ],
+  "special_rules": [
+    "You must attach one CAPTAIN or CHAPTER MASTER model to this unit. If this is not possible, this unit does not take part in the battle and counts as having been destroyed."
+  ]
+} 

@@ -1,0 +1,125 @@
+{
+  "name": "Land Raider",
+  "type": "other",
+  "base_size": "Use model",
+  "characteristics": {
+    "movement": "10\"",
+    "toughness": 12,
+    "save": "2+",
+    "wounds": 16,
+    "leadership": "6+",
+    "objective_control": 5
+  },
+  "weapons": {
+    "ranged": [
+      {
+        "name": "Godhammer lascannon",
+        "range": "48\"",
+        "attacks": 2,
+        "ballistic_skill": "3+",
+        "strength": 12,
+        "armor_penetration": -3,
+        "damage": "D6+1"
+      },
+      {
+        "name": "Hunter-killer missile",
+        "range": "48\"",
+        "attacks": 1,
+        "ballistic_skill": "2+",
+        "strength": 14,
+        "armor_penetration": -3,
+        "damage": "D6",
+        "abilities": ["one shot"]
+      },
+      {
+        "name": "Multi-melta",
+        "range": "18\"",
+        "attacks": 2,
+        "ballistic_skill": "3+",
+        "strength": 9,
+        "armor_penetration": -4,
+        "damage": "D6",
+        "abilities": ["melta 2"]
+      },
+      {
+        "name": "Storm bolter",
+        "range": "24\"",
+        "attacks": 2,
+        "ballistic_skill": "3+",
+        "strength": 4,
+        "armor_penetration": 0,
+        "damage": 1,
+        "abilities": ["rapid fire 2"]
+      },
+      {
+        "name": "Twin heavy bolter",
+        "range": "36\"",
+        "attacks": 3,
+        "ballistic_skill": "3+",
+        "strength": 5,
+        "armor_penetration": -1,
+        "damage": 2,
+        "abilities": ["sustained hits 1", "twin-linked"]
+      }
+    ],
+    "melee": [
+      {
+        "name": "Armoured tracks",
+        "range": "Melee",
+        "attacks": 6,
+        "weapon_skill": "4+",
+        "strength": 8,
+        "armor_penetration": 0,
+        "damage": 1
+      }
+    ]
+  },
+  "abilities": [
+    "Deadly Demise D6",
+    "Oath of Moment",
+    "Assault Ramp: Each time a unit disembarks from this model after it has made a Normal move, that unit is still eligible to declare a charge this turn."
+  ],
+  "unit_composition": {
+    "minimum": 1,
+    "maximum": 1,
+    "cost": {
+      "1_model": 240
+    },
+    "models": [
+      {
+        "name": "Land Raider",
+        "equipment": ["twin heavy bolter", "2 godhammer lascannons", "armoured tracks"]
+      }
+    ]
+  },
+  "transport": {
+    "capacity": 12,
+    "unit_types": ["ADEPTUS ASTARTES INFANTRY"],
+    "space_requirements": {
+      "JUMP PACK": 2,
+      "WULFEN": 2,
+      "GRAVIS": 2,
+      "TERMINATOR": 2,
+      "CENTURION": 3
+    }
+  },
+  "keywords": [
+    "VEHICLE",
+    "SMOKE",
+    "TRANSPORT",
+    "IMPERIUM",
+    "LAND RAIDER",
+    "DEATHWING"
+  ],
+  "faction_keywords": [
+    "ADEPTUS ASTARTES"
+  ],
+  "wargear_options": [
+    "This model can be equipped with 1 hunter-killer missile.",
+    "This model can be equipped with 1 multi-melta.",
+    "This model can be equipped with 1 storm bolter."
+  ],
+  "damaged_effects": {
+    "1-5_wounds_remaining": "While this model has 1-5 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll."
+  }
+} 

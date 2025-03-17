@@ -1,0 +1,102 @@
+{
+  "name": "Gladiator Valiant",
+  "type": "other",
+  "base_size": "100mm",
+  "characteristics": {
+    "movement": "10\"",
+    "toughness": 10,
+    "save": "3+",
+    "wounds": 12,
+    "leadership": "6+",
+    "objective_control": 3
+  },
+  "weapons": {
+    "ranged": [
+      {
+        "name": "Icarus rocket pod",
+        "range": "24\"",
+        "attacks": "D3",
+        "ballistic_skill": "3+",
+        "strength": 8,
+        "armor_penetration": -1,
+        "damage": 2,
+        "abilities": ["anti-fly 2+"]
+      },
+      {
+        "name": "Ironhail heavy stubber",
+        "range": "36\"",
+        "attacks": 3,
+        "ballistic_skill": "3+",
+        "strength": 4,
+        "armor_penetration": 0,
+        "damage": 1,
+        "abilities": ["rapid fire 3"]
+      },
+      {
+        "name": "Multi-melta",
+        "range": "18\"",
+        "attacks": 2,
+        "ballistic_skill": "3+",
+        "strength": 9,
+        "armor_penetration": -4,
+        "damage": "D6",
+        "abilities": ["melta 2"]
+      },
+      {
+        "name": "Twin las-talon",
+        "range": "36\"",
+        "attacks": 2,
+        "ballistic_skill": "3+",
+        "strength": 10,
+        "armor_penetration": -3,
+        "damage": "D6+1",
+        "abilities": ["twin-linked"]
+      }
+    ],
+    "melee": [
+      {
+        "name": "Armoured hull",
+        "range": "Melee",
+        "attacks": 3,
+        "weapon_skill": "4+",
+        "strength": 6,
+        "armor_penetration": 0,
+        "damage": 1
+      }
+    ]
+  },
+  "abilities": [
+    "Deadly Demise D3",
+    "Oath of Moment",
+    "Ferocious Assault: Each time this model makes an attack with its twin las-talon that targets the closest eligible MONSTER or VEHICLE unit, add 1 to the Hit roll."
+  ],
+  "unit_composition": {
+    "minimum": 1,
+    "maximum": 1,
+    "cost": {
+      "1_model": 160
+    },
+    "models": [
+      {
+        "name": "Gladiator Valiant",
+        "equipment": ["2 multi-meltas", "twin las-talon", "armoured hull"]
+      }
+    ]
+  },
+  "keywords": [
+    "VEHICLE",
+    "SMOKE",
+    "IMPERIUM",
+    "GLADIATOR VALIANT"
+  ],
+  "faction_keywords": [
+    "ADEPTUS ASTARTES"
+  ],
+  "wargear_options": [
+    "This model can be equipped with 1 ironhail heavy stubber.",
+    "This model can be equipped with 1 Icarus rocket pod."
+  ],
+  "damaged": {
+    "1-4_wounds_remaining": "While this model has 1-4 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll."
+  }
+} 

@@ -1,0 +1,122 @@
+{
+  "name": "Assault Intercessors With Jump Packs",
+  "type": "other",
+  "base_size": "32mm",
+  "characteristics": {
+    "movement": "12\"",
+    "toughness": 4,
+    "save": "3+",
+    "wounds": 2,
+    "leadership": "6+",
+    "objective_control": 1
+  },
+  "weapons": {
+    "ranged": [
+      {
+        "name": "Hand flamer",
+        "range": "12\"",
+        "attacks": "D6",
+        "strength": 3,
+        "armor_penetration": 0,
+        "damage": 1,
+        "abilities": ["ignores cover", "pistol", "torrent"]
+      },
+      {
+        "name": "Heavy bolt pistol",
+        "range": "18\"",
+        "attacks": 1,
+        "ballistic_skill": "3+",
+        "strength": 4,
+        "armor_penetration": -1,
+        "damage": 1,
+        "abilities": ["pistol"]
+      },
+      {
+        "name": "Plasma pistol - standard",
+        "range": "12\"",
+        "attacks": 1,
+        "ballistic_skill": "3+",
+        "strength": 7,
+        "armor_penetration": -2,
+        "damage": 1,
+        "abilities": ["pistol"]
+      },
+      {
+        "name": "Plasma pistol - supercharge",
+        "range": "12\"",
+        "attacks": 1,
+        "ballistic_skill": "3+",
+        "strength": 8,
+        "armor_penetration": -3,
+        "damage": 2,
+        "abilities": ["hazardous", "pistol"]
+      }
+    ],
+    "melee": [
+      {
+        "name": "Astartes chainsword",
+        "range": "Melee",
+        "attacks": 4,
+        "weapon_skill": "3+",
+        "strength": 4,
+        "armor_penetration": -1,
+        "damage": 1
+      },
+      {
+        "name": "Power weapon",
+        "range": "Melee",
+        "attacks": 4,
+        "weapon_skill": "3+",
+        "strength": 5,
+        "armor_penetration": -2,
+        "damage": 1
+      },
+      {
+        "name": "Power fist",
+        "range": "Melee",
+        "attacks": 3,
+        "weapon_skill": "3+",
+        "strength": 8,
+        "armor_penetration": -2,
+        "damage": 2
+      }
+    ]
+  },
+  "abilities": [
+    "Deep Strike",
+    "Oath of Moment",
+    "Hammer of Wrath: Each time this unit ends a Charge move, select one enemy unit within Engagement Range of it, then roll one D6 for each model in this unit that is within Engagement Range of that enemy unit: for each 4+, that enemy unit suffers 1 mortal wound."
+  ],
+  "unit_composition": {
+    "minimum": 5,
+    "maximum": 10,
+    "cost": {
+      "5_models": 90,
+      "10_models": 160
+    }
+  },
+  "keywords": [
+    "INFANTRY",
+    "GRENADES",
+    "JUMP PACK",
+    "FLY",
+    "IMPERIUM",
+    "TACTICUS",
+    "ASSAULT INTERCESSORS WITH JUMP PACKS"
+  ],
+  "faction_keywords": [
+    "ADEPTUS ASTARTES"
+  ],
+  "wargear_options": [
+    "For every 5 models in this unit, 1 Assault Intercessor with Jump Pack's heavy bolt pistol can be replaced with 1 plasma pistol.",
+    "The Assault Intercessor Sergeant with Jump Pack's Astartes chainsword can be replaced with one of the following: 1 power weapon; 1 power fist",
+    "The Assault Intercessor Sergeant with Jump Pack's heavy bolt pistol can be replaced with one of the following: 1 hand flamer; 1 plasma pistol"
+  ],
+  "can_be_led_by": [
+    "Captain With Jump Pack",
+    "Chaplain With Jump Pack",
+    "Kayvaan Shrike",
+    "Commander Dante",
+    "Sanguinary Priest With Jump Pack"
+  ]
+} 

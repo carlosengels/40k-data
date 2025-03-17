@@ -1,0 +1,118 @@
+{
+  "name": "Bladeguard Veteran Squad",
+  "type": "other",
+  "base_size": "40mm",
+  "characteristics": {
+    "movement": "6\"",
+    "toughness": 4,
+    "save": "3+",
+    "wounds": 3,
+    "leadership": "6+",
+    "objective_control": 1,
+    "invulnerable_save": "4+"
+  },
+  "weapons": {
+    "ranged": [
+      {
+        "name": "Heavy bolt pistol",
+        "range": "18\"",
+        "attacks": 1,
+        "ballistic_skill": "3+",
+        "strength": 4,
+        "armor_penetration": -1,
+        "damage": 1,
+        "abilities": ["pistol"]
+      },
+      {
+        "name": "Neo-volkite pistol",
+        "range": "12\"",
+        "attacks": 1,
+        "ballistic_skill": "3+",
+        "strength": 5,
+        "armor_penetration": 0,
+        "damage": 2,
+        "abilities": ["devastating wounds", "pistol"]
+      },
+      {
+        "name": "Plasma pistol - standard",
+        "range": "12\"",
+        "attacks": 1,
+        "ballistic_skill": "3+",
+        "strength": 7,
+        "armor_penetration": -2,
+        "damage": 1,
+        "abilities": ["pistol"]
+      },
+      {
+        "name": "Plasma pistol - supercharge",
+        "range": "12\"",
+        "attacks": 1,
+        "ballistic_skill": "3+",
+        "strength": 8,
+        "armor_penetration": -3,
+        "damage": 2,
+        "abilities": ["hazardous", "pistol"]
+      }
+    ],
+    "melee": [
+      {
+        "name": "Master-crafted power weapon",
+        "range": "Melee",
+        "attacks": 4,
+        "weapon_skill": "3+",
+        "strength": 5,
+        "armor_penetration": -2,
+        "damage": 2
+      }
+    ]
+  },
+  "abilities": [
+    "Oath of Moment",
+    "Bladeguard: At the start of the Fight phase, you can select one of the following abilities to apply to models in this unit until the end of the phase: Swords of the Chapter: Each time a model in this unit makes a melee attack, re-roll a Hit roll of 1. Shields of the Chapter: Each time an invulnerable saving throw is made for a model in this unit, re-roll a saving throw of 1."
+  ],
+  "unit_composition": {
+    "minimum": 3,
+    "maximum": 6,
+    "cost": {
+      "3_models": 80,
+      "6_models": 160
+    }
+  },
+  "keywords": [
+    "INFANTRY",
+    "GRENADES",
+    "IMPERIUM",
+    "TACTICUS",
+    "BLADEGUARD VETERAN SQUAD",
+    "DEATHWING"
+  ],
+  "faction_keywords": [
+    "ADEPTUS ASTARTES"
+  ],
+  "wargear_options": [
+    "The Bladeguard Veteran Sergeant's heavy bolt pistol can be replaced with one of the following: 1 neo-volkite pistol; 1 plasma pistol"
+  ],
+  "can_be_led_by": [
+    "Adrax Agatone",
+    "Bladeguard Ancient",
+    "Captain",
+    "Captain Sicarius",
+    "Chaplain",
+    "Chief Librarian Tigurius",
+    "Judiciar",
+    "Kor'sarro Khan",
+    "Lieutenant",
+    "Marneus Calgar",
+    "Pedro Kantor",
+    "Uriel Ventris",
+    "Asmodai",
+    "Azrael",
+    "Ezekiel",
+    "Lazarus",
+    "Ragnar Blackmane",
+    "Lieutenant Titus",
+    "Captain Tycho",
+    "Gabriel Seth",
+    "Primaris Company Champion"
+  ]
+} 

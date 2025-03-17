@@ -1,0 +1,107 @@
+{
+  "name": "Infernus Squad",
+  "type": "other",
+  "base_size": "32mm",
+  "characteristics": {
+    "movement": "6\"",
+    "toughness": 4,
+    "save": "3+",
+    "wounds": 2,
+    "leadership": "6+",
+    "objective_control": 1
+  },
+  "weapons": {
+    "ranged": [
+      {
+        "name": "Bolt pistol",
+        "range": "12\"",
+        "attacks": 1,
+        "ballistic_skill": "3+",
+        "strength": 4,
+        "armor_penetration": 0,
+        "damage": 1,
+        "abilities": ["pistol"]
+      },
+      {
+        "name": "Pyreblaster",
+        "range": "12\"",
+        "attacks": "D6",
+        "ballistic_skill": "N/A",
+        "strength": 5,
+        "armor_penetration": -1,
+        "damage": 1,
+        "abilities": ["ignores cover", "torrent"]
+      }
+    ],
+    "melee": [
+      {
+        "name": "Close combat weapon",
+        "range": "Melee",
+        "attacks": 3,
+        "weapon_skill": "3+",
+        "strength": 4,
+        "armor_penetration": 0,
+        "damage": 1
+      }
+    ]
+  },
+  "abilities": [
+    "Oath of Moment",
+    "Incendiary Terror: In your Shooting phase, after this unit has shot, you can select one enemy INFANTRY unit hit by one or more of those attacks made with a pyreblaster. That enemy unit must take a Battle-shock test, subtracting 1 from that test."
+  ],
+  "unit_composition": {
+    "minimum": 5,
+    "maximum": 10,
+    "cost": {
+      "5_models": 90,
+      "10_models": 180
+    },
+    "models": [
+      {
+        "name": "Infernus Sergeant",
+        "equipment": ["bolt pistol", "pyreblaster", "close combat weapon"]
+      },
+      {
+        "name": "Infernus Marines",
+        "count": "4-9",
+        "equipment": ["bolt pistol", "pyreblaster", "close combat weapon"]
+      }
+    ]
+  },
+  "keywords": [
+    "INFANTRY",
+    "GRENADES",
+    "IMPERIUM",
+    "TACTICUS",
+    "INFERNUS SQUAD"
+  ],
+  "faction_keywords": [
+    "ADEPTUS ASTARTES"
+  ],
+  "led_by": [
+    "Adrax Agatone",
+    "Ancient",
+    "Apothecary",
+    "Captain",
+    "Chaplain",
+    "Judiciar",
+    "Librarian",
+    "Lieutenant",
+    "Marneus Calgar",
+    "Vulkan He'stan",
+    "Castellan",
+    "Chaplain Grimaldus",
+    "Marshal",
+    "Blood Angels Captain",
+    "Sanguinary Priest",
+    "Asmodai",
+    "Azrael",
+    "Ezekiel",
+    "Lazarus",
+    "Lieutenant Titus",
+    "Brother Corbulo",
+    "Captain Tycho",
+    "Gabriel Seth",
+    "Primaris Company Champion"
+  ]
+} 

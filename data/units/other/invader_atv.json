@@ -1,0 +1,98 @@
+{
+  "name": "Invader ATV",
+  "type": "other",
+  "base_size": "Use model",
+  "characteristics": {
+    "movement": "12\"",
+    "toughness": 5,
+    "save": "3+",
+    "wounds": 8,
+    "leadership": "6+",
+    "objective_control": 2
+  },
+  "weapons": {
+    "ranged": [
+      {
+        "name": "Bolt pistol",
+        "range": "12\"",
+        "attacks": 1,
+        "ballistic_skill": "3+",
+        "strength": 4,
+        "armor_penetration": 0,
+        "damage": 1,
+        "abilities": ["pistol"]
+      },
+      {
+        "name": "Multi-melta",
+        "range": "18\"",
+        "attacks": 2,
+        "ballistic_skill": "3+",
+        "strength": 9,
+        "armor_penetration": -4,
+        "damage": "D6",
+        "abilities": ["melta 2"]
+      },
+      {
+        "name": "Onslaught gatling cannon",
+        "range": "24\"",
+        "attacks": 8,
+        "ballistic_skill": "3+",
+        "strength": 5,
+        "armor_penetration": 0,
+        "damage": 1,
+        "abilities": ["devastating wounds"]
+      },
+      {
+        "name": "Twin bolt rifle",
+        "range": "24\"",
+        "attacks": 2,
+        "ballistic_skill": "3+",
+        "strength": 4,
+        "armor_penetration": -1,
+        "damage": 1,
+        "abilities": ["twin-linked"]
+      }
+    ],
+    "melee": [
+      {
+        "name": "Close combat weapon",
+        "range": "Melee",
+        "attacks": 5,
+        "weapon_skill": "3+",
+        "strength": 4,
+        "armor_penetration": 0,
+        "damage": 1
+      }
+    ]
+  },
+  "abilities": [
+    "Oath of Moment",
+    "Outrider Escort: Once per turn, in your opponent's Shooting phase, when another friendly ADEPTUS ASTARTES MOUNTED unit within 6\" of this model is selected as the target of an attack, one model from your army with this ability can use it. If it does, after that enemy unit has finished making its attacks, that model can shoot as if it were your Shooting phase, but when resolving those attacks it can only target that enemy unit (and only if it is an eligible target)."
+  ],
+  "unit_composition": {
+    "minimum": 1,
+    "maximum": 1,
+    "cost": {
+      "1_model": 60
+    },
+    "models": [
+      {
+        "name": "Invader ATV",
+        "equipment": ["bolt pistol", "twin bolt rifle", "onslaught gatling cannon", "close combat weapon"]
+      }
+    ]
+  },
+  "keywords": [
+    "MOUNTED",
+    "GRENADES",
+    "IMPERIUM",
+    "INVADER ATV",
+    "RAVENWING"
+  ],
+  "faction_keywords": [
+    "ADEPTUS ASTARTES"
+  ],
+  "wargear_options": [
+    "This model's onslaught gatling cannon can be replaced with 1 multi-melta."
+  ]
+} 

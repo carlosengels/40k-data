@@ -1,0 +1,95 @@
+{
+  "name": "Incursor Squad",
+  "type": "other",
+  "base_size": "32mm",
+  "characteristics": {
+    "movement": "6\"",
+    "toughness": 4,
+    "save": "3+",
+    "wounds": 2,
+    "leadership": "6+",
+    "objective_control": 1
+  },
+  "weapons": {
+    "ranged": [
+      {
+        "name": "Bolt pistol",
+        "range": "12\"",
+        "attacks": 1,
+        "ballistic_skill": "3+",
+        "strength": 4,
+        "armor_penetration": 0,
+        "damage": 1,
+        "abilities": ["pistol"]
+      },
+      {
+        "name": "Occulus bolt carbine",
+        "range": "24\"",
+        "attacks": 2,
+        "ballistic_skill": "3+",
+        "strength": 4,
+        "armor_penetration": 0,
+        "damage": 1,
+        "abilities": ["assault", "ignores cover"]
+      }
+    ],
+    "melee": [
+      {
+        "name": "Paired combat blades",
+        "range": "Melee",
+        "attacks": 3,
+        "weapon_skill": "3+",
+        "strength": 4,
+        "armor_penetration": -1,
+        "damage": 1,
+        "abilities": ["sustained hits 1"]
+      }
+    ]
+  },
+  "abilities": [
+    "Scouts 6\"",
+    "Oath of Moment",
+    "Multi-spectrum Array: In your Shooting phase, after this unit has shot, select one enemy unit that was hit by one or more attacks made by this unit this phase. Until the end of the phase, each time a friendly ADEPTUS ASTARTES unit makes an attack that targets that enemy unit, add 1 to the Hit roll."
+  ],
+  "unit_composition": {
+    "minimum": 5,
+    "maximum": 10,
+    "cost": {
+      "5_models": 80,
+      "10_models": 160
+    },
+    "models": [
+      {
+        "name": "Incursor Sergeant",
+        "equipment": ["bolt pistol", "occulus bolt carbine", "paired combat blades"]
+      },
+      {
+        "name": "Incursors",
+        "count": "4-9",
+        "equipment": ["bolt pistol", "occulus bolt carbine", "paired combat blades"]
+      }
+    ]
+  },
+  "keywords": [
+    "INFANTRY",
+    "GRENADES",
+    "SMOKE",
+    "IMPERIUM",
+    "PHOBOS",
+    "INCURSOR SQUAD"
+  ],
+  "faction_keywords": [
+    "ADEPTUS ASTARTES"
+  ],
+  "wargear_options": [
+    "One Incusor can be equipped with 1 haywire mine."
+  ],
+  "wargear_abilities": [
+    "Haywire Mine: Once per battle, at the start of any phase, you can select one enemy unit within 3\" of the bearer and roll one D6: on a 2+, that enemy unit suffers D3 mortal wounds, or 2D3 mortal wounds instead if it is a VEHICLE unit."
+  ],
+  "led_by": [
+    "Captain In Phobos Armour",
+    "Librarian In Phobos Armour",
+    "Lieutenant In Phobos Armour"
+  ]
+} 

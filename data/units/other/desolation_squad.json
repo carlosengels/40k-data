@@ -1,0 +1,132 @@
+{
+  "name": "Desolation Squad",
+  "type": "other",
+  "base_size": "32mm",
+  "characteristics": {
+    "movement": "6\"",
+    "toughness": 4,
+    "save": "3+",
+    "wounds": 2,
+    "leadership": "6+",
+    "objective_control": 1
+  },
+  "weapons": {
+    "ranged": [
+      {
+        "name": "Bolt pistol",
+        "range": "12\"",
+        "attacks": 1,
+        "ballistic_skill": "3+",
+        "strength": 4,
+        "armor_penetration": 0,
+        "damage": 1,
+        "abilities": ["pistol"]
+      },
+      {
+        "name": "Castellan launcher",
+        "range": "36\"",
+        "attacks": "D3",
+        "ballistic_skill": "3+",
+        "strength": 4,
+        "armor_penetration": 0,
+        "damage": 1,
+        "abilities": ["blast", "indirect fire"]
+      },
+      {
+        "name": "Superfrag rocket launcher",
+        "range": "48\"",
+        "attacks": "D6+1",
+        "ballistic_skill": "4+",
+        "strength": 5,
+        "armor_penetration": 0,
+        "damage": 1,
+        "abilities": ["blast", "heavy"]
+      },
+      {
+        "name": "Superkrak rocket launcher",
+        "range": "48\"",
+        "attacks": 1,
+        "ballistic_skill": "4+",
+        "strength": 10,
+        "armor_penetration": -2,
+        "damage": "D6+1",
+        "abilities": ["heavy"]
+      },
+      {
+        "name": "Vengor launcher",
+        "range": "48\"",
+        "attacks": "D6",
+        "ballistic_skill": "2+",
+        "strength": 7,
+        "armor_penetration": -1,
+        "damage": 2,
+        "abilities": ["blast", "indirect fire"]
+      }
+    ],
+    "melee": [
+      {
+        "name": "Close combat weapon",
+        "range": "Melee",
+        "attacks": 3,
+        "weapon_skill": "3+",
+        "strength": 4,
+        "armor_penetration": 0,
+        "damage": 1
+      }
+    ]
+  },
+  "abilities": [
+    "Oath of Moment",
+    "Targeter Optics: Each time this unit Remains Stationary, until the start of your next Movement phase, ranged weapons equipped by models in this unit have the [IGNORES COVER] ability."
+  ],
+  "unit_composition": {
+    "minimum": 5,
+    "maximum": 5,
+    "cost": 200,
+    "models": [
+      {
+        "name": "Desolation Sergeant",
+        "equipment": ["bolt pistol", "castellan launcher", "superfrag rocket launcher", "close combat weapon"]
+      },
+      {
+        "name": "Desolation Marine 1",
+        "equipment": ["bolt pistol", "castellan launcher", "superfrag rocket launcher", "close combat weapon"]
+      },
+      {
+        "name": "Desolation Marine 2",
+        "equipment": ["bolt pistol", "castellan launcher", "superfrag rocket launcher", "close combat weapon"]
+      },
+      {
+        "name": "Desolation Marine 3",
+        "equipment": ["bolt pistol", "castellan launcher", "superfrag rocket launcher", "close combat weapon"]
+      },
+      {
+        "name": "Desolation Marine 4",
+        "equipment": ["bolt pistol", "castellan launcher", "superfrag rocket launcher", "close combat weapon"]
+      }
+    ]
+  },
+  "keywords": [
+    "INFANTRY",
+    "GRENADES",
+    "IMPERIUM",
+    "TACTICUS",
+    "DESOLATION SQUAD"
+  ],
+  "faction_keywords": [
+    "ADEPTUS ASTARTES"
+  ],
+  "wargear_options": [
+    "All of the models in this unit can each have their superfrag rocket launcher replaced with 1 superkrak rocket launcher.",
+    "The Desolation Sergeant's superfrag rocket launcher or superkrak rocket launcher can be replaced with 1 vengor launcher."
+  ],
+  "can_be_led_by": [
+    "Ancient",
+    "Apothecary",
+    "Chief Librarian Tigurius",
+    "Librarian",
+    "Techmarine",
+    "Sanguinary Priest",
+    "Brother Corbulo"
+  ]
+} 
