@@ -225,6 +225,85 @@ The analysis is implemented in `functions/mobility_survivability_ratio.py`, whic
 - Detailed output of component scores and unit statistics
 - Sorting and ranking of units by combined efficiency
 
+## Damage Efficiency Analysis
+
+### Methodology
+We analyzed the damage output efficiency of units by calculating their expected damage per point against various target profiles. The analysis considers:
+- Hit probability (based on Ballistic Skill and special rules like Sustained Hits)
+- Wound probability (based on Strength vs Toughness)
+- Save probability (modified by AP)
+- Damage characteristics
+- Points cost
+
+### Target Profiles
+1. **MEQ (Marine Equivalent)**
+   - Toughness 4, 3+ Save
+   - Represents standard Space Marines and similar units
+
+2. **GEQ+ (Enhanced Guard Equivalent)**
+   - Toughness 5, 2+ Save
+   - Represents tougher infantry units
+
+3. **VEQ (Vehicle Equivalent)**
+   - Toughness 7, 3+ Save
+   - Represents standard vehicles
+
+4. **TEQ (Terminator Equivalent)**
+   - Toughness 6, 5+ Save
+   - Represents elite infantry
+
+### Key Findings
+
+#### Most Efficient Units by Target Type
+
+1. **vs MEQ (T4, 3+)**
+   - Gladiator Reaper (0.028 damage/point)
+     - Twin heavy onslaught gatling cannon provides 3.56 expected damage
+     - Excellent anti-infantry efficiency
+   - Aggressor Squad (0.015 damage/point)
+   - Redemptor Dreadnought (0.011 damage/point)
+
+2. **vs GEQ+ (T5, 2+)**
+   - Gladiator Reaper (0.012 damage/point)
+     - Volume of fire overcomes tough saves
+   - Aggressor Squad (0.005 damage/point)
+   - Drop Pod (0.004 damage/point)
+
+3. **vs VEQ (T7, 3+)**
+   - Gladiator Reaper (0.015 damage/point)
+     - Balanced anti-vehicle capability
+   - Aggressor Squad (0.010 damage/point)
+   - Drop Pod (0.006 damage/point)
+
+4. **vs TEQ (T6, 5+)**
+   - Firestrike Servo-turrets (0.089 damage/point)
+     - Twin Firestrike weapons excel against elite infantry
+   - Gladiator Reaper (0.044 damage/point)
+   - Dreadnought (0.038 damage/point)
+
+### Strategic Implications
+
+1. **Unit Role Specialization**
+   - The Gladiator Reaper shows remarkable versatility across all target types
+   - Firestrike Servo-turrets are extremely cost-effective against elite targets
+   - Volume of fire weapons maintain effectiveness against higher toughness targets
+
+2. **Points Efficiency Considerations**
+   - Lower-cost units with high damage output (like Firestrike Servo-turrets) provide excellent value
+   - More expensive units need significant damage output to justify their cost
+   - Multi-damage weapons become more valuable against higher toughness targets
+
+3. **Target Priority Guidelines**
+   - Use high volume, lower strength weapons against MEQ targets
+   - Employ multi-damage weapons against TEQ and VEQ targets
+   - Consider AP values carefully when targeting units with good saves
+
+4. **List Building Recommendations**
+   - Include a mix of anti-infantry and anti-armor capabilities
+   - Consider Gladiator Reapers for versatile firepower
+   - Use Firestrike Servo-turrets for cost-effective anti-elite firepower
+   - Balance points investment between specialized and versatile units
+
 ## Proposed Points-Based Analyses
 
 ### 1. Damage per Point Analysis
