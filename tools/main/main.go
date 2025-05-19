@@ -25,6 +25,8 @@ type Defender struct {
 	FNP        int
 }
 
+//TODO Add probabilty const
+
 func calcDamage(attacker Attacker, defender Defender) {
 
 	// Calc hits. Hits on +3 so: Attacks * 4 / 6
@@ -33,6 +35,7 @@ func calcDamage(attacker Attacker, defender Defender) {
 	fmt.Printf("\n%d out of %d attacks hit\n", roundedHits, attacker.Attacks)
 
 	// Calc wounds. Wounds on 5s
+	// TODO Add WoundRollCalculator function
 	var wounds int
 	wounds = int(math.Round(float64(roundedHits) * (2.0 / 6.0)))
 	fmt.Printf("\n%d out of %d hits wound\n", wounds, roundedHits)
@@ -44,6 +47,7 @@ func calcDamage(attacker Attacker, defender Defender) {
 
 	// No FNP in this scenario
 
+	//Calculate total damage
 	var damage int
 	damage = failedSaves * attacker.Damage
 	fmt.Printf("\nTotal damage is: %v\n", damage)
