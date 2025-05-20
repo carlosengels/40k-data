@@ -20,7 +20,8 @@ func CalcHits(attacks int, bs int) int {
 	case bs == 6:
 		hitRate = 1.0 / 6.0
 	default:
-		hitRate = 0.0
+		// Used for auto-hit (TORRENT) weapons
+		hitRate = 1.0
 	}
 
 	// Multiply by attacks
