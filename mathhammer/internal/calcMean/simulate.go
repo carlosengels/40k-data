@@ -18,15 +18,13 @@ func CalcDamage(attacker u.Attacker, defender u.Defender) {
 
 	//Saving on 5sZ
 	//D only
-	var failedSaves int
-	failedSaves = int(math.Round(float64(wounds) * (4.0 / 6.0)))
+	failedSaves := int(math.Round(float64(wounds) * (4.0 / 6.0)))
 	fmt.Printf("\n%d out of %d wounds go through\n", failedSaves, wounds)
 
 	//TODO FNP
 	// D only
 
 	//Calculate total damage
-	var damage int
-	damage = failedSaves * attacker.Damage
+	damage := failedSaves * attacker.Damage
 	fmt.Printf("\nTotal damage is: %v\n", damage)
 }
