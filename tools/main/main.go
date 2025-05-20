@@ -23,15 +23,13 @@ type Defender struct {
 }
 
 func calcHits(attacks int, bs int) int {
-	var hits int
-	var hitRate float32
-
 	// Calculate mean rate based on BS
 	// 2+ = 5/6 chance
 	// 3+ = 4/6
 	// 4+ = 3/6
 	// 5+ = 2/6
 	// 6+ = 1/6
+	var hitRate float32
 	switch {
 	case bs == 2:
 		hitRate = 5.0 / 6.0
@@ -48,12 +46,58 @@ func calcHits(attacks int, bs int) int {
 	}
 
 	// Multiply by attacks
-	hits = int(hitRate * float32(attacks))
+	hits := int(hitRate * float32(attacks))
 
 	return hits
 }
 
-func calcWounds(strength int, toughness int) {
+func calcWounds(strength int, toughness int, hits int) int {
+	// Compare S vs T and determine minimum roll needed
+	var woundRoll int
+	switch {
+	// double
+	case float32(strength)/float32(toughness) >= 2.0:
+		woundRoll = 2
+		// half
+	case float32(strength)/float32(toughness) <= 0.5:
+		woundRoll = 6
+		// more
+	case float32(strength)/float32(toughness) > 1.0:
+		woundRoll = 3
+		// less
+	case float32(strength)/float32(toughness) < 1.0:
+		woundRoll = 5
+		// equal
+	default:
+		woundRoll = 4
+	}
+
+	// Determine probablity of roll
+	var woundRate float32
+	switch {
+	case woundRoll == 2:
+		woundRate = 5.0 / 6.0
+	case woundRoll == 3:
+		woundRate = 4.0 / 6.0
+	case woundRoll == 4:
+		woundRate = 3.0 / 6.0
+	case woundRoll == 5:
+		woundRate = 2.0 / 6.0
+	case woundRoll == 6:
+		woundRate = 1.0 / 6.0
+	default:
+		woundRate = 0.0
+	}
+
+	// Multiply hits and wound rate
+	wounds := int(float32(hits) * woundRate)
+	return wounds
+}
+
+func calcSaves(wounds int, save int, invuln int) int {
+	// Determine save probabolity
+
+	// Multiply save probability X wounds
 
 }
 
@@ -63,12 +107,9 @@ func calcDamage(attacker Attacker, defender Defender) {
 	hits := calcHits(attacker.Attacks, attacker.BS)
 	fmt.Printf("\n%d out of %d attacks hit\n", hits, attacker.Attacks)
 
-	// Calc wounds. Wounds on 5s
-	// TODO Add WoundRollCalculator function
-	// A and D
-	var wounds int
-	wounds = int(math.Round(float64(roundedHits) * (2.0 / 6.0)))
-	fmt.Printf("\n%d out of %d hits wound\n", wounds, roundedHits)
+	// Evaluate T/S and calculate wounds
+	wounds := calcWounds(attacker.Strength, defender.Toughness, hits)
+	fmt.Printf("\n%d out of %d hits wound\n", wounds, hits)
 
 	//Saving on 5s
 	//D only
