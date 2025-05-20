@@ -2,7 +2,7 @@ package main
 
 import (
 	"fmt"
-	"mathhammer/internal/calcMean"
+	c "mathhammer/internal/calcMean"
 	u "mathhammer/internal/units"
 )
 
@@ -20,6 +20,5 @@ func main() {
 	fmt.Printf("\nDEFENDER\nModel Count: %d, Toughness: %d, Wounds: %d, Save: %d, Invuln: %d, FNP: %d\n",
 		defender.ModelCount, defender.Toughness, defender.Wounds, defender.Save, defender.Invuln, defender.FNP)
 
-	calcMean.CalcDamage(attacker, defender)
-
+	c.CalcDamage(attacker, defender)
 }
