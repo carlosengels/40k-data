@@ -37,7 +37,8 @@ func CalcWounds(strength int, toughness int, hits int) int {
 		woundRate = 0.0
 	}
 
+	// TODO add reroll wounds
+
 	// Multiply hits and wound rate
-	wounds := int(float32(hits) * woundRate)
-	return wounds
+	return int(float32(hits) * woundRate)
 }

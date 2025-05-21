@@ -1,5 +1,11 @@
 package calcMean
 
+// TODO add sustain capability
+// Every Hits + (Sustained# x 1/6)
+// add 1 to the BS for every sustained?
+// OR  add 1 to the numerator before dividing by denominator
+// OR multiply hitRate by 16.7
+
 func CalcHits(attacks int, bs int) int {
 	// Calculate mean rate based on BS
 	// 2+ = 5/6 chance
@@ -24,8 +30,7 @@ func CalcHits(attacks int, bs int) int {
 		hitRate = 1.0
 	}
 
-	// Multiply by attacks
-	hits := int(hitRate * float32(attacks))
+	// Add re-roll logic
 
-	return hits
+	return int(hitRate * float32(attacks))
 }
