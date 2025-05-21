@@ -13,6 +13,7 @@ type Defender struct {
 	Toughness  int
 	Wounds     int
 	Save       int
-	Invuln     int
-	FNP        int
+	// Invuln should be greater than 6 if it's NA
+	Invuln int
+	FNP    int
 }

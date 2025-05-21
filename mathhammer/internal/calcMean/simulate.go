@@ -2,7 +2,6 @@ package calcMean
 
 import (
 	"fmt"
-	"math"
 	u "mathhammer/internal/units"
 )
 
@@ -18,7 +17,7 @@ func CalcDamage(attacker u.Attacker, defender u.Defender) {
 
 	//Saving on 5sZ
 	//D only
-	failedSaves := int(math.Round(float64(wounds) * (4.0 / 6.0)))
+	failedSaves := CalcSaves(wounds, attacker.AP, defender.Save, defender.Invuln)
 	fmt.Printf("\n%d out of %d wounds go through\n", failedSaves, wounds)
 
 	//TODO FNP
