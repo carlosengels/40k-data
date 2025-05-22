@@ -1,5 +1,5 @@
 package calcMean
-// TODO replace switch with (6 - (n -1)) / 6 formula to determine probabilty
+
 func CalcWounds(strength int, toughness int, hits int) int {
 	// Compare S vs T and determine minimum roll needed
 	var woundRoll int
@@ -20,22 +20,9 @@ func CalcWounds(strength int, toughness int, hits int) int {
 	default:
 		woundRoll = 4
 	}
-	// Determine probablity of roll
-	var woundRate float32
-	switch {
-	case woundRoll == 2:
-		woundRate = 5.0 / 6.0
-	case woundRoll == 3:
-		woundRate = 4.0 / 6.0
-	case woundRoll == 4:
-		woundRate = 3.0 / 6.0
-	case woundRoll == 5:
-		woundRate = 2.0 / 6.0
-	case woundRoll == 6:
-		woundRate = 1.0 / 6.0
-	default:
-		woundRate = 0.0
-	}
+
+	// Determine probablity of roll (6 - (n - 1))
+	var woundRate float32 = (6 - (float32(woundRoll) - 1)) / 6
 
 	// TODO add reroll wounds
 
