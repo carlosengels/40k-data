@@ -7,6 +7,8 @@ import (
 
 func CalcDamage(attacker u.Attacker, defender u.Defender) {
 
+	// Add bonuses to modify attacker properties?
+
 	// Calc hits
 	hits := CalcHits(attacker.Attacks, attacker.BS, attacker.Sustained)
 	fmt.Printf("\n%d out of %d attacks hit\n", hits, attacker.Attacks)
