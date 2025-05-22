@@ -23,6 +23,10 @@ jobs:
 
     - name: Build
       run: go build -v ./...
+      working-directory: ./mathhammer
+
 
     - name: Test
       run: go test -v ./...
+      working-directory: ./mathhammer
+
