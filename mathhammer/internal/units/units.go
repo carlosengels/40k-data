@@ -7,6 +7,9 @@ type Attacker struct {
 	AP        int
 	Damage    int
 	Sustained int
+	// No rerolls = 0, re-roll 1s = 1, re-roll all failed = 6
+	HitReRolls   int
+	WoundReRolls int
 }
 
 type Defender struct {

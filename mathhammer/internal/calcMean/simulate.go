@@ -10,7 +10,7 @@ func CalcDamage(attacker u.Attacker, defender u.Defender) {
 	// Add bonuses to modify attacker properties?
 
 	// Calc hits
-	hits := CalcHits(attacker.Attacks, attacker.BS, attacker.Sustained)
+	hits := CalcHits(attacker.Attacks, attacker.BS, attacker.Sustained, attacker.HitReRolls)
 	fmt.Printf("\n%d out of %d attacks hit\n", hits, attacker.Attacks)
 
 	// Evaluate T/S and calculate wounds
