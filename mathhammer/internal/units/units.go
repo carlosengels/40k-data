@@ -1,11 +1,12 @@
 package calcMean
 
 type Attacker struct {
-	Attacks  int
-	BS       int
-	Strength int
-	AP       int
-	Damage   int
+	Attacks   int
+	BS        int
+	Strength  int
+	AP        int
+	Damage    int
+	Sustained int
 }
 
 type Defender struct {

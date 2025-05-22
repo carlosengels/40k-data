@@ -8,7 +8,7 @@ import (
 func CalcDamage(attacker u.Attacker, defender u.Defender) {
 
 	// Calc hits
-	hits := CalcHits(attacker.Attacks, attacker.BS)
+	hits := CalcHits(attacker.Attacks, attacker.BS, attacker.Sustained)
 	fmt.Printf("\n%d out of %d attacks hit\n", hits, attacker.Attacks)
 
 	// Evaluate T/S and calculate wounds
@@ -20,8 +20,7 @@ func CalcDamage(attacker u.Attacker, defender u.Defender) {
 	failedSaves := CalcSaves(wounds, attacker.AP, defender.Save, defender.Invuln)
 	fmt.Printf("\n%d out of %d wounds go through\n", failedSaves, wounds)
 
-	//TODO FNP
-	// D only
+	//TODO FNP functionality
 
 	//Calculate total damage
 	damage := failedSaves * attacker.Damage
