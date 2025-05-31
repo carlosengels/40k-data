@@ -1,6 +1,3 @@
-Absolutely! Here's the full `README.md` content in Markdown format — ready to copy and paste directly into GitLab:
-
-```markdown
 # 🧮 MathHammer 40K
 
 A Go-based tool to simulate average damage output in **Warhammer 40,000**. This tool helps players evaluate the statistical effectiveness of units and weapons by modeling core mechanics like **hit rolls, wound rolls, saving throws**, and **damage calculations**.
