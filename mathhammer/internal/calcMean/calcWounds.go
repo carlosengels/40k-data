@@ -2,7 +2,7 @@ package calcMean
 
 // TODO add Lethal hits logic
 
-func CalcWounds(strength int, toughness int, hits int) int {
+func CalcWounds(strength int, toughness int, hits int, reroll int) int {
 	// Compare S vs T, determine min roll needed
 	var woundRoll int
 	switch {
@@ -25,6 +25,13 @@ func CalcWounds(strength int, toughness int, hits int) int {
 
 	// Dice rolls that are succesfull = (6 - (n - 1))
 	var woundRate float32 = (6 - (float32(woundRoll) - 1)) / 6
+
+	switch reroll {
+	case 1:
+		woundRate *= reRoll1sBonus()
+	case 6:
+		woundRate *= reRollAllFailedBonus(woundRoll)
+	}
 
 	return int(float32(hits) * woundRate)
 }

@@ -1,7 +1,5 @@
 package calcMean
 
-// TODO re-roll logic
-
 func CalcHits(attacks int, bs int, sustained int, reroll int) int {
 
 	// Successfull rolls = (6 - (n - 1))

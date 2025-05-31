@@ -14,7 +14,7 @@ func CalcDamage(attacker u.Attacker, defender u.Defender) {
 	fmt.Printf("\n%d out of %d attacks hit\n", hits, attacker.Attacks)
 
 	// Evaluate T/S and calculate wounds
-	wounds := CalcWounds(attacker.Strength, defender.Toughness, hits)
+	wounds := CalcWounds(attacker.Strength, defender.Toughness, hits, attacker.WoundReRolls)
 	fmt.Printf("\n%d out of %d hits wound\n", wounds, hits)
 
 	//Saving on 5sZ
