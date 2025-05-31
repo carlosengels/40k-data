@@ -1,128 +1,136 @@
-# 40k Data Collection
+Absolutely! Here's the full `README.md` content in Markdown format — ready to copy and paste directly into GitLab:
 
-This repository contains tools and data for collecting, processing, and analyzing Warhammer 40,000 unit information, specifically focusing on Space Marines units.
+```markdown
+# 🧮 MathHammer 40K
 
-## Project Structure
+A Go-based tool to simulate average damage output in **Warhammer 40,000**. This tool helps players evaluate the statistical effectiveness of units and weapons by modeling core mechanics like **hit rolls, wound rolls, saving throws**, and **damage calculations**.
+
+---
+
+## 📁 Project Structure
 
 ```
-.
-├── data/                    # Processed data files
-│   ├── units/              # Unit data organized by type
-│   └── weapons/            # Weapon data and statistics
-├── extract/                # Data extraction scripts
-│   ├── extract.py         # Main script for fetching unit data
-│   └── ultramarines_links.txt  # List of URLs to fetch
-├── functions/             # Analysis and processing functions
-│   ├── damage_efficiency.py           # Calculate damage output efficiency
-│   ├── mobility_survivability_ratio.py # Analyze movement vs survivability
-│   ├── survivability_ratio.py         # Calculate survivability metrics
-│   └── wounds_points_ratio.py         # Analyze wounds to points ratio
-├── schemas/               # JSON schemas for data validation
-├── tmp/                   # Temporary files (git ignored)
-│   ├── source/           # Raw HTML source files
-│   ├── intermediate/     # Processing intermediate files
-│   └── processed/        # Processed text files
-└── .venv/                # Python virtual environment
+
+mathammer/
+├── cmd/
+│   └── main.go                    # Entry point for running the simulation
+├── internal/
+│   ├── calcMean/                  # Placeholder for advanced statistical functions
+│   ├── calcHits.go                # Hit calculation logic
+│   ├── calcHits\_test.go
+│   ├── calcWounds.go              # Wound calculation logic
+│   ├── calcWounds\_test.go
+│   ├── calcSaves.go               # Save logic (armor, invuln)
+│   ├── calcSaves\_test.go
+│   ├── reRolls.go                 # Re-roll rules logic
+│   ├── reRolls\_test.go
+│   ├── simulate.go                # Full combat simulation orchestration
+│   └── units/
+│       └── units.go               # Unit definitions (Attacker, Defender)
+├── go.mod                         # Go module file
+├── README.md                      # Project documentation
+├── .gitignore
+├── tmp/                           # Temporary scratch/testing
+└── utility/
+└── extract.py                 # Python utility (e.g. Wahapedia scraper)
+
+````
+
+---
+
+## 🚀 Getting Started
+
+### 1. Clone the repository
+
+```bash
+git clone https://gitlab.com/your-username/mathammer.git
+cd mathammer
+````
+
+### 2. Run the simulation
+
+```bash
+go run ./cmd/main.go
 ```
 
-## Project Components
+---
 
-1. **Data Collection and Storage**
-   - Raw data collection from specified URLs
-   - Structured data storage in JSON format
-   - Separate organization for units and weapons data
+## 🧪 Running Unit Tests
 
-2. **Analysis Functions**
-   - Damage efficiency calculations
-   - Mobility vs survivability analysis
-   - Unit survivability metrics
-   - Points efficiency calculations
+Each calculation module includes its own unit tests:
 
-3. **Data Processing Pipeline**
-   - Raw data extraction
-   - Structured data transformation
-   - Analysis and metrics generation
-
-## Data Analysis Features
-
-The project includes several analysis functions to evaluate unit performance:
-
-1. **Damage Efficiency**
-   - Calculates expected damage output
-   - Considers weapon profiles and target characteristics
-   - Provides efficiency metrics per point cost
-
-2. **Survivability Analysis**
-   - Evaluates unit durability
-   - Considers toughness, wounds, and save characteristics
-   - Calculates survivability ratios
-
-3. **Mobility vs Survivability**
-   - Analyzes the relationship between movement and durability
-   - Helps identify unit roles and tactical uses
-
-4. **Points Efficiency**
-   - Evaluates wounds-to-points ratio
-   - Helps identify cost-effective units
-   - Supports list-building decisions
-
-## Setup and Usage
-
-1. **Environment Setup**
-   ```bash
-   python -m venv .venv
-   source .venv/bin/activate  # On Windows: .venv\Scripts\activate
-   pip install -r requirements.txt
-   ```
-
-2. **Data Collection**
-   ```bash
-   python extract/extract.py
-   ```
-
-3. **Running Analysis**
-   ```bash
-   python functions/damage_efficiency.py
-   python functions/survivability_ratio.py
-   # Additional analysis scripts as needed
-   ```
-
-## Data Format
-
-Unit data follows this structure:
-```json
-{
-    "name": "Unit Name",
-    "type": "unit_type",
-    "base_size": "size",
-    "characteristics": {
-        "movement": "X\"",
-        "toughness": X,
-        "save": "X+",
-        "wounds": X,
-        "leadership": "X+",
-        "objective_control": X
-    },
-    "weapons": {
-        "ranged": [...],
-        "melee": [...]
-    },
-    "abilities": [...],
-    "unit_composition": {
-        "min_models": X,
-        "max_models": X,
-        "cost": X,
-        "model_equipment": [...]
-    },
-    "keywords": [...],
-    "faction_keywords": [...],
-    "wargear_options": [...]
-}
+```bash
+go test ./internal/...
 ```
 
-## Notes
+You can also run individual test files:
 
-- The `tmp/` directory is git-ignored and contains temporary processing files
-- Analysis results are stored in the `FINDINGS.md` file
-- Project planning and future enhancements are tracked in `project_plan.md`
-- All data processing functions include proper error handling and logging 
+```bash
+go test ./internal -run TestCalcHits
+```
+
+---
+
+## 🛠 Features
+
+* Modular calculation of:
+
+  * Ballistic skill (BS) → hits
+  * Strength vs. Toughness → wounds
+  * Saves (armor, invuln, FNP)
+  * Re-roll logic (in progress)
+* Uses deterministic math (no random rolling)
+* Easily extensible for additional Warhammer rules
+* Organized, testable, idiomatic Go code
+
+---
+
+## ✅ Example Output
+
+```
+ATTACKER
+Attacks: 20, BS: 3, Strength: 4, AP: 2, Damage: 1
+
+DEFENDER
+Model Count: 1, Toughness: 5, Wounds: 5, Save: 3, Invuln: 0, FNP: 0
+
+13 out of 20 attacks hit
+7 out of 13 hits wound
+4 out of 7 wounds go through
+Total damage is: 4
+```
+
+---
+
+## 🔮 Future Plans
+
+* [ ] Support for D6/D3 damage rolls
+* [ ] Advanced invuln/FNP logic
+* [ ] Custom CLI input for attacker/defender profiles
+* [ ] Output damage distribution charts
+
+---
+
+## 📌 Tech Stack
+
+* [Go](https://golang.org/) — backend simulator
+* [Python](https://www.python.org/) — scraping utility (e.g. Wahapedia parsing)
+
+---
+
+## 📄 License
+
+MIT — feel free to use, modify, and contribute!
+
+---
+
+## 🤝 Contributing
+
+Pull requests welcome! If you'd like to help implement new rules (like re-rolls, mortal wounds, or stratagems), feel free to fork and submit a PR.
+
+```
+
+Let me know if you'd like a GitLab badge section, CI instructions, or API usage added!
+```
+
+README is AI generated and human verified.
