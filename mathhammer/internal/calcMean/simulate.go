@@ -12,6 +12,8 @@ func CalcDamage(attacker u.Attacker, defender u.Defender) {
 	woundRoll := GetWoundRoll(attacker.Strength, defender.Toughness)
 
 	//2. Pass value to CalcWounds (instead of T and S)
+	// DONE
+
 	//3. Pass value to CalcHits (to calc Lethal Hits bonus). Because based on the roll, lethal hits will have different bonus.
 
 	// Calc hits
