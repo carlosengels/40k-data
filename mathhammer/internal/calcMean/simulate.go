@@ -7,14 +7,16 @@ import (
 
 func CalcDamage(attacker u.Attacker, defender u.Defender) {
 
-	// Add bonuses to modify attacker properties?
+	// TODO make functions return rates, rather than actual result to simplify functions. Combine all values once complete.
+
+	woundRoll := GetWoundRoll(attacker.Strength, defender.Toughness)
 
 	// Calc hits
-	hits := CalcHits(attacker.Attacks, attacker.BS, attacker.Sustained, attacker.HitReRolls)
+	hits := CalcHits(attacker.Attacks, attacker.BS, attacker.Sustained, attacker.HitReRolls, attacker.LethalHits, woundRoll)
 	fmt.Printf("\n%d out of %d attacks hit\n", hits, attacker.Attacks)
 
 	// Evaluate T/S and calculate wounds
-	wounds := CalcWounds(attacker.Strength, defender.Toughness, hits, attacker.WoundReRolls)
+	wounds := CalcWounds(woundRoll, hits, attacker.WoundReRolls)
 	fmt.Printf("\n%d out of %d hits wound\n", wounds, hits)
 
 	//Saving on 5sZ
