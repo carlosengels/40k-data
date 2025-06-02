@@ -17,7 +17,7 @@ func CalcDamage(attacker u.Attacker, defender u.Defender) {
 	//3. Pass value to CalcHits (to calc Lethal Hits bonus). Because based on the roll, lethal hits will have different bonus.
 
 	// Calc hits
-	hits := CalcHits(attacker.Attacks, attacker.BS, attacker.Sustained, attacker.HitReRolls)
+	hits := CalcHits(attacker.Attacks, attacker.BS, attacker.Sustained, attacker.HitReRolls, attacker.LethalHits, woundRoll)
 	fmt.Printf("\n%d out of %d attacks hit\n", hits, attacker.Attacks)
 
 	// Evaluate T/S and calculate wounds
