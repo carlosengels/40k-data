@@ -7,14 +7,9 @@ import (
 
 func CalcDamage(attacker u.Attacker, defender u.Defender) {
 
-	//Somewhere in this simulation orchestration we need to pass the wound roll to the hit roll to calculate the value if Lethal hits.
-	//1. Make GetWoundRoll it's own function, and call it here.
+	// TODO make functions return rates, rather than actual result to simplify functions. Combine all values once complete.
+
 	woundRoll := GetWoundRoll(attacker.Strength, defender.Toughness)
-
-	//2. Pass value to CalcWounds (instead of T and S)
-	// DONE
-
-	//3. Pass value to CalcHits (to calc Lethal Hits bonus). Because based on the roll, lethal hits will have different bonus.
 
 	// Calc hits
 	hits := CalcHits(attacker.Attacks, attacker.BS, attacker.Sustained, attacker.HitReRolls, attacker.LethalHits, woundRoll)
