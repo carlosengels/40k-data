@@ -2,8 +2,8 @@ package calcMean
 
 func CalcHits(attacks int, bs int, sustained int, reroll int, lethal bool, woundRoll int) int {
 
-	var lethalBonus float32
 	// Lethal bonus
+	var lethalBonus float32
 	if lethal {
 		lethalBonus = float32(6/(6-(woundRoll-1))) - 1
 	}

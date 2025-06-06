@@ -16,13 +16,13 @@ func CalcDamage(attacker u.Attacker, defender u.Defender) {
 	fmt.Printf("\n%d out of %d attacks hit\n", hits, attacker.Attacks)
 
 	// Evaluate T/S and calculate wounds
-	wounds := CalcWounds(woundRoll, hits, attacker.WoundReRolls)
-	fmt.Printf("\n%d out of %d hits wound\n", wounds, hits)
+	wounds := CalcWounds(woundRoll, hits, attacker.WoundReRolls, false, 6)
+	// fmt.Printf("\n%d out of %d hits wound\n", wounds, hits)
 
 	//Saving on 5sZ
 	//D only
-	failedSaves := CalcSaves(wounds, attacker.AP, defender.Save, defender.Invuln)
-	fmt.Printf("\n%d out of %d wounds go through\n", failedSaves, wounds)
+	failedSaves := CalcSaves(int(wounds), attacker.AP, defender.Save, defender.Invuln)
+	// fmt.Printf("\n%d out of %d wounds go through\n", failedSaves, wounds)
 
 	//TODO FNP functionality
 
