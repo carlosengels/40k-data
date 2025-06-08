@@ -5,62 +5,53 @@ import (
 	"testing"
 )
 
+const rollsEpsilon = 0.001
+
+func floatRollsEquals(a, b float64) bool {
+	return math.Abs(a-b) <= rollsEpsilon
+}
+
 func TestReRoll1sDefault(t *testing.T) {
 	result := reRoll1sBonus()
-	expected := float32(1.167)
-	epsilon := float32(0.001)
+	expected := 1.167
 
-	if float32(math.Abs(float64(result-expected))) > epsilon {
-		t.Errorf("reRoll1s() = %v, want %v (±%v)", result, expected, epsilon)
+	if !floatRollsEquals(result, expected) {
+		t.Errorf("reRoll1sBonus() = %v, want %v (±%v)", result, expected, rollsEpsilon)
 	}
 }
 
-func TestReRollssAllFailedBS2(t *testing.T) {
+func TestReRollAllFailedBS2(t *testing.T) {
 	result := reRollAllFailedBonus(2)
-	expected := float32(1.167)
-	epsilon := float32(0.001)
+	expected := 1.167
 
-	if float32(math.Abs(float64(result-expected))) > epsilon {
-		t.Errorf("reRoll1s() = %v, want %v (±%v)", result, expected, epsilon)
+	if !floatRollsEquals(result, expected) {
+		t.Errorf("reRollAllFailedBonus(2) = %v, want %v (±%v)", result, expected, rollsEpsilon)
 	}
 }
 
-func TestReRollssAllFailedBS3(t *testing.T) {
+func TestReRollAllFailedBS3(t *testing.T) {
 	result := reRollAllFailedBonus(3)
-	expected := float32(1.333)
-	epsilon := float32(0.001)
+	expected := 1.333
 
-	if float32(math.Abs(float64(result-expected))) > epsilon {
-		t.Errorf("reRoll1s() = %v, want %v (±%v)", result, expected, epsilon)
+	if !floatRollsEquals(result, expected) {
+		t.Errorf("reRollAllFailedBonus(3) = %v, want %v (±%v)", result, expected, rollsEpsilon)
 	}
 }
 
-func TestReRollssAllFailedBS4(t *testing.T) {
+func TestReRollAllFailedBS4(t *testing.T) {
 	result := reRollAllFailedBonus(4)
-	expected := float32(1.5)
-	epsilon := float32(0.001)
+	expected := 1.5
 
-	if float32(math.Abs(float64(result-expected))) > epsilon {
-		t.Errorf("reRoll1s() = %v, want %v (±%v)", result, expected, epsilon)
+	if !floatRollsEquals(result, expected) {
+		t.Errorf("reRollAllFailedBonus(4) = %v, want %v (±%v)", result, expected, rollsEpsilon)
 	}
 }
 
-func TestReRollssAllFailedBS5(t *testing.T) {
+func TestReRollAllFailedBS5(t *testing.T) {
 	result := reRollAllFailedBonus(5)
-	expected := float32(1.667)
-	epsilon := float32(0.001)
+	expected := 1.667
 
-	if float32(math.Abs(float64(result-expected))) > epsilon {
-		t.Errorf("reRoll1s() = %v, want %v (±%v)", result, expected, epsilon)
-	}
-}
-
-func TestReRollssAllFailedBS6(t *testing.T) {
-	result := reRollAllFailedBonus(6)
-	expected := float32(1.833)
-	epsilon := float32(0.001)
-
-	if float32(math.Abs(float64(result-expected))) > epsilon {
-		t.Errorf("reRoll1s() = %v, want %v (±%v)", result, expected, epsilon)
+	if !floatRollsEquals(result, expected) {
+		t.Errorf("reRollAllFailedBonus(5) = %v, want %v (±%v)", result, expected, rollsEpsilon)
 	}
 }

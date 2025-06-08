@@ -1,6 +1,6 @@
 package calcMean
 
-func CalcSaves(wounds int, AP int, save int, invuln int) int {
+func CalcSaves(wounds float64, AP int, save int, invuln int) float64 {
 	// Determine the needed save roll, and if invuln is applicable
 	// - determine Save + AP
 	// - if invuln is lower than save, use that
@@ -11,14 +11,14 @@ func CalcSaves(wounds int, AP int, save int, invuln int) int {
 		appliedSave = AP + save
 	}
 
-	// Calculate ratio of failed saves. If save roll is greater than 6 then there is not save and all wounds go through.
-	var failedSavesRatio float32
+	// Calculate ratio of failed saves. If save roll is greater than 6 then there is no save and all wounds go through.
+	var failedSavesRatio float64
 	if appliedSave <= 6 {
-		failedSavesRatio = (6 - (float32(appliedSave) - 1)) / 6
+		failedSavesRatio = (6 - (float64(appliedSave) - 1)) / 6.0
 	} else {
-		failedSavesRatio = 1
+		failedSavesRatio = 1.0
 	}
 
-	// Multiply save probability X wounds
-	return int(failedSavesRatio * float32(wounds))
+	// Multiply save probability by wounds and return float64
+	return failedSavesRatio * wounds
 }

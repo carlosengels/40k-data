@@ -1,5 +1,5 @@
 package calcMean
 
-func CalcFNP(FNP int) float32 {
-	return (float32(FNP) - 1.0) / 6.0
+func CalcFNP(FNP int) float64 {
+	return (float64(FNP) - 1.0) / 6.0
 }

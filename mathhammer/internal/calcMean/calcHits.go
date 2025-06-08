@@ -1,16 +1,16 @@
 package calcMean
 
-func CalcHits(attacks int, bs int, sustained int, reroll int, lethal bool, woundRoll int) int {
+func CalcHits(attacks int, bs int, sustained int, reroll int, lethal bool, woundRoll int) float64 {
 
 	// Lethal bonus
-	var lethalBonus float32
+	var lethalBonus float64
 	if lethal {
-		lethalBonus = float32(6/(6-(woundRoll-1))) - 1
+		lethalBonus = float64(6)/float64(6-(woundRoll-1)) - 1
 	}
 
-	// Successfull rolls = (6 side of the dice - (BS - 1))
-	var succesfullRolls float32 = 6 - (float32(bs) - 1) + float32(sustained) + lethalBonus
-	var hitRate float32 = succesfullRolls / 6
+	// Successful rolls = (6 side of the dice - (BS - 1))
+	var successfulRolls float64 = 6 - (float64(bs) - 1) + float64(sustained) + lethalBonus
+	var hitRate float64 = successfulRolls / 6
 
 	switch reroll {
 	case 1:
@@ -19,5 +19,5 @@ func CalcHits(attacks int, bs int, sustained int, reroll int, lethal bool, wound
 		hitRate *= reRollAllFailedBonus(bs)
 	}
 
-	return int(hitRate * float32(attacks))
+	return hitRate * float64(attacks)
 }
