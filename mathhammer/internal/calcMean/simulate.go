@@ -25,6 +25,9 @@ func CalcDamage(attacker u.Attacker, defender u.Defender) {
 	// fmt.Printf("\n%d out of %d wounds go through\n", failedSaves, wounds)
 
 	//TODO FNP functionality
+	if defender.FNP > 0 {
+		failedSaves *= int(CalcFNP(defender.FNP))
+	}
 
 	//Calculate total damage
 	damage := failedSaves * attacker.Damage
