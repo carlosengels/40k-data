@@ -14,7 +14,7 @@ func main() {
 	attacker := u.Attacker{Attacks: 20, BS: 3, Strength: 4, AP: 2, Damage: 1, Sustained: 0, HitReRolls: 0, WoundReRolls: 0, LethalHits: false, DevWounds: false}
 	defender := u.Defender{ModelCount: 1, Toughness: 5, Wounds: 5, Save: 3, Invuln: 0, FNP: 0}
 
-	fmt.Printf("\nATTACKER\nAttacks: %d, BS: %d, Strength: %d, AP: %d, Damage: %d, Sustained: %d, Re-rolls: %d\n",
+	fmt.Printf("\nATTACKER\nAttacks: %d, BS: %d, Strength: %d, AP: %d, Damage: %f, Sustained: %d, Re-rolls: %d\n",
 		attacker.Attacks, attacker.BS, attacker.Strength, attacker.AP, attacker.Damage, attacker.Sustained, attacker.HitReRolls)
 
 	fmt.Printf("\nDEFENDER\nModel Count: %d, Toughness: %d, Wounds: %d, Save: %d, Invuln: %d, FNP: %d\n",
