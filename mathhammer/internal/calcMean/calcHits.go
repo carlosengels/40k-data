@@ -16,6 +16,8 @@ func CalcHits(attacks int, bs int, sustained int, reroll int, lethal bool, wound
 	var successfulRolls float64 = 6 - (float64(bs) - 1) + float64(sustained) + lethalBonus
 	var hitRate float64 = successfulRolls / 6
 
+	fmt.Printf("\nHit Rate before rerolls is : %f", hitRate)
+
 	switch reroll {
 	case 1:
 		hitRate *= reRoll1sBonus()
