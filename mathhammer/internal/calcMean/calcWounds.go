@@ -1,23 +1,30 @@
 package calcMean
 
-func CalcWounds(woundRoll int, hits int, reroll int, devastatingWounds bool, saveRoll int) float32 {
+import "fmt"
+
+func CalcWounds(woundRoll int, hits float64, reroll int, devastatingWounds bool, saveRoll int) float64 {
 
 	// Devastating Wounds bonus
-	var devastatingWoundsBonus float32
+	var devastatingWoundsBonus float64
 	if devastatingWounds {
-		devastatingWoundsBonus = 6.0/float32(saveRoll-1) - 1
+		devastatingWoundsBonus = 6.0/float64(saveRoll-1) - 1
 	}
 
-	// Dice rolls that are succesfull = (6 - (n - 1))
-	var succesfullRolls float32 = (6 - (float32(woundRoll) - 1)) + devastatingWoundsBonus
-	var woundRate float32 = succesfullRolls / 6
+	fmt.Printf("\nCrit Wound Bonus is %f because SaveRoll is: %d", devastatingWoundsBonus, saveRoll)
+
+	// Dice rolls that are successful = (6 - (n - 1))
+	var successfulRolls float64 = (6 - (float64(woundRoll) - 1)) + devastatingWoundsBonus
+	var woundRate float64 = successfulRolls / 6
 
 	switch reroll {
 	case 1:
 		woundRate *= reRoll1sBonus()
+		fmt.Print("\nWounds: Re-rolling 1s")
 	case 6:
 		woundRate *= reRollAllFailedBonus(woundRoll)
+		fmt.Print("\nWounds: Re-rolling all failed")
 	}
 
-	return float32(hits) * woundRate
+	fmt.Printf("\nWound Rate is : %f", woundRate)
+	return hits * woundRate
 }

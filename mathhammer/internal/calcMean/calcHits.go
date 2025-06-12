@@ -1,23 +1,33 @@
 package calcMean
 
-func CalcHits(attacks int, bs int, sustained int, reroll int, lethal bool, woundRoll int) int {
+import "fmt"
+
+func CalcHits(attacks int, bs int, sustained int, reroll int, lethal bool, woundRoll int) float64 {
 
 	// Lethal bonus
-	var lethalBonus float32
+	var lethalBonus float64
 	if lethal {
-		lethalBonus = float32(6/(6-(woundRoll-1))) - 1
+		lethalBonus = float64(6)/float64(6-(woundRoll-1)) - 1
+		fmt.Printf("\nLethal hit bonus is %f, because woundRoll is %d", lethalBonus, woundRoll)
+		// To get the true value of lethal, hits do I need to get the value of a crit in wounds
 	}
 
-	// Successfull rolls = (6 side of the dice - (BS - 1))
-	var succesfullRolls float32 = 6 - (float32(bs) - 1) + float32(sustained) + lethalBonus
-	var hitRate float32 = succesfullRolls / 6
+	// Successful rolls = (6 side of the dice - (BS - 1))
+	var successfulRolls float64 = 6 - (float64(bs) - 1) + float64(sustained) + lethalBonus
+	var hitRate float64 = successfulRolls / 6
+
+	fmt.Printf("\nHit Rate before rerolls is : %f", hitRate)
 
 	switch reroll {
 	case 1:
 		hitRate *= reRoll1sBonus()
+		fmt.Printf("\nRerolling 1s to hit")
 	case 6:
 		hitRate *= reRollAllFailedBonus(bs)
+		fmt.Printf("\nRereolling all failed hits")
 	}
 
-	return int(hitRate * float32(attacks))
+	fmt.Printf("\nHit Rate is : %f", hitRate)
+
+	return hitRate * float64(attacks)
 }

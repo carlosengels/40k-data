@@ -5,7 +5,7 @@ type Attacker struct {
 	BS        int
 	Strength  int
 	AP        int
-	Damage    int
+	Damage    float32
 	Sustained int
 	//No rerolls = 0, re-roll 1s = 1, re-roll all failed = 6
 	HitReRolls   int

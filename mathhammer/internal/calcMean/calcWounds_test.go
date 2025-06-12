@@ -5,112 +5,98 @@ import (
 	"testing"
 )
 
-func TestCalWounds4s(t *testing.T) {
-	// Woundting on Torrents, everything is auto Wound, same as Woundting on 1s
-	result := CalcWounds(4, 100, 0, false, 0)
-	var expected float32 = 50.0
-	epsilon := float32(0.001)
+const woundsEpsilon = 0.1
 
-	if float32(math.Abs(float64(result-expected))) > epsilon {
-		t.Errorf("reRoll1s() = %v, want %v (±%v)", result, expected, epsilon)
+func floatWoundsEquals(a, b float64) bool {
+	return math.Abs(a-b) <= woundsEpsilon
+}
+
+func TestCalWounds4s(t *testing.T) {
+	result := CalcWounds(4, 100, 0, false, 0)
+	expected := 50.0
+
+	if !floatWoundsEquals(result, expected) {
+		t.Errorf("CalcWounds(4) = %v, want %v (±%v)", result, expected, woundsEpsilon)
 	}
 }
 
 func TestCalWounds2s(t *testing.T) {
-	// Woundting on Torrents, everything is auto Wound, same as Woundting on 1s
 	result := CalcWounds(2, 100, 0, false, 0)
-	var expected float32 = 83.3
-	epsilon := float32(0.1)
+	expected := 83.3
 
-	if float32(math.Abs(float64(result-expected))) > epsilon {
-		t.Errorf("reRoll1s() = %v, want %v (±%v)", result, expected, epsilon)
+	if !floatWoundsEquals(result, expected) {
+		t.Errorf("CalcWounds(2) = %v, want %v (±%v)", result, expected, woundsEpsilon)
 	}
 }
 
 func TestCalWounds6s(t *testing.T) {
-	// Woundting on Torrents, everything is auto Wound, same as Woundting on 1s
 	result := CalcWounds(6, 100, 0, false, 0)
-	var expected float32 = 16.7
-	epsilon := float32(0.1)
+	expected := 16.7
 
-	if float32(math.Abs(float64(result-expected))) > epsilon {
-		t.Errorf("reRoll1s() = %v, want %v (±%v)", result, expected, epsilon)
+	if !floatWoundsEquals(result, expected) {
+		t.Errorf("CalcWounds(6) = %v, want %v (±%v)", result, expected, woundsEpsilon)
 	}
 }
 
 func TestCalWounds3s(t *testing.T) {
-	// Woundting on Torrents, everything is auto Wound, same as Woundting on 1s
 	result := CalcWounds(3, 100, 0, false, 0)
-	var expected float32 = 66.7
-	epsilon := float32(0.1)
+	expected := 66.7
 
-	if float32(math.Abs(float64(result-expected))) > epsilon {
-		t.Errorf("reRoll1s() = %v, want %v (±%v)", result, expected, epsilon)
+	if !floatWoundsEquals(result, expected) {
+		t.Errorf("CalcWounds(3) = %v, want %v (±%v)", result, expected, woundsEpsilon)
 	}
 }
 
 func TestCalcWound5s(t *testing.T) {
-	// Woundting on Torrents, everything is auto Wound, same as Woundting on 1s
 	result := CalcWounds(5, 100, 0, false, 0)
-	var expected float32 = 33.3
-	epsilon := float32(0.1)
+	expected := 33.3
 
-	if float32(math.Abs(float64(result-expected))) > epsilon {
-		t.Errorf("reRoll1s() = %v, want %v (±%v)", result, expected, epsilon)
+	if !floatWoundsEquals(result, expected) {
+		t.Errorf("CalcWounds(5) = %v, want %v (±%v)", result, expected, woundsEpsilon)
 	}
 }
 
 func TestCalWounds4RollAllFailed(t *testing.T) {
-
 	result := CalcWounds(4, 100, 6, false, 0)
-	var expected float32 = 75
-	epsilon := float32(0.1)
+	expected := 75.0
 
-	if float32(math.Abs(float64(result-expected))) > epsilon {
-		t.Errorf("reRoll1s() = %v, want %v (±%v)", result, expected, epsilon)
+	if !floatWoundsEquals(result, expected) {
+		t.Errorf("CalcWounds(4, reroll=6) = %v, want %v (±%v)", result, expected, woundsEpsilon)
 	}
 }
 
 func TestCalWounds4RollAll1s(t *testing.T) {
-
 	result := CalcWounds(4, 100, 1, false, 0)
-	var expected float32 = 58.33
-	epsilon := float32(0.1)
+	expected := 58.33
 
-	if float32(math.Abs(float64(result-expected))) > epsilon {
-		t.Errorf("reRoll1s() = %v, want %v (±%v)", result, expected, epsilon)
+	if !floatWoundsEquals(result, expected) {
+		t.Errorf("CalcWounds(4, reroll=1) = %v, want %v (±%v)", result, expected, woundsEpsilon)
 	}
 }
 
 func TestCalWoundsDevWounds_Wound3s_Save2s(t *testing.T) {
-
 	result := CalcWounds(3, 100, 0, true, 2)
-	var expected float32 = 150
-	epsilon := float32(0.1)
+	expected := 150.0
 
-	if float32(math.Abs(float64(result-expected))) > epsilon {
-		t.Errorf("reRoll1s() = %v, want %v (±%v)", result, expected, epsilon)
+	if !floatWoundsEquals(result, expected) {
+		t.Errorf("CalcWounds(3, devWounds=true, save=2) = %v, want %v (±%v)", result, expected, woundsEpsilon)
 	}
 }
 
 func TestCalWoundsDevWounds_Wound5s_Save5s(t *testing.T) {
-
 	result := CalcWounds(5, 100, 0, true, 5)
-	var expected float32 = 41.66
-	epsilon := float32(0.1)
+	expected := 41.66
 
-	if float32(math.Abs(float64(result-expected))) > epsilon {
-		t.Errorf("reRoll1s() = %v, want %v (±%v)", result, expected, epsilon)
+	if !floatWoundsEquals(result, expected) {
+		t.Errorf("CalcWounds(5, devWounds=true, save=5) = %v, want %v (±%v)", result, expected, woundsEpsilon)
 	}
 }
 
 func TestCalWoundsDevWounds_Wound4s_Save4s(t *testing.T) {
-
 	result := CalcWounds(4, 100, 0, true, 4)
-	var expected float32 = 66.67
-	epsilon := float32(0.1)
+	expected := 66.67
 
-	if float32(math.Abs(float64(result-expected))) > epsilon {
-		t.Errorf("reRoll1s() = %v, want %v (±%v)", result, expected, epsilon)
+	if !floatWoundsEquals(result, expected) {
+		t.Errorf("CalcWounds(4, devWounds=true, save=4) = %v, want %v (±%v)", result, expected, woundsEpsilon)
 	}
 }
