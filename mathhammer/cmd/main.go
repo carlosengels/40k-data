@@ -31,12 +31,6 @@ func getDefender(c *gin.Context) {
 
 func main() {
 
-	// fmt.Printf("\nATTACKER\nAttacks: %d, BS: %d, Strength: %d, AP: %d, Damage: %f, Sustained: %d, Re-rolls: %d\n",
-	// 	attacker.Attacks, attacker.BS, attacker.Strength, attacker.AP, attacker.Damage, attacker.Sustained, attacker.HitReRolls)
-
-	// fmt.Printf("\nDEFENDER\nModel Count: %d, Toughness: %d, Wounds: %d, Save: %d, Invuln: %d, FNP: %d\n",
-	// 	defender.ModelCount, defender.Toughness, defender.Wounds, defender.Save, defender.Invuln, defender.FNP)
-
 	// Router
 	r := gin.Default()
 	r.GET("/simulate", getResult)
